@@ -7,7 +7,7 @@ body,div,ul,li,a,p,h2,h3{
 h2{
     font-size: 16px;
 }
-h3{
+.left h3{
     font-size: 14px;
 }
 body{
@@ -102,10 +102,23 @@ a:hover{
     margin: 10px 0 ;
 }
 /*main样式*/
-
+.main .title{
+    margin:10px 0;
+    color:#fff;
+    text-align: center;
+}
 .main_content{
     margin:0 250px;
     text-align: center;
+    padding:10px 0;
+    height: calc(100vh - 148px);
+    overflow: hidden;
+}
+.main_content:hover{
+    overflow: auto;
+}
+.main_content .all-articles{
+    height:calc(100vh - 130px);
 }
 .main_content .article_list{
     text-align: left;

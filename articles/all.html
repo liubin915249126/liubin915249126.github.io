@@ -40,7 +40,7 @@
         $('.article').find('a').on('click',function(){
             var target = $(this).attr('data-target');
             var iframe = window.parent.document.getElementById('showcontent');
-            $(iframe).find('#showcontent').attr('src',target)
+            $(iframe).attr('src',target)
         })
     })
  </script>

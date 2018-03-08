@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col-md-6 col-md-12">
                 <article class="article">
-                    <a class="title">
+                    <a class="title" data-target="articles/svg1.html">
                         <h4>SVG相关学习(一)SVG基础</h4>
                     </a>
                     <div class="tags">
@@ -34,5 +34,16 @@
         </div>
     </div>
 </body>
-
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.article').find('a').on('click',function(){
+            var target = $(this).attr('data-target');
+            var iframe = window.parent.document.getElementById('showcontent');
+            debugger;
+            console.log(iframe)
+            $(window.parent.document).find('#showcontent').attr('src',target)
+        })
+    })
+ </script>
 </html>

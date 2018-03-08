@@ -17,7 +17,9 @@ function time(){
     /*    var tb = document.createElement("span");
      tb.innerHTML=html;
      timeShow.appendChild(tb);*/
-    timeShow.innerHTML = html;
+    if(timeShow){ 
+        timeShow.innerHTML = html;
+    }
     t= setTimeout(time,500);
 }
 function checkTime(t){

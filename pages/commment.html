@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>comment</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/comment.css" rel="stylesheet">
+    <link href="../css/footer.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/gettime.js"></script>
+    <script type="text/javascript" src="../js/totop.js"></script>
+    <style type="text/css">
+        /*大屏幕图片动画*/
+       .jumbotron img{
+            -moz-transition:all 500ms ease-in;
+            -webkit-transition:all 500ms ease-in ;
+            -o-transition:all 500ms ease-in ;
+            -ms-transition:all 500ms ease-in ;
+            transition:all 500ms ease-in ;
+        }
+       .jumbotron img:hover{
+            -webkit-animation: testanimation 500ms ease-in-out ;
+            -moz-animation: testanimation 500ms ease-in-out ;
+            -o-animation: testanimation 500ms ease-in-out ;
+            -ms-animation: testanimation 500ms ease-in-out ;
+            animation: testanimation 500ms ease-in-out ;
+        }
+        @-webkit-keyframes testanimation{
+            from{transform:rotate(0);}
+            40%{transform:rotate(45deg);}
+
+            60%{transform:rotate(-45deg);}
+            to{transform:rotate(0);}
+        }
+        @-moz-keyframes testanimation{
+            from{transform:rotate(0);}
+            40%{transform:rotate(45deg);}
+
+            60%{transform:rotate(-45deg);}
+            to{transform:rotate(0);}
+        }
+        @-ms-keyframes testanimation{
+            from{transform:rotate(0);}
+            40%{transform:rotate(45deg);}
+
+            60%{transform:rotate(-45deg);}
+            to{transform:rotate(0);}
+        }
+        @-o-keyframes testanimation{
+            from{transform:rotate(0);}
+            40%{transform:rotate(45deg);}
+
+            60%{transform:rotate(-45deg);}
+            to{transform:rotate(0);}
+        }
+        @keyframes testanimation{
+            from{transform:rotate(0);}
+            40%{transform:rotate(45deg);}
+
+            60%{transform:rotate(-45deg);}
+            to{transform:rotate(0);}
+        }
+        /*媒体图片动画*/
+      .media-object{
+           -moz-transition:all 500ms ease-in;
+           -webkit-transition:all 500ms ease-in ;
+           -o-transition:all 500ms ease-in ;
+           -ms-transition:all 500ms ease-in ;
+           transition:all 500ms ease-in ;
+       }
+        .media-object:hover{
+           -webkit-animation: animation_a 500ms ease-in-out ;
+           -moz-animation:  animation_a 500ms ease-in-out ;
+           -o-animation:  animation_a 500ms ease-in-out ;
+           -ms-animation:  animation_a 500ms ease-in-out ;
+           animation: animation_a 500ms ease-in-out ;
+       }
+       @-webkit-keyframes animation_a{
+           from{transform:translate(0,0);}
+           40%{transform:translate(20px,0);}
+
+           60%{transform:translate(-20px,0);}
+           to{transform:translate(0,0);}
+       }
+       @-moz-keyframes animation_a{
+           from{transform:translate(0,0);}
+           40%{transform:translate(20px,0);}
+
+           60%{transform:translate(-20px,0);}
+           to{transform:translate(0,0);}
+       }
+       @-ms-keyframes animation_a{
+           from{transform:translate(0,0);}
+           40%{transform:translate(20px,0);}
+
+           60%{transform:translate(-20px,0);}
+           to{transform:translate(0,0);}
+       }
+       @-o-keyframes animation_a{
+           from{transform:translate(0,0);}
+           40%{transform:translate(20px,0);}
+
+           60%{transform:translate(-20px,0);}
+           to{transform:translate(0,0);}
+       }
+       @keyframes animation_a{
+           from{transform:translate(0,0);}
+           40%{transform:translate(20px,0);}
+
+           60%{transform:translate(-20px,0);}
+           to{transform:translate(0,0);}
+       }
+        /*导航图片动画*/
+        .navbar-brand img{
+            -moz-transition:all 500ms ease-in;
+            -webkit-transition:all 500ms ease-in ;
+            -o-transition:all 500ms ease-in ;
+            -ms-transition:all 500ms ease-in ;
+            transition:all 500ms ease-in ;
+        }
+        .navbar-brand img:hover{
+            -webkit-animation: animation_b 500ms ease-in-out ;
+            -moz-animation:  animation_b 500ms ease-in-out ;
+            -o-animation:  animation_b 500ms ease-in-out ;
+            -ms-animation:  animation_b 500ms ease-in-out ;
+            animation: animation_b 500ms ease-in-out ;
+        }
+        @-webkit-keyframes animation_b{
+            from{transform:scale(0);}
+            40%{transform:scale(1.2);}
+
+            60%{transform:scale(0.8);}
+            to{transform:scale(0,0);}
+        }
+        @-moz-keyframes animation_b{
+            from{transform:scale(0);}
+            40%{transform:scale(1.2);}
+
+            60%{transform:scale(0.8);}
+            to{transform:scale(0,0);}
+        }
+        @-ms-keyframes animation_b{
+            from{transform:scale(0);}
+            40%{transform:scale(1.2);}
+
+            60%{transform:scale(0.8);}
+            to{transform:scale(0,0);}
+        }
+        @-o-keyframes animation_b{
+            from{transform:scale(0);}
+            40%{transform:scale(1.2);}
+
+            60%{transform:scale(0.8);}
+            to{transform:scale(0,0);}
+        }
+        @keyframes animation_b{
+            from{transform:scale(0);}
+            40%{transform:scale(1.2);}
+
+            60%{transform:scale(0.8);}
+            to{transform:scale(0,0);}
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+
+<nav class="navbar navbar-fixed-top navbar-inverse one" role="navigation" >
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <a class="navbar-brand" href="../index.html" target="_blank"><img src="../img/zjl01.png"><span>首页</span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li> <span id="time">时间</span></li>
+                <li><a href="login.html" target="_blank">登录</a></li>
+                <li><a href="register.html" target="_blank">注册</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!--中间-->
+<div class="container two" >
+    <div class="jumbotron three">
+        <h2>周杰伦</h2>
+        <img src="../img/bsr.jpg" class="pull-left animation">
+        <p>周杰伦（Jay Chou），1979年1月18日出生于台湾新北市。华语男歌手、词曲创作人、制作人、演员、导演、编剧及监制  。
+            2000年发行首张专辑《Jay》出道，2002年在中国、新加坡、马来西亚、美国等地举办首场世界巡回演唱会。2003年成为美国
+            《时代周刊》封面人物 。周杰伦的音乐融合中西方元素，风格多变，四次获得世界音乐大奖中国最畅销艺人奖  。
+            凭借专辑《Jay》《范特西》《叶惠美》及《跨时代》四次获得金曲奖最佳国语专辑奖，并凭借《魔杰座》《跨时代》两度获得金曲奖最佳国语男歌手奖。
+            2014年、2015年两度获得QQ音乐年度盛典最佳全能艺人奖 。2015年获得全球华语榜中榜亚洲最受欢迎全能艺人奖 。</p>
+        <p><button class="btn btn-primary btn-lg" role="button" data-toggle="modal" data-target="#myModal" >了解更多</button></p>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <ul class="media-list">
+                <li class="media four">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="../img/zjl01.png" alt="zhoujiel">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">以父之名</h4>
+                        《以父之名》是周杰伦与作家黄俊郎首度合作的一首歌曲 。
+                        周杰伦的父亲周耀中很内向，平时和周杰伦没有什么话聊，
+                        于是周杰伦为父亲创作了这首叫《以父之名》的歌曲。
+                    </div>
+                </li>
+                <li class="media five">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="../img/zjl01.png" alt="zhoujiel">
+                    </a>
+                    <div class="media-body ">
+                        <h4 class="media-heading">以父之名</h4>
+                        《以父之名》是周杰伦与作家黄俊郎首度合作的一首歌曲 。
+                        周杰伦的父亲周耀中很内向，平时和周杰伦没有什么话聊，
+                        于是周杰伦为父亲创作了这首叫《以父之名》的歌曲。
+                    </div>
+                </li>
+                <li class="media six">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" src="../img/zjl01.png" alt="zhoujiel">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">以父之名</h4>
+                        《以父之名》是周杰伦与作家黄俊郎首度合作的一首歌曲 。
+                        周杰伦的父亲周耀中很内向，平时和周杰伦没有什么话聊，
+                        于是周杰伦为父亲创作了这首叫《以父之名》的歌曲。
+                    </div>
+            </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="comments">
+                <div class="c_header">
+                    发表评论
+                </div>
+                <div class="c_form form-group">
+                    <form action="" method="get">
+                        <fieldset class="">
+                            <legend>在下面写下你的评论</legend>
+                            <textarea  rows="3" name="comment" placeholder="写点什么吧..." cols="100%" class="form-control"></textarea>
+                            <div><a class="btn btn-primary"  id="submit" >
+                                <span class="fa fa-check-square-o">
+                                </span>提交评论
+                            </a>
+
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="c_list">
+                    <div>
+                    <p><span class="fa fa-comments-o"></span>已有<span id="num"></span>人评论</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="c_number">
+                      <ol class="clearfix">
+                          <li class="comment01">
+                            <span>用户名</span>
+                            <div class="c-main">
+                                  用户发表的评论
+                            </div>
+                            <div class="c-meta pull-right">
+                                      <span class="c-author">2015-3-14 16:00</span>
+                            </div>
+                          </li>
+                      </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                <h4 class="modal-title" id="modal-label">关于</h4>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">了解</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<footer >
+    <p>
+        Copyright © 2015 . <a href="../index.html" target="_blank">刘宾</a> 版权所有
+    </p>
+</footer>
+<!--totop-->
+<div class="totop" id="totop">
+    <a href="javascript:;"><img src="../img/totop.png" alt=""/></a>
+</div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+<script type="text/javascript" src="../js/velocity.js" ></script>
+<script type="text/javascript" src="../js/velocity.ui.js" ></script>
+<script type="text/javascript" rel="script" src="../js/bootstrap.min.js"></script>
+<script type="text/javascript" rel="script" src="../js/fadeIn.js"></script>
+
+<script>
+    $(function(){
+        toTop();
+        time();
+        var $btn=$("#submit");
+        $btn.click(function(){
+            var $text=$("textarea").val();
+
+            if($text!=""){
+                var $comment_content=$("ol");
+                $comment_content.append("<li class=''>"+"<span>用户名</span>"+"<div class='c-main'>"
+                        +$text+"</div>"+"<div class='c-meta pull-right'>"
+                        +"<span class='c-author'>"+$timer+"</span></div></li>");
+
+                /*var $newComment=$(".comment01").clone();
+                $newComment.appendTo($comment_content);
+                $newComment.find( ".c_main").text($text);*/
+                $("textarea").val("");
+                var dateDom = new Date();
+                //获取本地时间，年月日时分
+                var year = dateDom.getFullYear();
+                var month = dateDom.getMonth()+1;
+                var day = dateDom.getDate();
+                var hour = dateDom.getHours();
+                var min = dateDom.getMinutes();
+                var sec= dateDom.getSeconds();
+                var $timer = year+"年"+month+"月"+day+"日"+hour+":"+min+":"+sec;
+                return false;
+            }else{
+                alert("请输入评论内容");
+                return;
+            }
+
+             var $num   =$comment_content.children().length;
+            console.log($num);
+             $("#num").text($num);
+
+            /*console.log($num);*/
+        })
+
+    })
+</script>
+</html>

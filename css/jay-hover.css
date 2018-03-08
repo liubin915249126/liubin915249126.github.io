@@ -1,0 +1,159 @@
+
+.border2{
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    -webkit-transition: 0.4s,-webkit-transform .4s;
+    -moz-transition: 0.4s,-moz-transform .4s;
+    -o-transition: 0.4s,-o-transform .4s;
+    transition: 0.4s,transform .4s;
+    position: relative;
+    overflow: hidden;
+}
+img{
+    position: absolute;
+    left: 0;
+    top:0;
+
+}
+.border2_caption{
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+    text-align: center;
+    -webkit-transform:translateY(5px);
+    margin: 0 auto;
+    -webkit-transition:all 0.4s,-webkit-transform .4s;
+    -moz-transition:all 0.4s,-moz-transform .4s;
+    -o-transition:all 0.4s,-o-transform .4s;
+    -ms-transition:all 0.4s,-o-transform .4s;
+    transition:all 0.4s,transform .4s
+
+}
+
+.border2_caption h2,.border2_caption p{
+    -webkit-transform:translateY(150px);
+    -webkit-transition:all 0.4s,-webkit-transform .4s;
+    -moz-transition:all 0.4s,-moz-transform .4s;
+    -o-transition:all 0.4s,-o-transform .4s;
+    -ms-transition:all 0.4s,-o-transform .4s;
+    transition:all 0.4s,transform .4s;
+    opacity: 0;
+
+
+}
+.border2_caption p{
+    -webkit-transform:translateY(300px);
+    -webkit-transition:all 0.4s,-webkit-transform .4s;
+    -moz-transition:all 0.4s,-moz-transform .4s;
+    -o-transition:all 0.4s,-o-transform .4s;
+    -ms-transition:all 0.4s,-o-transform .4s;
+    transition:all 0.4s,transform .4s
+}
+.border2_caption:hover h2,.border2_caption:hover p{
+    -webkit-transform:translateY(30px);
+    opacity: 1;
+}
+.border2_caption:before{
+    display: block;
+    opacity: 0;
+    content: "";
+    position: absolute;
+    left:7%;right: 7%;
+    top: 10%;bottom: 10%;
+    border-top: 1px solid #000;
+    border-bottom:1px solid #000;
+    -webkit-transition:all 0.4s,-webkit-transform .4s;
+    -moz-transition:all 0.4s,-moz-transform .4s;
+    -o-transition:all 0.4s,-o-transform .4s;
+    -ms-transition:all 0.4s,-o-transform .4s;
+    transition:all 0.4s,transform .4s
+-webkit-transform:scale(0,1);-moz-transform:scale(0,1);-o-transform:scale(0,1);transform:scale(0,1);
+    -webkit-transform-origin:0 0;-moz-transform-origin:0 0;-o-transform-origin:0 0;transform-origin:0 0
+}
+.border2_caption:hover:before{
+    opacity: 1;
+    -webkit-transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);transform:scale(1);
+}
+.border2_caption:after{
+    display: block;
+    content: "";
+    opacity: 0;
+    position: absolute;
+    left: 10%;right: 10%;
+    top: 5%;bottom: 5%;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    -webkit-transition:all 0.4s,-webkit-transform .4s;
+    -moz-transition:all 0.4s,-moz-transform .4s;
+    -o-transition:all 0.4s,-o-transform .4s;
+    -ms-transition:all 0.4s,-o-transform .4s;
+    -webkit-transform:scale(1,0);-moz-transform:scale(1,0);-o-transform:scale(1,0);transform:scale(1,0);
+    -webkit-transform-origin:0 0;-moz-transform-origin:0 0;-o-transform-origin:0 0;transform-origin:0 0
+}
+.border2_caption:hover:after{
+
+    opacity: 1;
+    -webkit-transform:scale(1);-moz-transform:scale(1);-o-transform:scale(1);transform:scale(1);
+}
+
+
+/*slideCaptionDown*/
+
+.slideCaptionDown{
+    width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    border: 1px solid #000;
+    -webkit-transition: 0.4s,-webkit-transform .4s;
+    -moz-transition: 0.4s,-moz-transform .4s;
+    -o-transition: 0.4s,-o-transform .4s;
+    transition: 0.4s,transform .4s;
+    position: relative;
+    overflow: hidden;
+}
+.slideCaptionDown img{
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.slideCaptionDown .caption{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -150px;
+    margin-top: -100px;
+    -webkit-transform:translateY(-200px);
+    opacity: 0;
+
+    -webkit-transition:all 0.4s,-webkit-transform .4s;
+    -moz-transition:all 0.4s,-moz-transform .4s;
+    -o-transition:all 0.4s,-o-transform .4s;
+    -ms-transition:all 0.4s,-o-transform .4s;
+    transition:all 0.4s,transform .4s;
+}
+.slideCaptionDown:hover .caption{
+    -webkit-transform:translateY(0);
+    opacity: 1;
+    background: #005b8a;
+}
+.slideCaptionDown .caption h2,  .slideCaptionDown .caption p{
+    /*position: absolute;*//*???????*/
+}
+.slideCaptionDown .caption p{
+
+    -webkit-transition:all 0.4s,-webkit-transform .4s;
+    -moz-transition:all 0.4s,-moz-transform .4s;
+    -o-transition:all 0.4s,-o-transform .4s;
+    -ms-transition:all 0.4s,-o-transform .4s;
+    transition:all 0.4s,transform .4s;
+    -webkit-transform:translateY(-200px);
+}
+.slideCaptionDown:hover .caption p,.caption p{
+    -webkit-transform:translateY(50px);
+}

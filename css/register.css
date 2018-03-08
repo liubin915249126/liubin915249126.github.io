@@ -1,0 +1,37 @@
+
+.page-wrapper:not(h2){
+    font-size: 18px ;
+    color: #080808;
+}
+.page-wrapper a{
+    text-decoration: none;
+    color: #d01b17;
+}
+.header{
+    background: #080808;
+}
+.header .logo{
+ margin:  0 auto;
+    font-size: 20px ;
+}
+.header .logo a{
+     text-decoration: none;
+      color: #fcfffa;
+}
+.header .logo img{
+    height: 50px ;
+    width: 50px ;
+    margin: 5px 20px  ;
+}
+.btn{
+    background: #c62620;
+    color: #ffffff;
+    margin-bottom: 20px ;
+}
+input{
+    margin-bottom: 10px;
+}
+footer{
+    margin-top: 40px ;
+    font-size: 25px ;
+}

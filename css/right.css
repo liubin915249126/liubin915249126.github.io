@@ -1,0 +1,93 @@
+.theam{
+    border: 1px solid #000000;
+    border-radius: 10px ;
+    margin-bottom: 10px;
+    background: #ffffff;
+
+}
+.theam .theam_top{
+    background: #747174;
+    color: #ffffff;
+    border-radius: 5px  5px  0 0;
+    font: normal 18px/30px "Microsoft Yahei";
+    height: 40px ;
+    padding-top: 5px;
+}
+.theam .theam_top span {
+   margin-left: 10px;
+   margin-top: 10px;
+   /*line-height: 40px ;*/
+
+}
+.theam .theam_body{
+padding: 10px;
+    text-align: center;
+}
+.theam .theam_body a{
+    display: inline-block;
+    margin-left: 5px;
+}
+/*tab选项卡*/
+.tab_w{
+    margin-top: 100px ;
+}
+.tab li{
+    list-style: none;
+    float: left;
+    padding: 0 10px ;
+}
+.tab_top{
+    height: 30px;
+    width: 250px;
+    border: 1px solid #313131;
+     padding-top: 5px ;
+    /*padding-left: 30px;*/
+    text-align: center;
+}
+.tab_top ul {
+    display: inline-block;
+    vertical-align: middle;
+}
+.tab_top li:hover{
+    cursor: pointer;
+}
+.tab_con{
+    width: 260px;
+    border: 1px solid #313131;
+    height: 80px ;
+    padding-left: 40px ;
+    padding-top: 20px ;
+    border-top: none;
+    overflow: hidden;
+}
+.tab_con li{
+    height: 30px ;
+    width: 100px ;
+}
+/*    .tab_con ul{
+        display: none;*/
+
+.lihover{
+    background: #444043;
+    color: #ffffff;
+
+}
+/*信息滚动*/
+.info{
+    text-align: center;
+    margin: 0 auto;
+    height: 200px;
+    overflow: hidden;
+}
+.info ul {
+     display: inline-block;
+
+}
+.info li{
+    list-style: none;
+    line-height: 28px;
+    margin:0  auto ;
+    display: inline-block;
+    height: 28px ;
+    width: 100%;
+}

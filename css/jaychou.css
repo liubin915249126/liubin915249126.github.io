@@ -1,0 +1,75 @@
+
+body{
+    padding-top: 50px;
+    /*background-color: #343869;*/
+}
+.navbar-brand {
+    padding: 0;
+    width: 200px;
+    position: relative;
+}
+
+.navbar-brand span{
+    position: absolute;
+    left: 60px ;
+    top: 50%;
+    margin-top: -10px ;
+
+}
+.navbar-brand img{
+    height: 50px;
+    width: 50px;
+}
+/*轮播样式*/
+.carousel{
+    background-color: #000000;
+    height: 500px;
+}
+.carousel .item{
+    width: 100%;
+    height: 500px;
+}
+.carousel img{
+    width: 100%;
+}
+.carousel .carousel-caption{
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+/*三栏样式*/
+#family .col-md-3 p{
+    line-height: 25px;
+}
+#family img {
+    /*width: 350px;*/
+    /*height: 400px;*/
+    display: inline-block;
+    margin-bottom: 10px;
+
+}
+
+#family {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid #000000;
+
+}
+#family .col-md-3{
+    padding-bottom: 200px ;
+    margin-bottom: -200px ;
+
+}
+/*tab选项卡*/
+.tab-pane{
+    width:600px;
+}
+#carousel-example-generic .container{
+    border-bottom: 5px solid #000000;
+}
+/*底部样式*/
+footer{
+    margin-top: 40px ;
+    font-size: 25px ;
+}
+

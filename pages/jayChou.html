@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>周杰伦</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/jaychou.css" rel="stylesheet">
+    <link type="text/css" href="../css/footer.css" >
+    <link type="text/css" href="../css/totop.css">
+    <link rel="stylesheet" href="../css/3DAnimation.css">
+    <link rel="stylesheet" href="../css/jay-hover.css">
+    <script type="text/javascript" src="../js/totop.js" ></script>
+    <script type="text/javascript" src="../js/velocity.js" ></script>
+    <script type="text/javascript" src="../js/velocity.ui.js" ></script>
+    <style type="text/css">
+   .carousel-caption{
+       color: #020384;
+   }
+   #family>div{
+      position: relative;
+
+   }
+   .thumbnail{
+       position: absolute;
+       left: 50px ;
+       top:60px  ;
+       /*opacity: 0.2;*/
+      display: none;
+   }
+    #family .col-md-3{
+        overflow: hidden;
+        padding-right:0;
+        margin-right: 20px;
+
+    }
+   .totop{
+       position: fixed;
+       right: 50px;
+       bottom: 20px;
+   }
+    a[data-toggle="collapse"]{
+        margin-left: 50px ;
+    }
+   .panel-body li{
+       list-style: none;
+   }
+   figure{
+       position:relative;
+   }
+   figcaption{
+       text-align: center;
+       position: absolute;
+
+       top: 20px;
+       background: rgba(3, 28, 255, 0.25);
+        }
+        /***********/
+.row{
+/*    margin-bottom: 20px;*/
+}
+        .tab_select{
+            margin-bottom: 50px;
+
+        }
+        #panel{
+            margin-top: 50px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<!--顶部导航-->
+<nav class="navbar navbar-fixed-top navbar-inverse one" role="navigation" id="navbar">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html" target="_blank"><img src="../img/zjl01.png"><span>首页</span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-center">
+            <li class=""><a href="http://baike.baidu.com/link?url=alKt-1y5aaWE3RUZZ7ZJFM1P-8a8zseCD5nqUGGTKJHTzYXlP21xX3SAhUQS4NSQna33_wrVmLvJ1tVib5ntPyyFgP66gwp62mZf-0dDeIG" target="_blank">杰伦百科</a></li>
+            <li><a href="#family">家人</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">专辑 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#tab_list" data-tab="jay">jay同名专辑</a></li>
+                    <li><a href="#tab_list" data-tab="ftx">范特西</a></li>
+                    <li><a href="#tab_list" data-tab="yhm">叶惠美</a></li>
+                    <li><a href="#tab_list" data-tab="bdkj">八度空间</a></li>
+                </ul>
+            </li>
+            <li><a  class="btn  btn-lg" role="button" data-toggle="modal" data-target="#myModal" >关于</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="login.html" target="_blank">登录</a></li>
+            <li><a href="register.html" target="_blank">注册</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+    </div>
+</nav>
+<div class="divider"></div>
+<!--轮播-->
+<div class="container-fluid two" id="carousel">
+    <div class="row">
+
+        <div class="col-md-12"><div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="../img/bg01.jpg" alt="周杰伦">
+                    <div class="carousel-caption">
+                        <h1>jay</h1>
+                        <p>周杰伦第一张专辑同名专辑Jay横空出世</p>
+                        <a class=" btn btn-primary " role="button" href="#">试听地址</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/bg02.jpg" alt="周杰伦">
+                    <div class="carousel-caption">
+                        <h1>范特西</h1>
+                        <p>周杰伦第二张专辑范特西横空出世</p>
+                        <a class=" btn btn-primary " role="button" href="#">试听地址</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../img/bg03.jpg" alt="周杰伦">
+                    <div class="carousel-caption">
+                        <h1>叶惠美</h1>
+                        <p>周杰伦第三张专辑叶惠美横空出世</p>
+                        <a class=" btn btn-primary " role="button" href="#">试听地址</a>
+                    </div>
+                </div>
+                <div class="item ">
+                    <img src="../img/bg04.jpg" alt="周杰伦">
+                    <div class="carousel-caption">
+                        <h1>八度空间</h1>
+                        <p>周杰伦第四张专辑八度空间横空出世</p>
+                        <a class=" btn btn-primary " role="button" href="#">试听地址</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+
+            </a>
+        </div>
+        </div>
+
+    </div>
+</div>
+<!--三栏-->
+<div class="container-fluid three" id="family">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1 all-captions-wrap">
+            <div class="border2">
+                <img src="../img/m300.jpg">
+                <div class="border2_caption">
+                    <h2>标题</h2>
+                    <p>句中段落</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="border2">
+                <img src="../img/m300.jpg">
+                <div class="border2_caption">
+                    <h2>标题</h2>
+                    <p>句中段落</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+
+            <div class="border2">
+                <img src="../img/m300.jpg">
+                <div class="border2_caption">
+                    <h2>标题</h2>
+                    <p>句中段落</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-1 ">
+            <div class="slideCaptionDown">
+                <img src="../img/m300.jpg">
+                <div class="caption">
+                    <h2>标题</h2>
+                    <p>句中段落句中段落句中段落</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="slideCaptionDown">
+                <img src="../img/m300.jpg">
+                <div class="caption">
+                    <h2>标题</h2>
+                    <p>句中段落句中段落句中段落</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+
+            <div class="slideCaptionDown">
+                <img src="../img/m300.jpg">
+                <div class="caption">
+                    <h2>标题</h2>
+                    <p>句中段落句中段落句中段落</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--tab选项卡-->
+<div class="container-fluid tab_select four" id="tab">
+    <div class="row">
+        <div class="col-md-10 col-md-offset-2">
+            <ul class="nav nav-tabs " role="tablist" id="tab_list">
+                <li class="active"><a href="#jay" role="tab"   data-toggle="tab">jay</a></li>
+                <li><a href="#ftx" role="tab"data-toggle="tab">范特西</a></li>
+                <li><a href="#yhm"role="tab" data-toggle="tab">叶惠美</a></li>
+                <li><a href="#bdkj"role="tab" data-toggle="tab">八度空间</a></li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div class="tab-pane active" id="jay">
+                        <div class="row">
+                            <div class="col-md-6">
+                                 <p>
+                                     <h2>Jay同名专辑</h2>
+                                     《Jay》是歌手周杰伦的首张音乐专辑，由周杰伦制作、作曲，方文山、徐若瑄等人作词，收录了10首歌曲，2000年11月7日发行[1]  。
+            2001年，该专辑获得台湾金曲奖最佳流行音乐演唱专辑奖、IFPI香港唱片销量大奖十大销量国语唱片等奖项.</p>
+            <p>专辑曲目:
+            可爱女人  完美主义	 星晴        娘子  	    斗牛
+            黑色幽默	 龙卷风	    反方向的钟	 伊斯坦堡	印第安老斑鸠
+                                 </p>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="../img/zjl.jpg" class="picAnimate" /></span>
+                            </div>
+                        </div>
+                </div>
+                <div class="tab-pane" id="ftx">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img  class="" src="../img/zjl.jpg" />
+                        </div>
+                        <div class="col-md-6 col-md-offset-2">
+
+                            <p>
+                            <h2>范特西</h2>
+                            <span>
+《范特西》的专辑名称来源是英文“Fantasy”的发音，意为“幻想” 。《范特西》由周杰伦担任专辑的
+ 监制，全碟10首歌曲均由周杰伦作曲。作词方面，周杰伦负责其中2首，其余作词工作分别由方文山及徐若瑄完成
+                                。周杰伦在制作《范特西》专辑时，没事先知会徐若瑄，便擅自更改了《开不了口》的歌名。
+                            </span></p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="tab-pane" id="yhm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>
+                            <h2>叶惠美</h2>
+                            <p>《叶惠美》是周杰伦于2003年发行的专辑，共收录了11首歌曲。
+                                2004年，该专辑获得了第15届金曲奖最佳流行音乐演唱专辑奖、新城国语力颁奖礼新城国语力亚洲大碟奖、
+                                第四届全球华语歌曲排行榜颁奖典礼年度最受欢迎专辑奖[1-3]  。</p>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../img/zjl.jpg" /></span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tab-pane" id="bdkj">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img  class="" src="../img/zjl.jpg" />
+                        </div>
+                        <div class="col-md-6 col-md-offset-2">
+
+                            <p>
+                            <h2>八度空间</h2>
+                            <span>
+                               《八度空间》这张专辑的创作灵感来自周杰伦平时看的一些电影和音乐录影带。
+                                因此专辑中的歌曲就像电影一样，每部的剧情都不同。 这张专辑之所以取名《八度空间》，
+                                是因为周杰伦想在西方八度音阶的空间内创造属于自己的音乐，展现音乐领域中的第八艺术。
+                                专辑以R&B曲风的歌曲为主，在专辑曲目编排上与上张专辑《范特西》类似，几首R&B主流情歌加上几首曲风怪异的周杰伦式叙事作品。
+                                在专辑中，周杰伦加入了一些不同的元素，试图通过一些音乐的效果以及多种变化的编曲来改变歌曲的面貌
+                            </span></p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--折叠-->
+<div class="container" id="panel">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                       Jay同名专辑
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                   <ul>
+                       <li>可爱女人</li>
+                       <li>娘子</li>
+                       <li>完美主义</li>
+                       <li>星晴</li>
+                       <li>斗牛</li>
+                       <li>印第安老斑鸠</li>
+                       <li>龙卷风</li>
+                       <li>黑色幽默</li>
+                       <li>反方向的钟</li>
+                       <li>伊斯坦堡</li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                        范特西
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li>可爱女人</li>
+                        <li>娘子</li>
+                        <li>完美主义</li>
+                        <li>星晴</li>
+                        <li>斗牛</li>
+                        <li>印第安老斑鸠</li>
+                        <li>龙卷风</li>
+                        <li>黑色幽默</li>
+                        <li>反方向的钟</li>
+                        <li>伊斯坦堡</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                        叶惠美
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li>可爱女人</li>
+                        <li>娘子</li>
+                        <li>完美主义</li>
+                        <li>星晴</li>
+                        <li>斗牛</li>
+                        <li>印第安老斑鸠</li>
+                        <li>龙卷风</li>
+                        <li>黑色幽默</li>
+                        <li>反方向的钟</li>
+                        <li>伊斯坦堡</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                        八度空间
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+                    <ul>
+                        <li>可爱女人</li>
+                        <li>娘子</li>
+                        <li>完美主义</li>
+                        <li>星晴</li>
+                        <li>斗牛</li>
+                        <li>印第安老斑鸠</li>
+                        <li>龙卷风</li>
+                        <li>黑色幽默</li>
+                        <li>反方向的钟</li>
+                        <li>伊斯坦堡</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="modal-label"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span
+                        aria-hidden="true">&times;</span><span class="sr-only">关闭</span></button>
+                <h4 class="modal-title" id="modal-label">关于</h4>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">确定</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">了解</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- footer start  -->
+<footer id="footer">
+    <div class="subfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="text-align:center;">
+                    <p style="line-height:46px;">Copyright © 2015 . <a href="../index.html" target="_blank">刘宾</a> 版权所有</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer end -->
+<!--totop-->
+<div class="totop" id="totop">
+    <a href="javascript:;"><img src="../img/totop.png" alt=""/></a>
+</div>
+<script type="text/javascript" src="js/animation.js" ></script>
+<script type="text/javascript " src="../js/picAnimate.js"></script>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js" ></script>
+<script type="text/javascript" src="../js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="../js/velocity.js" ></script>
+<script type="text/javascript" src="../js/velocity.ui.js" ></script>
+<script type="text/javascript" src="../js/fadeIn.js"></script>
+<script>
+    $(function () {
+        toTop();
+        $('#ad-carousel').carousel();
+        $('.dropdown.dropdown-menu a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+ /* $(function () {
+
+    $('#ad-carousel').carousel();
+        $('#navbar .navbar-collapse a').click(function (e) {
+           var href = $(this).attr('href');
+           var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+ });*/
+
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+
+.c_header{
+    height: 36px;
+    line-height: 36px;
+    font-size: 18px;
+    background-color: #acc6bb;
+    box-shadow: 3px 5px #7297ff;
+    margin:20px 0;
+
+}
+
+.divider{
+    height: 2px;
+    background-color: #204d74;
+
+}
+#submit{
+    margin-top: 20px ;
+}
+.clearfix:after{content:''; display:table; clear:both;}
+.clearfix{*zoom:1;}
+/*头部样式*/
+.navbar-brand {
+    padding: 0;
+    width: 200px;
+    position: relative;
+    padding-left: 50px ;
+}
+
+.navbar-brand span{
+    position: absolute;
+    left: 110px ;
+    top: 50%;
+    margin-top: -10px ;
+
+}
+.navbar-brand img{
+    height: 50px;
+    width: 50px;
+
+}
+.navbar-right li:first-child{
+    height: 50px;
+    line-height: 50px ;
+    color: #ffffff;
+    margin-left: 10px ;
+}
+body{
+    background-color: #707c65;
+}
+.container:not(:first-child){
+    background-color: #ffffff;
+}
+.media{
+    background-color: #bbbbbb;
+    line-height: 2;
+    padding: 10px 0;
+}
+.c_number{
+    border: 1px solid #000000;
+    margin-top: 5px ;
+    margin-bottom: 10px ;
+    padding-right: 5px ;
+    padding-top: 10px;
+}
+/*totop*/
+.totop{
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+}
+.c_number li{margin-bottom: 5px;
+
+
+}

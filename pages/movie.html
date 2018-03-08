@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>movie</title>
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/top.css" type="text/css" >
+    <!--<link rel="stylesheet" href="css/hover_animation.css" type="text/css" >-->
+    <link rel="stylesheet" href="../css/left-hover.css" type="text/css" >
+    <link type="text/css" href="../css/footer.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/snap.svg/0.3.0/snap.svg-min.js"></script>
+    <script type="text/javascript" rel="script" src="../js/snap.svg-min.js"></script>
+    <script type="text/javascript" src="../js/time.js"></script>
+    <style type="text/css" rel="stylesheet">
+        body{
+            background: #a5a3ff;
+            padding-top: 60px ;
+        }
+        .wrap .move_content{
+            position: relative;
+            display: inline-block;
+            border: 1px solid #000;
+        }
+
+        .wrap .move_content div{
+            position: absolute;
+            left: 50%;
+            top:50px;
+            margin-left: -49px;
+            text-align: center;
+
+        }
+        .wrap .move_content div button{
+            display: none;
+            transition:all 2000ms ease-in;
+            -ms-transition:all 2000ms ease-in;
+            -webkit-transition:all 2000ms ease-in;
+            -moz-transition:all 2000ms ease-in;
+            -o--transition:all 2000ms ease-in;
+        }
+        .wrap .move_content div {
+            transition:all 300ms ease-in;
+            -ms-transition:all 300ms ease-in;
+            -webkit-transition:all 300ms ease-in;
+            -moz-transition:all 300ms ease-in;
+            -o--transition:all 300ms ease-in;
+        }
+        .col-md-9{
+            padding-top: 30px ;
+            /*background-color: #ffffff;*/
+        }
+        a[class="move_content"]{
+            width: 200px;
+            margin-left: 5px ;
+            margin-top: 20px ;
+        }
+        a[class="move_content"] img{
+            width: 100%;
+            height: 350px ;
+        }
+        a[class="move_content"]:hover figcaption div{
+            -moz-transform:translateY(-45px);
+            -webkit-transform:translateY(-45px);
+            -o-transform:translateY(-45px);
+            -ms-transform:translateY(-45px);
+            transform:translateY(-45px);
+        }
+        a[class="move_content"]:hover figcaption div p{
+            display: none;
+        }
+        a[class="move_content"]:hover figcaption div button{
+            display: inline-block;
+            -webkit-animation: testanimations 500ms ease-in-out  ;
+            -moz-animation: testanimations 500ms ease-in-out  ;
+            -o-animation: testanimations 500ms ease-in-out  ;
+            -ms-animation: testanimations 500ms ease-in-out  ;
+            animation: testanimations 500ms ease-in-out  ;
+        }
+        @-webkit-keyframes testanimations{
+            from{transform:scale(0);opacity: 0;}
+
+            40%{transform:scale(0.4);opacity: 0.4;}
+            60%{transform:scale(0.6);opacity: 0.6;}
+
+            to{transform:scale(1);opacity:1;}
+        }
+        @-ms-keyframes testanimations{
+            from{transform:scale(0);opacity: 0;}
+
+            40%{transform:scale(0.4);opacity: 0.4;}
+            60%{transform:scale(0.6);opacity: 0.6;}
+
+            to{transform:scale(1);opacity:1;}
+        }
+        @-moz-keyframes testanimations{
+            from{transform:scale(0);opacity: 0;}
+
+            40%{transform:scale(0.4);opacity: 0.4;}
+            60%{transform:scale(0.6);opacity: 0.6;}
+
+            to{transform:scale(1);opacity:1;}
+        }
+        @-o-keyframes testanimations{
+            from{transform:scale(0);opacity: 0;}
+
+            40%{transform:scale(0.4);opacity: 0.4;}
+            60%{transform:scale(0.6);opacity: 0.6;}
+
+            to{transform:scale(1);opacity:1;}
+        }
+        @keyframes testanimations{
+            from{transform:scale(0);opacity: 0;}
+
+            40%{transform:scale(0.4);opacity: 0.4;}
+            60%{transform:scale(0.6);opacity: 0.6;}
+
+            to{transform:scale(1);opacity:1;}
+        }
+        svg{
+            width:100%;
+            height: 360px ;
+            position: absolute;
+            top: 0;
+            left: 0;
+            fill:#ffffff
+        }
+         .left{
+         /*   float: left;
+            margin-left: -100%;*/
+            width: 250px ;
+            /* background: #ffffff;*/
+            font-size: 12px;
+            line-height: 0;
+            text-align: center;
+            margin-top: 50px ;
+            vertical-align: bottom;
+            /*padding-left: 20px ;*/
+        }
+        .left .pic_icon{
+            vertical-align: bottom;
+        }
+
+        .pic_icon{
+            margin-bottom: 40px ;
+            color: #ffffff;
+        }
+        .list{
+            margin-bottom: -5px;
+        }
+        .pic_icon div{
+            margin-top: 30px ;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .list li{
+            height: 60px;
+            background: #ffffff;
+            border: 1px solid #000000;
+            text-align: center;
+            margin-bottom: 5px;
+            list-style: none;
+            border-radius:7px;
+            padding-bottom: 5px ;
+        }
+
+        .list li a{
+            text-decoration: none;
+            color: #000000;}
+
+        .list li a h2{
+            margin: 10px 0 0 5px ;
+            font-size: 18px ;
+        }
+        .list li a h3{
+            font-size: 16px ;
+            margin: 5px 0 0 0;
+        }
+    footer{
+        margin-top: 20px ;
+    }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+
+    <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--</button>-->
+                <a class="navbar-brand" href="#"><img src="../img/zjl01.png"><span>周杰伦</span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li> <span id="time">时间</span></li>
+                    <li><a href="login.html" target="_blank">登录</a></li>
+                    <li><a href="register.html" target="_blank">注册</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+    <div class="wrap row">
+        <div class="col-md-3">
+            <div class="left">
+                <div class="pic_icon hvr-float-shadow">
+                    <img src="../img/zjl01.png">
+                    <div> <span><a>刘宾&gt&gt</a></span></div>
+                </div>
+
+                <div class="list">
+                    <ul>
+                        <li class="hvr-sweep-to-right ">
+
+                            <div>
+                                <a href="#" >
+                                    <span class="icon"></span>
+                                    <h2>我的简历</h2>
+                                    <h3>ABOUT ME</h3>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="hvr-bounce-to-left ">
+                            <div></div>
+                            <div>
+                                <a href="jayChou.html">
+                                    <span class="icon"></span>
+                                    <h2>周杰伦</h2>
+                                    <h3>JAY</h3>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="hvr-bounce-to-bottom ">
+                            <div></div>
+                            <div>
+                                <a href="#">
+                                    <span class="icon"></span>
+                                    <h2>首页</h2>
+                                    <h3>HOME</h3>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="hvr-bounce-to-top ">
+                            <div></div>
+                            <div>
+                                <a href="#">
+                                    <span class="icon"></span>
+                                    <h2>首页</h2>
+                                    <h3>HOME</h3>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9 ">
+            <section id="grid" class="grid clearfix" >
+                <a   href="#" class="move_content" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+                    <figure>
+                        <img src="../img/zjl.jpg" alt=""/>
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                        </svg>
+                        <figcaption>
+                            <div>
+                                <h2>忠犬八公</h2>
+                                <p>故事情节很感人</p>
+                                <button class="btn btn-primary">view</button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a   href="#" class="move_content" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+                    <figure>
+                        <img src="../img/zjl.jpg" alt=""/>
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                        </svg>
+                        <figcaption>
+                            <div>
+                                <h2>忠犬八公</h2>
+                                <p>故事情节很感人</p>
+                                <button class="btn btn-primary">view</button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a   href="#" class="move_content" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+                    <figure>
+                        <img src="../img/zjl.jpg" alt=""/>
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                        </svg>
+                        <figcaption>
+                            <div>
+                                <h2>忠犬八公</h2>
+                                <p>故事情节很感人</p>
+                                <button class="btn btn-primary">view</button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a   href="#" class="move_content" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+                    <figure>
+                        <img src="../img/zjl.jpg" alt=""/>
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                        </svg>
+                        <figcaption>
+                            <div>
+                                <h2>忠犬八公</h2>
+                                <p>故事情节很感人</p>
+                                <button class="btn btn-primary">view</button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a   href="#" class="move_content" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+                    <figure>
+                        <img src="../img/zjl.jpg" alt=""/>
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                        </svg>
+                        <figcaption>
+                            <div>
+                                <h2>忠犬八公</h2>
+                                <p>故事情节很感人</p>
+                                <button class="btn btn-primary">view</button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a   href="#" class="move_content" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+                    <figure>
+                        <img src="../img/zjl.jpg" alt=""/>
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                        </svg>
+                        <figcaption>
+                            <div>
+                                <h2>忠犬八公</h2>
+                                <p>故事情节很感人</p>
+                                <button class="btn btn-primary">view</button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a   href="#" class="move_content" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+                    <figure>
+                        <img src="../img/zjl.jpg" alt=""/>
+                        <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                            <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                        </svg>
+                        <figcaption>
+                            <div>
+                                <h2>忠犬八公</h2>
+                                <p>故事情节很感人</p>
+                                <button class="btn btn-primary">view</button>
+                            </div>
+                        </figcaption>
+                    </figure>
+                </a>
+                <a   href="#" class="move_content" data-path-hover="M 0,0 0,38 90,58 180.5,38 180,0 z">
+                <figure>
+                    <img src="../img/zjl.jpg" alt=""/>
+                    <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                        <path d="M 0 0 L 0 182 L 90 126.5 L 180 182 L 180 0 L 0 0 z "/>
+                    </svg>
+                    <figcaption>
+                        <div>
+                            <h2>忠犬八公</h2>
+                            <p>故事情节很感人</p>
+                            <button class="btn btn-primary">view</button>
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+            </section>
+        </div>
+    </div>
+
+</div>
+<footer>
+    <p>
+        Copyright © 2015 . <a href="../index.html" target="_blank">刘宾</a> 版权所有
+    </p>
+</footer>
+</body>
+<script type="text/javascript" rel="script" src="../js/snap.svg-min.js"></script>
+<script>
+    (function() {
+
+        function init() {
+            var speed = 300,
+                    easing = mina.backout;
+
+            [].slice.call ( document.querySelectorAll( '#grid > a' ) ).forEach( function( el ) {
+                var s = Snap( el.querySelector( 'svg' ) ), path = s.select( 'path' ),
+                        pathConfig = {
+                            from : path.attr( 'd' ),
+                            to : el.getAttribute( 'data-path-hover' )
+                        };
+
+                el.addEventListener( 'mouseenter', function() {
+                    path.animate( { 'path' : pathConfig.to }, speed, easing );
+                } );
+
+                el.addEventListener( 'mouseleave', function() {
+                    path.animate( { 'path' : pathConfig.from }, speed, easing );
+                } );
+            } );
+        }
+
+        init();
+
+    })();
+</script>
+
+</html>

@@ -1,0 +1,150 @@
+
+/*全局样式*/
+body,div,ul,li,a,p,h2,h3{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 16px;
+}
+h3{
+    font-size: 14px;
+}
+body{
+    background: #2f2b42;
+}
+a:hover{
+    color: #ff0a05;
+}
+.clearfix:after{content:''; display:table; clear:both;}
+.clearfix{*zoom:1;}
+/*头部样式*/
+.hd{
+    background: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 3px;
+}
+.hd .login{
+    float: right;
+    line-height: 36px ;
+    margin-right: 30px ;
+}
+.hd .login a{
+    text-decoration:none;
+    font-family: "Microsoft YaHei";
+    color: #000000;
+}
+.bd .main{
+    float: left;
+    width: 100%;
+
+
+}
+.bd .left{
+    float: left;
+    margin-left: -100%;
+    width: 250px ;
+   /* background: #ffffff;*/
+    font-size: 12px;
+    line-height: 0;
+    text-align: center;
+    margin-top: 50px ;
+    vertical-align: bottom;
+    padding-left: 20px ;
+}
+
+
+.bd .right{
+    float: left;
+    width: 250px;
+    margin-left: -270px;
+    background: inherit;
+}
+
+/*左侧样式*/
+.left .pic_icon{
+  vertical-align: bottom;
+   }
+
+.pic_icon{
+    margin-bottom: 40px ;
+    color: #ffffff;
+}
+.list{
+    margin-bottom: -5px;
+}
+.pic_icon div{
+    margin-top: 30px ;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.list li{
+    height: 60px;
+   background: #ffffff;
+    border: 1px solid #000000;
+    text-align: center;
+    margin-bottom: 5px;
+    list-style: none;
+    border-radius:7px;
+
+}
+.list li a{
+    text-decoration: none;
+    color: #000000;}
+/*.list li a:hover{
+    color: red;
+}*/
+/*.list li:hover{
+    background: #204d74;
+}*/
+.list li a h2{
+    margin: 10px 0 ;
+}
+/*main样式*/
+
+.main_content{
+    margin:0 250px;
+    text-align: center;
+}
+.main_content .article_list{
+    text-align: left;
+}
+.pagination{
+
+}
+.list li div{
+
+}
+footer{
+    margin-top: 10px;
+
+}
+footer p{
+    font-size:16px ;
+
+    background: #ffffff;
+    margin: 10px auto;
+    width: 800px;
+    padding: 5px 0;
+    text-align: center;
+
+}
+footer p a{
+    text-decoration: none;
+    color: #000000;
+}
+.totop{
+    position: fixed;
+    right: 50px;
+    bottom: 20px;
+ }
+.login span{
+    display: inline-block;
+    margin-right: 10px;
+}
+#time{
+    display: inline-block;
+    width: 400px;
+    margin: 0 auto;
+}

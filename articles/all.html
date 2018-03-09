@@ -13,16 +13,17 @@
 <body>
     <div class="article-lists container-fluid">
         <div class="row">
-            <div class="col-md-6 col-md-12">
+           
+        </div>
+        <div class="col-md-6 col-md-12" id="template" style="display:none;">
                 <article class="article">
-                    <a class="title" data-target="articles/svg1.html">
+                    <a class="title" href="https://github.com/liubin915249126/HTML-CSS-SVG/tree/master/SVG#svg-%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0" target="blank">
                         <h4>SVG相关学习(一)SVG基础</h4>
                     </a>
                     <div class="tags">
-                        <span class="label label-primary">SVG</span>
-                        <span class="label label-primary">动画</span>
+                        
                     </div>
-                    <a class="content" data-target="articles/svg1.html">
+                    <a class="content" href="https://github.com/liubin915249126/HTML-CSS-SVG/tree/master/SVG#svg-%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0" target="blank">
                         <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/SVGArcs_Flags.png" alt="SVGArcs_Flags.png"
                         />
                         <div class="description">
@@ -31,31 +32,32 @@
                     </a>
                 </article>
             </div>
-            <div class="col-md-6 col-md-12">
-                    <article class="article">
-                        <a class="title" href="https://github.com/liubin915249126/HTML-CSS-SVG/tree/master/SVG" target="blank">
-                            <h4>SVG相关学习(一)SVG基础</h4>
-                        </a>
-                        <div class="tags">
-                            <span class="label label-primary">SVG</span>
-                            <span class="label label-primary">动画</span>
-                        </div>
-                        <a class="content" href="https://github.com/liubin915249126/HTML-CSS-SVG/tree/master/SVG" target="blank">
-                            <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/SVGArcs_Flags.png" alt="SVGArcs_Flags.png"
-                            />
-                            <div class="description">
-                               主要包括SVG基础知识，基本图形，渐变，还有path路径相关
-                            </div>
-                        </a>
-                    </article>
-                </div>
-        </div>
     </div>
 </body>
 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="./all.js"></script>
 <script type="text/javascript">
     // 切换页面
     $(function(){
+        // 渲染文章
+        allArticles.forEach(function(article){
+          var $template = $('#template').clone();
+          $template.css('display','block')
+                   .find('.title')
+                   .attr('href',article.target)
+                   .find('h4').text(article.title);
+          $template.find('.tags').html('')
+          article.tags.forEach(function(tag){
+            var $tag = $('<span class="label label-primary"></span>');
+            $tag.text(tag);  
+            $template.find('.tags').append($tag)
+          })
+          $template.find('.content').attr('href',article.target)
+                   .find('img').attr({'src':article.img.src,'alt':article.img.alt}).end()
+                   .find('.description').text(article.description);
+          $('.article-lists .row').append($template);
+        });
+        // 文章点击事件 
         $('.article').find('a').on('click',function(){
             var target = $(this).attr('data-target');
             var title = $(this).closest('.article').find('h4').text();

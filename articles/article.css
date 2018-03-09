@@ -1,3 +1,23 @@
-.container{
+body,html,div,p{
+    margin: 0;
+    padding:0;
+}
+.len-article{
     color:#1f4eaf;
+    padding:20px;
+}
+ 
+.len-article .paragraph{
+    padding: 10px 20px;
+    background: #eee;
+    margin: 0;
+    color:#192f20;
+}
+.len-article img{
+    width:200px;
+}
+.len-article  .len-code{
+    padding: 10px 0;
+    color: #00f;
+    background: #ccc;
 }

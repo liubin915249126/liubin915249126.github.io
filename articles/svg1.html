@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,80 @@
     <link rel="stylesheet" href="./article.css" type="text/css">
     <title>文章详情</title>
 </head>
-<body>
-    <div class="container">
-       <div>
-          <h2>SVG 相关学习</h2>
-       </div>
-       <div>
 
-       </div>
+<body>
+    <div class="len-article">
+        <div>
+            <h2>SVG 相关学习</h2>
+        </div>
+        <div>
+            <h4>SVG</h4>
+            <div class="paragraph">SVG 指可伸缩矢量图形 (Scalable Vector Graphics)</div>
+        </div>
+        <div>
+            <h4>SVG viewBox</h4>
+            <div class="paragraph">
+                <div>viewport: svg 实际大小</div>
+                <div>viewBox="x, y, width, height" // x:左上角横坐标，y:左上角纵坐标，width:宽度，height:高度</div>
+                <div>视区盒子：以视区盒子大小选中元素然后缩放至viewport的大小</div>
+            </div>
+        </div>
+        <div>
+            <img class="small-img" src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/viewbox.gif" />
+        </div>
+        <div>
+            preserveAspectRatio() 第1个值表示，viewBox如何与SVG viewport对齐；第2个值表示，如何维持高宽比（如果有)
+            <div class="paragraph">
+                <div>meet 保持纵横比同时比例大的方向缩放适应viewport</div>
+                <div>slice 保持纵横比同时比例小的方向缩放适应viewport</div>
+                <div>none 扭曲纵横比以充分适应viewport </div>
+            </div>
+        </div>
+        <div>
+            <h4>参考文章
+                <a target="blank" href="http://www.zhangxinxu.com/wordpress/2014/08/svg-viewport-viewbox-preserveaspectratio/">张鑫旭</a>
+            </h4>
+        </div>
+        <div>
+            <h2>渐变</h2>
+            <h4>线性渐变</h4>
+            先定义再引用
+            <div class="len-code">
+                <pre class="prettyprint">
+                            <svg width="660" height="220">
+                                    <defs>
+                                        <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#05a" />
+                                            <stop offset="50%" stop-color="#a55" />
+                                            <stop offset="100%" stop-color="#0a5" />
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <svg width="660" height="220">
+                                    <rect x="10" y="10" width="600" height="200" fill="url(#linear)" />
+                                </svg>
+                                <svg width="660" height="220"> 
+                                    <rect x="10" y="10" width="600" height="200" stroke="url(#linear)" stroke-width="20" fill="#fff"/>
+                                </svg>
+                    </pre>
+            </div>
+
+        </div>
     </div>
+    <script type="text/javascript">
+      window.onload=function(){
+        transformCode()
+      }
+      function transformCode(){
+        var lenCodes = document.querySelectorAll('.len-code');
+        [].slice.call(lenCodes).forEach(function(lenCode){
+           var pre = lenCode.querySelector('pre');
+           var code = pre.innerHTML;
+           pre.innerHtml= "";
+           pre.innerText = code;
+        });
+      }
+    </script>
 </body>
+
 </html>

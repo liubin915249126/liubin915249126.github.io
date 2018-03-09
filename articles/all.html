@@ -26,7 +26,7 @@
         <div class="row">
 
         </div>
-        <div class="col-md-6 col-md-12" id="template" style="display:none;">
+        <div class="col-md-6 col-xs-12" id="template" style="display:none;">
             <article class="article">
                 <a class="title" href="https://github.com/liubin915249126/HTML-CSS-SVG/tree/master/SVG#svg-%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0"
                     target="blank">
@@ -53,12 +53,12 @@
     // 切换页面
     $(function () {
         // 渲染文章
-        allArticles.forEach(function (article) {
+        allArticles.forEach(function (article,index) {
             var $template = $('#template').clone();
             $template.css('display', 'block')
                 .find('.title')
                 .attr('href', article.target)
-                .find('h4').text(article.title);
+                .find('h4').text("第"+ (index+1) + "篇: "+article.title);
             $template.find('.tags').html('')
             article.tags.forEach(function (tag) {
                 var $tag = $('<span class="label label-primary"></span>');

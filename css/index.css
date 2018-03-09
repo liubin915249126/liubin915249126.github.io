@@ -115,7 +115,7 @@ a:hover{
     overflow: hidden;
 }
 .main_content:hover{
-    overflow: auto;
+    /* overflow: auto; */
 }
 .main_content .all-articles{
     height:calc(100vh - 130px);

@@ -47,7 +47,7 @@
             <h4>线性渐变</h4>
             先定义再引用
             <div class="len-code">
-                <pre class="prettyprint">
+                <pre>
                             <svg width="660" height="220">
                                     <defs>
                                         <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -65,22 +65,51 @@
                                 </svg>
                     </pre>
             </div>
-
+            <h4>径向渐变</h4>
+            先定义再引用
+            <div class="len-code">
+                <pre>
+                        <svg width="660" height="330">
+                                <defs>
+                                    <radialGradient id="radial" fx="50%" fy="50%" cx="50%" cy="50%" r="50%">
+                                        <stop offset="0%" stop-color="#05a" stop-opacity="1" />
+                                        <stop offset="100%" stop-color="#0a5" stop-opacity="1" /> 
+                                    </radialGradient>
+                                </defs>
+                                <rect x="0" y="0" width="600" height="300" fill="url(#radial)" /> 
+                            </svg> 
+                </pre>
+            </div>
+        </div>
+        <div>
+           <h4>stop属性</h4>
+           <div class="paragraph">
+                <div>offset: 在径向渐变中，它表示从点(fx,fy)到外边缘的圆的百分比值距离。它定义了渐变结点的位置。值从0到1之间，或者0%到100%。</div>
+                <div>stop-color: 定义offset结点位置的颜色</div>
+                <div>stop-opacity: 定义颜色结点的透明度，值从0到1，或0%到100%。</div>
+           </div>
+        </div>
+        <div>
+            <div>gradientUnit属性和spreadMethod属性类似于线性渐变</div>
+            <div>焦点:
+                <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/SVG_Radial_Grandient_Focus.png"/>
+            </div>
         </div>
     </div>
     <script type="text/javascript">
-      window.onload=function(){
-        transformCode()
-      }
-      function transformCode(){
-        var lenCodes = document.querySelectorAll('.len-code');
-        [].slice.call(lenCodes).forEach(function(lenCode){
-           var pre = lenCode.querySelector('pre');
-           var code = pre.innerHTML;
-           pre.innerHtml= "";
-           pre.innerText = code;
-        });
-      }
+        window.onload = function () {
+            transformCode()
+        }
+
+        function transformCode() {
+            var lenCodes = document.querySelectorAll('.len-code');
+            [].slice.call(lenCodes).forEach(function (lenCode) {
+                var pre = lenCode.querySelector('pre');
+                var code = pre.innerHTML;
+                pre.innerHtml = "";
+                pre.innerText = code;
+            });
+        }
     </script>
 </body>
 

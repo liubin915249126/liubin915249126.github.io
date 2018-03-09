@@ -83,8 +83,8 @@
         })
         
         // 有父级时隐藏头部 
-        if(window.parent){
-           $('.header').css('dispaly',"none")
+        if(window.parent.document.getElementById('showcontent')){
+           $('.header').css('display',"none")
         }
     })
 </script>

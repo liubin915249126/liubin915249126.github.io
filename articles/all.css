@@ -37,7 +37,7 @@ header{
 }
 .article-lists .article .content img{
   float:left;
-  width:100px;
+  height:100px;
   margin-right: 10px;
 }
 .article .tags .label:not(:first-child){

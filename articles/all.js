@@ -16,7 +16,7 @@ var allArticles = [
     {
         title:'原生js实现视差滚动效果（类似D3官网的效果），兼容IE',
         tags:['javascript','动画','Parallax'],
-        target:'https://github.com/liubin915249126/javascript/tree/master/Parallax#js%E8%A7%86%E5%B7%AE%E6%95%88%E6%9E%9C',
+        target:'parallax.html',
         img:{src:'https://github.com/liubin915249126/javascript/raw/master/Parallax/img/parallax.gif',alt:'效果图'},
         description:'鼠标在图片上上下左右滑动时,让图片整体转动,转动方向与鼠标移动的方向相同,从而实现视差效果'
     },

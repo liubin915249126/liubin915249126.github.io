@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>liubin website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="用SVG连接两个div的直线，拖动实时改变位置用d3.js动态添加 path,line 节点，并动态修改节点属性 1.产品经理提出的需求    用带箭头的虚线将两个位置不固定的div连接起来,初听到这个需求一头雾水，传统的div可以做直线，但斜起来不太好做，幸亏之前接触过svg,里面有一个line标签，知道起始中止两个点的位置，就可以将两个点连接起来了。  至于箭头,可以这么做先定义箭头：  12">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="liubin website">
+    <meta property="og:url" content="http://yoursite.com/2018/03/10/svg2/index.html">
+    <meta property="og:site_name" content="liubin website">
+    <meta property="og:description" content="用SVG连接两个div的直线，拖动实时改变位置用d3.js动态添加 path,line 节点，并动态修改节点属性 1.产品经理提出的需求    用带箭头的虚线将两个位置不固定的div连接起来,初听到这个需求一头雾水，传统的div可以做直线，但斜起来不太好做，幸亏之前接触过svg,里面有一个line标签，知道起始中止两个点的位置，就可以将两个点连接起来了。  至于箭头,可以这么做先定义箭头：  12">
+    <meta property="og:image" content="https://github.com/liubin915249126/javascript/blob/master/SVG/image/svgDrag.gif">
+    <meta property="og:updated_time" content="2018-03-10T09:51:25.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="liubin website">
+    <meta name="twitter:description" content="用SVG连接两个div的直线，拖动实时改变位置用d3.js动态添加 path,line 节点，并动态修改节点属性 1.产品经理提出的需求    用带箭头的虚线将两个位置不固定的div连接起来,初听到这个需求一头雾水，传统的div可以做直线，但斜起来不太好做，幸亏之前接触过svg,里面有一个line标签，知道起始中止两个点的位置，就可以将两个点连接起来了。  至于箭头,可以这么做先定义箭头：  12">
+    <meta name="twitter:image" content="https://github.com/liubin915249126/javascript/blob/master/SVG/image/svgDrag.gif">
+    <link rel="stylesheet" href="./style.css">
+    <style type="text/css">
+        header {
+            background-color: #000000;
+            height: 40px;
+            color: #ffffff;
+
+        }
+
+        .lb_logo {
+            margin-left: 60px;
+            height: 40px;
+            width: 45px;
+            vertical-align: middle;
+            line-height: 40px;
+        }
+
+        .logo_a {
+            float: right;
+            text-decoration: none;
+            color: #ffffff;
+            height: 40px;
+            line-height: 40px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="wrap">
+            <header class="header">
+                <a href="../index.html" target="_blank">
+                    <img src="../img/liubin.jpg" class="lb_logo">
+                    <span>刘宾</span>
+                </a>
+
+                <span>
+                    <a class="logo_a" href="../index.html" target="_blank">返回首页</a>
+                </span>
+            </header>
+            <div class="outer">
+                <section id="main">
+                    <article id="post-svg2" class="article article-type-post" itemscope itemprop="blogPost">
+                        <div class="article-meta">
+                            <a href="/2018/03/10/svg2/" class="article-date">
+                                <time datetime="2018-03-10T09:51:17.076Z" itemprop="datePublished">2018-03-10</time>
+                            </a>
+
+                        </div>
+                        <div class="article-inner">
+
+
+                            <div class="article-entry" itemprop="articleBody">
+
+                                <h2 id="用SVG连接两个div的直线，拖动实时改变位置">
+                                    <a href="#用SVG连接两个div的直线，拖动实时改变位置" class="headerlink" title="用SVG连接两个div的直线，拖动实时改变位置"></a>用SVG连接两个div的直线，拖动实时改变位置</h2>
+                                <p>
+                                    <img src="https://raw.githubusercontent.com/liubin915249126/javascript/master/SVG/image/svgDrag.gifif" alt="效果图">
+                                    <br>用d3.js动态添加 path,line 节点，并动态修改节点属性</p>
+                                <h4 id="1-产品经理提出的需求">
+                                    <a href="#1-产品经理提出的需求" class="headerlink" title="1.产品经理提出的需求"></a>1.产品经理提出的需求</h4>
+                                <blockquote>
+                                </blockquote>
+                                <p> 用带箭头的虚线将两个位置不固定的div连接起来,初听到这个需求一头雾水，传统的div可以做直线，但斜起来不太好做，幸亏之前接触过svg,里面有一个line标签，知道起始中止两个点的位置，就可以将两个点连接起来了。
+                                    <br> 至于箭头,可以这么做先定义箭头：
+                                    <br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><span class="line">&lt;svg&gt;</span><br><span class="line">    &lt;defs&gt;</span><br><span class="line">        &lt;marker id=&quot;arrow&quot; markerUnits=&quot;strokeWidth&quot; markerWidth=&quot;12&quot; markerHeight=&quot;12&quot; viewBox=&quot;0 0 12 12&quot; refX=&quot;6&quot; refY=&quot;6&quot; orient=&quot;auto&quot;&gt;</span><br><span class="line">            &lt;path xmlns=&quot;http://www.w3.org/2000/svg&quot; d=&quot;M2,2 L10,6 L2,10 L6,6 L2,2&quot; style=&quot;fill: #000000;&quot; /&gt;</span><br><span class="line">        &lt;/marker&gt;</span><br><span class="line">    &lt;/defs&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <p> 将箭头放在直线上：marker-end=”url(#arrow)”
+                                    <br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><span class="line">1</span><br></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><span class="line">&lt;line  x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;200&quot; y2=&quot;50&quot; stroke=&quot;#000&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#arrow)&quot;stroke-dasharray=&quot;10,10&quot;&gt;&lt;/line&gt;</span><br></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <blockquote>
+                                </blockquote>
+                                <h4 id="2-确定起始中止两个点左上角的位置">
+                                    <a href="#2-确定起始中止两个点左上角的位置" class="headerlink" title="2.确定起始中止两个点左上角的位置"></a>2.确定起始中止两个点左上角的位置</h4>
+                                <blockquote>
+                                </blockquote>
+                                <p> 需要连接的两个div及SVG都相对于某一个div.wrap绝对定位，可以先求得两个div左上角相对与div.wrap坐标：
+                                    <br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><span class="line"> //获取元素左上角相对于某一元素的的位置</span><br><span class="line"> function getElCoordinate(dom) &#123;</span><br><span class="line">             var t = dom.offsetTop;</span><br><span class="line">             var l = dom.offsetLeft;</span><br><span class="line">             var w = dom.offsetWidth;</span><br><span class="line">             var h = dom.offsetHeight;</span><br><span class="line">             dom = dom.offsetParent;</span><br><span class="line">             while (!$(dom).hasClass(&apos;wrap&apos;)) &#123;</span><br><span class="line">                 t += dom.offsetTop;</span><br><span class="line">                 l += dom.offsetLeft;</span><br><span class="line">                 dom = dom.offsetParent;</span><br><span class="line">             &#125;; return &#123;</span><br><span class="line">                 top: t,//Y轴坐标</span><br><span class="line">                 left: l,//X轴坐标</span><br><span class="line">                 width:w,//元素宽度</span><br><span class="line">                 height:h//元素高度 </span><br><span class="line">             &#125;;</span><br><span class="line">         &#125;</span><br><span class="line">&#125;)</span><br></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <blockquote>
+                                </blockquote>
+                                <h4 id="3-确定连接点在div上的位置：">
+                                    <a href="#3-确定连接点在div上的位置：" class="headerlink" title="3.确定连接点在div上的位置："></a>3.确定连接点在div上的位置：</h4>
+                                <blockquote>
+                                </blockquote>
+                                <p> 分为两种情况：终点div位于起点div上方,终点div位于起点div下方。
+                                    <br>
+                                    <figure class="highlight plain">
+                                        <table>
+                                            <tr>
+                                                <td class="gutter">
+                                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre>
+                                                </td>
+                                                <td class="code">
+                                                    <pre><span class="line">var pos1 = getElCoordinate($(&apos;.item1&apos;)[0])//起点div的位置</span><br><span class="line">var pos2 = getElCoordinate($(&apos;.item2&apos;)[0])//终点div的位置</span><br><span class="line">function getPos(pos1, pos2)&#123;</span><br><span class="line">           //分两种情况</span><br><span class="line">           var x1,y1,x2,y2;</span><br><span class="line">           if(pos2.top&lt;pos1.top)&#123;</span><br><span class="line">               x1 = pos1.left + pos1.width/2;</span><br><span class="line">               y1 = pos1.top;</span><br><span class="line">               y2 = pos2.top + pos2.height</span><br><span class="line">              if(pos2.left&lt;pos1.left)&#123;</span><br><span class="line">                 x2 = pos2.left + pos2.width/2</span><br><span class="line">           &#125;else&#123;</span><br><span class="line">               x1 = pos1.left + pos1.width / 2;</span><br><span class="line">               y1 = pos1.top + pos1.height;</span><br><span class="line">               x2 = pos2.left + pos2.width/2</span><br><span class="line">               y2 = pos2.top </span><br><span class="line">           &#125;</span><br><span class="line">           return &#123;</span><br><span class="line">               start :&#123;x:x1,y:y1&#125;,</span><br><span class="line">               end : &#123;x:x2,y:y2&#125;</span><br><span class="line">           &#125;</span><br><span class="line">        &#125;</span><br></pre>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </figure>
+                                </p>
+                                <blockquote>
+                                </blockquote>
+                                <h4 id="4-确定起止点位置后连线。">
+                                    <a href="#4-确定起止点位置后连线。" class="headerlink" title="4.确定起止点位置后连线。"></a>4.确定起止点位置后连线。</h4>
+                                <blockquote>
+                                </blockquote>
+                                <figure class="highlight plain">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><span class="line">function move()&#123;</span><br><span class="line">            var pos1 = getElCoordinate($(&apos;.item1&apos;)[0])</span><br><span class="line">            var pos2 = getElCoordinate($(&apos;.item2&apos;)[0])</span><br><span class="line">            var start = getPos(pos1, pos2).start</span><br><span class="line">            var end = getPos(pos1, pos2).end</span><br><span class="line"></span><br><span class="line">            $(&apos;#line&apos;).attr(&#123; x1: start.x, y1: start.y, x2: end.x, y2: end.y &#125;)</span><br><span class="line">            $(&apos;#path&apos;).attr(&#123; d: &apos;M20,20 L100,100&apos; &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        move()</span><br></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <blockquote>
+                                </blockquote>
+                                <h4 id="5-两个div分别拖动并保持线始终连接">
+                                    <a href="#5-两个div分别拖动并保持线始终连接" class="headerlink" title="5.两个div分别拖动并保持线始终连接"></a>5.两个div分别拖动并保持线始终连接</h4>
+                                <blockquote>
+                                </blockquote>
+                                <pre><code>  drag($(&apos;.item&apos;), move)
+                      function drag(obj,callback) {
+                         var dragEles = obj;
+                         dragEles.each(function(index, dragEleDom){
+                             var _move = false;//移动标记
+                             var _x, _y;//鼠标离控件左上角的相对位置
+                             var dragEle = $(dragEleDom)
+                             dragEle.click(function () {
+                                 //alert(&quot;click&quot;);//点击（松开后触发）
+                             }).mousedown(function (e) {
+                                 _move = true;
+                                 _x = e.pageX - parseInt(dragEle.css(&quot;left&quot;));
+                                 _y = e.pageY - parseInt(dragEle.css(&quot;top&quot;));
+                                 // dragEle.fadeTo(20, 0.9);//点击后开始拖动并透明显示
+                             });
+                             $(document).mousemove(function (e) {
+                                 if (_move) {
+                                     var x = e.pageX - _x;//移动时根据鼠标位置计算控件左上角的绝对位置
+                                     var y = e.pageY - _y;
+                                     dragEle.css({ top: y, left: x });//控件新位置
+                                     if(callback){callback()}
+                                 }
+                             }).mouseup(function () {
+                                 _move = false;
+                                 dragEle.fadeTo(&quot;fast&quot;, 1);//松开鼠标后停止移动并恢复成不透明
+                             });
+                         })
+                    
+                    }
+                    </code></pre>
+                                <blockquote>
+                                </blockquote>
+                                <h4 id="梳理下流程：分析需求-gt-确定使用SVG-gt-找到连接点-gt-连线-gt-拖动时保持连线。">
+                                    <a href="#梳理下流程：分析需求-gt-确定使用SVG-gt-找到连接点-gt-连线-gt-拖动时保持连线。" class="headerlink" title="梳理下流程：分析需求&gt;确定使用SVG&gt;找到连接点&gt;连线&gt;拖动时保持连线。"></a>梳理下流程：分析需求&gt;确定使用SVG&gt;找到连接点&gt;连线&gt;拖动时保持连线。</h4>
+                                <h4 id="源码托管于github欢迎star">
+                                    <a href="#源码托管于github欢迎star" class="headerlink" title="源码托管于github欢迎star"></a>源码托管于
+                                    <a href="https://github.com/liubin915249126/javascript/tree/master/SVG" target="_blank" rel="noopener">github</a>欢迎star</h4>
+
+                            </div>
+                            <footer class="article-footer">
+                                <a data-url="http://yoursite.com/2018/03/10/svg2/" data-id="cjel6xkv30003mpx8dfnht1nt" class="article-share-link">Teilen</a>
+
+
+                            </footer>
+                        </div>
+
+
+                        <nav id="article-nav">
+
+
+                            <a href="/2018/03/10/svg1/" id="article-nav-older" class="article-nav-link-wrap">
+                                <strong class="article-nav-caption">Älter</strong>
+                                <div class="article-nav-title"></div>
+                            </a>
+
+                        </nav>
+
+
+                    </article>
+                </section>
+            </div>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-115451143-1');
+            </script>
+</body>
+
+</html>

@@ -26,6 +26,20 @@ var allArticles = [
         target:'https://github.com/liubin915249126/javascript/tree/master/lencharts#jquery%E6%8F%92%E4%BB%B6',
         img:{src:'https://github.com/liubin915249126/javascript/raw/master/lencharts/image/lenchart.gif',alt:'效果图'},
         description:'使用递归的方式深层遍历数据,架构图第二层为横向结构,从第三层开始为竖向结构,解决了横向太长的问题。点击加减号按钮可以显示与隐藏当前节点的子节点。'
+    },
+    {
+        title:'js判断鼠标划入方向',
+        tags:['javascript','动画','jquery','mouse'],
+        target:'https://github.com/liubin915249126/javascript#js%E5%88%A4%E6%96%AD%E9%BC%A0%E6%A0%87%E5%88%92%E5%85%A5%E6%96%B9%E5%90%91mousedirction',
+        img:{src:'https://github.com/liubin915249126/javascript/raw/master/image/dirction.gif',alt:'效果图'},
+        description:'根据鼠标滑入方向定制相应动画'
+    },
+    {
+        title:'react里面使用jquery插件',
+        tags:['javascript','jquery','react','jquery插件'],
+        target:'https://github.com/liubin915249126/react-study/blob/master/jquery-in-react.md#%E5%9C%A8react%E9%87%8C%E9%9D%A2%E4%BD%BF%E7%94%A8jquery%E6%8F%92%E4%BB%B6',
+        // img:{src:'https://github.com/liubin915249126/javascript/raw/master/image/dirction.gif',alt:'效果图'},
+        description:'webpack支持CMD，AMD语法，CMD，AMD的语法写文件，然后引入，在组件componentDidMount里面调用方法'
     }
     
 ]

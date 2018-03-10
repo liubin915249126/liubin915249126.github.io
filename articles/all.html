@@ -66,11 +66,15 @@
                 $template.find('.tags').append($tag)
             })
             $template.find('.content').attr('href', article.target)
-                .find('img').attr({
+                .find('.description').text(article.description);
+            if(article.img){
+                $template.find('img').attr({
                     'src': article.img.src,
                     'alt': article.img.alt
-                }).end()
-                .find('.description').text(article.description);
+                });
+            }    
+                
+                
             $('.article-lists .row').append($template);
         });
         // 文章点击事件 

@@ -2,7 +2,7 @@ var allArticles = [
     {
         title:'SVG相关学习(一)SVG基础',
         tags:['SVG','动画'],
-        target:'https://github.com/liubin915249126/HTML-CSS-SVG/tree/master/SVG#svg-%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0',
+        target:'svg2.html',
         img:{src:'https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/SVGArcs_Flags.png',alt:'SVGArcs_Flags'},
         description:'主要包括SVG基础知识，基本图形，渐变，还有path路径相关'
     },

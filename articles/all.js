@@ -19,6 +19,13 @@ var allArticles = [
         target:'https://github.com/liubin915249126/javascript/tree/master/Parallax#js%E8%A7%86%E5%B7%AE%E6%95%88%E6%9E%9C',
         img:{src:'https://github.com/liubin915249126/javascript/raw/master/Parallax/img/parallax.gif',alt:'效果图'},
         description:'鼠标在图片上上下左右滑动时,让图片整体转动,转动方向与鼠标移动的方向相同,从而实现视差效果'
+    },
+    {
+        title:'jquery组织架构图插件',
+        tags:['javascript','动画','jquery','jquery插件','orgnization'],
+        target:'https://github.com/liubin915249126/javascript/tree/master/lencharts#jquery%E6%8F%92%E4%BB%B6',
+        img:{src:'https://github.com/liubin915249126/javascript/raw/master/lencharts/image/lenchart.gif',alt:'效果图'},
+        description:'使用递归的方式深层遍历数据,架构图第二层为横向结构,从第三层开始为竖向结构,解决了横向太长的问题。点击加减号按钮可以显示与隐藏当前节点的子节点。'
     }
     
 ]

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+
+
+  <title>我的博客 | liubin website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="js视差效果 1.思路：    鼠标在图片上上下左右滑动时,让图片整体转动,转动方向与鼠标移动的方向相同,转动角度大小正相关于鼠标离开图像中心点的水平或垂直距离，图片转动可以用css3的：  1transform:rotateX() rotateY();   实现,剩下的是求鼠标的位置图片中心点的距离差，鼠标位置为：  1e.clientX; e.clientY //鼠标相对于屏幕可视区域的位置(">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="我的博客">
+  <meta property="og:url" content="http://yoursite.com/2018/03/08/example/index.html">
+  <meta property="og:site_name" content="liubin website">
+  <meta property="og:description" content="js视差效果 1.思路：    鼠标在图片上上下左右滑动时,让图片整体转动,转动方向与鼠标移动的方向相同,转动角度大小正相关于鼠标离开图像中心点的水平或垂直距离，图片转动可以用css3的：  1transform:rotateX() rotateY();   实现,剩下的是求鼠标的位置图片中心点的距离差，鼠标位置为：  1e.clientX; e.clientY //鼠标相对于屏幕可视区域的位置(">
+  <meta property="og:image" content="https://github.com/liubin915249126/javascript/blob/master/Parallax/img/parallax.gif">
+  <meta property="og:updated_time" content="2018-03-10T08:44:41.000Z">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="我的博客">
+  <meta name="twitter:description" content="js视差效果 1.思路：    鼠标在图片上上下左右滑动时,让图片整体转动,转动方向与鼠标移动的方向相同,转动角度大小正相关于鼠标离开图像中心点的水平或垂直距离，图片转动可以用css3的：  1transform:rotateX() rotateY();   实现,剩下的是求鼠标的位置图片中心点的距离差，鼠标位置为：  1e.clientX; e.clientY //鼠标相对于屏幕可视区域的位置(">
+  <meta name="twitter:image" content="https://github.com/liubin915249126/javascript/blob/master/Parallax/img/parallax.gif">
+
+  <link rel="alternate" href="/atom.xml" title="liubin website" type="application/atom+xml">
+
+
+  <link rel="icon" href="/favicon.png">
+
+
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <!-- <header id="header">
+        <div id="banner"></div>
+        <div id="header-outer" class="outer">
+          <div id="header-title" class="inner">
+            <h1 id="logo-wrap">
+              <a href="/" id="logo">liubin website</a>
+            </h1>
+
+          </div>
+          <div id="header-inner" class="inner">
+            <nav id="main-nav">
+              <a id="main-nav-toggle" class="nav-icon"></a>
+
+              <a class="main-nav-link" href="/">Home</a>
+
+              <a class="main-nav-link" href="/archives">Archives</a>
+
+            </nav>
+            <nav id="sub-nav">
+
+              <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+
+              <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+            </nav>
+            <div id="search-form-wrap">
+              <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form">
+                <input type="search" name="q" class="search-form-input" placeholder="Search">
+                <button type="submit" class="search-form-submit">&#xF002;</button>
+                <input type="hidden" name="sitesearch" value="http://yoursite.com">
+              </form>
+            </div>
+          </div>
+        </div>
+      </header> -->
+      <div class="outer">
+        <section id="main">
+          <article id="post-example" class="article article-type-post" itemscope itemprop="blogPost">
+            <div class="article-meta">
+              <a href="/2018/03/08/example/" class="article-date">
+                <time datetime="2018-03-08T07:29:53.491Z" itemprop="datePublished">2018-03-08</time>
+              </a>
+
+            </div>
+            <div class="article-inner">
+
+
+              <header class="article-header">
+
+
+                <h1 class="article-title" itemprop="name">
+                  我的博客
+                </h1>
+
+
+              </header>
+
+              <div class="article-entry" itemprop="articleBody">
+
+                <h1 id="js视差效果">
+                  <a href="#js视差效果" class="headerlink" title="js视差效果"></a>js视差效果</h1>
+                <p>
+                  <img src="https://github.com/liubin915249126/javascript/blob/master/Parallax/img/parallax.gif" alt="效果图">
+                </p>
+                <h4 id="1-思路：">
+                  <a href="#1-思路：" class="headerlink" title="1.思路："></a>1.思路：</h4>
+                <blockquote>
+                </blockquote>
+                <p> 鼠标在图片上上下左右滑动时,让图片整体转动,转动方向与鼠标移动的方向相同,转动角度大小正相关于鼠标离开图像中心点的水平或垂直距离，图片转动可以用css3的：
+                  <br>
+                  <figure class="highlight plain">
+                    <table>
+                      <tr>
+                        <td class="gutter">
+                          <pre><span class="line">1</span><br></pre>
+                        </td>
+                        <td class="code">
+                          <pre><span class="line">transform:rotateX() rotateY();</span><br></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </figure>
+                </p>
+                <p> 实现,剩下的是求鼠标的位置图片中心点的距离差，鼠标位置为：
+                  <br>
+                  <figure class="highlight plain">
+                    <table>
+                      <tr>
+                        <td class="gutter">
+                          <pre><span class="line">1</span><br></pre>
+                        </td>
+                        <td class="code">
+                          <pre><span class="line">e.clientX; e.clientY //鼠标相对于屏幕可视区域的位置(不包括滚动条)</span><br></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </figure>
+                </p>
+                <p> 对于图片中心点可以先求图片左上角相对于屏幕的位置坐标，加上图片宽高的一半即可求得。</p>
+                <blockquote>
+                </blockquote>
+                <h4 id="2-求一个元素左上角相对于屏幕的位置">
+                  <a href="#2-求一个元素左上角相对于屏幕的位置" class="headerlink" title="2.求一个元素左上角相对于屏幕的位置"></a>2.求一个元素左上角相对于屏幕的位置</h4>
+                <blockquote>
+                </blockquote>
+                <figure class="highlight plain">
+                  <table>
+                    <tr>
+                      <td class="gutter">
+                        <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre>
+                      </td>
+                      <td class="code">
+                        <pre><span class="line">   //获取元素相对于屏幕绝对位置</span><br><span class="line">function getAbsPosition(element)&#123;</span><br><span class="line">   var abs=&#123;x:0,y:0&#125;</span><br><span class="line">   //如果浏览器兼容此方法</span><br><span class="line">   if (document.documentElement.getBoundingClientRect)&#123;</span><br><span class="line">       //注意，getBoundingClientRect()是jQuery对象的方法</span><br><span class="line">       //如果不用jQuery对象，可以使用else分支。</span><br><span class="line">       abs.x = element.getBoundingClientRect().left;</span><br><span class="line">       abs.y = element.getBoundingClientRect().top;</span><br><span class="line"></span><br><span class="line">       abs.x += window.screenLeft +</span><br><span class="line">                   document.documentElement.scrollLeft -</span><br><span class="line">                   document.documentElement.clientLeft;</span><br><span class="line">       abs.y += window.screenTop +</span><br><span class="line">                   document.documentElement.scrollTop -</span><br><span class="line">                   document.documentElement.clientTop;</span><br><span class="line">     &#125;</span><br><span class="line">   //如果浏览器不兼容此方法</span><br><span class="line">   else&#123;</span><br><span class="line">       while(element!=document.body)&#123;</span><br><span class="line">           abs.x+=element.offsetLeft;</span><br><span class="line">           abs.y+=element.offsetTop;</span><br><span class="line">           element=element.offsetParent;</span><br><span class="line">       &#125;</span><br><span class="line">    //计算想对位置</span><br><span class="line">        abs.x += window.screenLeft +</span><br><span class="line">               document.body.clientLeft - document.body.scrollLeft;</span><br><span class="line">        abs.y += window.screenTop +</span><br><span class="line">               document.body.clientTop - document.body.scrollTop;</span><br><span class="line">      &#125;</span><br><span class="line">      return abs;</span><br><span class="line">  &#125;</span><br></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </figure>
+                <p>此方法循环累加位置坐标，直到父元素为根元素。
+                  <br>
+                  <figure class="highlight plain">
+                    <table>
+                      <tr>
+                        <td class="gutter">
+                          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre>
+                        </td>
+                        <td class="code">
+                          <pre><span class="line">function getCenterPosition(element)&#123;</span><br><span class="line">       center=&#123;x:0,y:0&#125;</span><br><span class="line">       var leftTop=getAbsPosition(element[0])</span><br><span class="line">       // console.log(leftTop)</span><br><span class="line">       // console.log(element.css(&apos;width&apos;),element.css(&apos;height&apos;))</span><br><span class="line">       center.x =  leftTop.x + parseInt(element.css(&apos;width&apos;))/2</span><br><span class="line">       center.y =  leftTop.y + parseInt(element.css(&apos;height&apos;))/2</span><br><span class="line">       return center</span><br><span class="line">     &#125;</span><br></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </figure>
+                </p>
+                <p>获取元素中心点的位置。</p>
+                <blockquote>
+                </blockquote>
+                <h4 id="3-计算鼠标与元素中心点的距离差，使元素转动">
+                  <a href="#3-计算鼠标与元素中心点的距离差，使元素转动" class="headerlink" title="3.计算鼠标与元素中心点的距离差，使元素转动"></a>3.计算鼠标与元素中心点的距离差，使元素转动</h4>
+                <blockquote>
+                </blockquote>
+                <p>当鼠标在图片上移动时,实时计算鼠标与元素中心点的距离差，经过比例换算，修改元素的transform
+                  <br>
+                  <figure class="highlight plain">
+                    <table>
+                      <tr>
+                        <td class="gutter">
+                          <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre>
+                        </td>
+                        <td class="code">
+                          <pre><span class="line">$(document).on(&apos;mousemove&apos;,&apos;.layerWrap&apos;,function(e)&#123;</span><br><span class="line">         //console.log(e.clientX,e.clientY)</span><br><span class="line">         CenterPosition = getCenterPosition($(&apos;.layer img&apos;))</span><br><span class="line">         moveY = (CenterPosition.x - e.clientX)/30</span><br><span class="line">         moveX = 0-(CenterPosition.y - e.clientY)/27</span><br><span class="line">         //console.log(moveX,moveY)</span><br><span class="line">         $(&apos;.layerWrap&apos;).css(&apos;transform&apos;,&apos;rotateX(&apos;+moveX+&apos;deg)&apos;+&apos;&apos;+&apos;rotateY(&apos;+moveY+&apos;deg)&apos;)</span><br><span class="line">         $(&apos;.layerWrap&apos;).css(&apos;webKitTransform&apos;,&apos;rotateX(&apos;+moveX+&apos;deg)&apos;+&apos;&apos;+&apos;rotateY(&apos;+moveY+&apos;deg)&apos;)</span><br><span class="line">     &#125;)</span><br></pre>
+                        </td>
+                      </tr>
+                    </table>
+                  </figure>
+                </p>
+                <p>即可看到效果。</p>
+                <blockquote>
+                </blockquote>
+
+
+              </div>
+              <footer class="article-footer">
+                <a data-url="http://yoursite.com/2018/03/08/example/" data-id="cjel4krg80000jfx83rq6miwc" class="article-share-link">Teilen</a>
+
+
+              </footer>
+            </div>
+
+
+            <nav id="article-nav">
+
+
+              <a href="/2018/03/08/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+                <strong class="article-nav-caption">Älter</strong>
+                <div class="article-nav-title">Hello World</div>
+              </a>
+
+            </nav>
+
+
+          </article>
+
+        </section>
+
+        <!-- <aside id="sidebar">
+
+
+
+
+
+
+
+
+
+
+          <div class="widget-wrap">
+            <h3 class="widget-title">Archiv</h3>
+            <div class="widget">
+              <ul class="archive-list">
+                <li class="archive-list-item">
+                  <a class="archive-list-link" href="/archives/2018/03/">March 2018</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+
+
+          <div class="widget-wrap">
+            <h3 class="widget-title">letzter Beitrag</h3>
+            <div class="widget">
+              <ul>
+
+                <li>
+                  <a href="/2018/03/08/example/">我的博客</a>
+                </li>
+
+                <li>
+                  <a href="/2018/03/08/hello-world/">Hello World</a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+
+
+        </aside> -->
+
+      </div>
+      <!-- <footer id="footer">
+
+        <div class="outer">
+          <div id="footer-info" class="inner">
+            &copy; 2018 liubinhexo
+            <br> Powered by
+            <a href="http://hexo.io/" target="_blank">Hexo</a>
+          </div>
+        </div>
+      </footer> -->
+    </div>
+    <!-- <nav id="mobile-nav">
+
+      <a href="/" class="mobile-nav-link">Home</a>
+
+      <a href="/archives" class="mobile-nav-link">Archives</a>
+
+    </nav> -->
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+    <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+    <script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+
+</html>

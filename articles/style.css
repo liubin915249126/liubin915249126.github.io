@@ -1376,3 +1376,9 @@ body {
   .article-meta{
     display:none;
   }
+  #article-nav{
+    display: none;
+  }
+  .article-share-link{
+    display:none;
+  }

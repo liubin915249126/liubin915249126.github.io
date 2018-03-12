@@ -30,7 +30,7 @@ var allArticles = [
     {
         title:'js判断鼠标划入方向',
         tags:['javascript','动画','jquery','mouse'],
-        target:'https://github.com/liubin915249126/javascript#js%E5%88%A4%E6%96%AD%E9%BC%A0%E6%A0%87%E5%88%92%E5%85%A5%E6%96%B9%E5%90%91mousedirction',
+        target:'../example/mousedirction.html',
         img:{src:'https://github.com/liubin915249126/javascript/raw/master/image/dirction.gif',alt:'效果图'},
         description:'根据鼠标滑入方向定制相应动画'
     },

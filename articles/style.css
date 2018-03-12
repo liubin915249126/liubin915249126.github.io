@@ -1372,4 +1372,7 @@ body {
     margin-right: 5px;
     display: inline-block;
   }
-  
+  /* 新加样式 */
+  .article-meta{
+    display:none;
+  }

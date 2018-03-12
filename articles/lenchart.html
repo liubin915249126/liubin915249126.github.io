@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>liubin website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="jquery插件 说明jquery插件皆可用于react,使用方法:react中使用jquery插件 效果图 使用方法:  123456789  $(&amp;apos;.orgWrap&amp;apos;).lenChart(&amp;#123;             data:obj,   //数据源             drag:true,  //是否可拖拽             depth:3,  //初">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="liubin website">
+    <meta property="og:url" content="http://yoursite.com/2018/03/12/lencharts/index.html">
+    <meta property="og:site_name" content="liubin website">
+    <meta property="og:description" content="jquery插件 说明jquery插件皆可用于react,使用方法:react中使用jquery插件 效果图 使用方法:  123456789  $(&amp;apos;.orgWrap&amp;apos;).lenChart(&amp;#123;             data:obj,   //数据源             drag:true,  //是否可拖拽             depth:3,  //初">
+    <meta property="og:image" content="https://github.com/liubin915249126/javascript/blob/master/lencharts/image/lenchart.gif">
+    <meta property="og:updated_time" content="2018-03-12T07:53:29.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="liubin website">
+    <meta name="twitter:description" content="jquery插件 说明jquery插件皆可用于react,使用方法:react中使用jquery插件 效果图 使用方法:  123456789  $(&amp;apos;.orgWrap&amp;apos;).lenChart(&amp;#123;             data:obj,   //数据源             drag:true,  //是否可拖拽             depth:3,  //初">
+    <meta name="twitter:image" content="https://github.com/liubin915249126/javascript/blob/master/lencharts/image/lenchart.gif">
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="wrap">
+            <header class="header">
+                <a href="../index.html" target="_blank">
+                    <img src="../img/liubin.jpg" class="lb_logo">
+                    <span>刘宾</span>
+                </a>
+
+                <span>
+                    <a class="logo_a" href="../index.html" target="_blank">返回首页</a>
+                </span>
+            </header>
+            <div class="outer">
+                <section id="main">
+                    <article id="post-lencharts" class="article article-type-post" itemscope itemprop="blogPost">
+                        <div class="article-meta">
+                            <a href="/2018/03/12/lencharts/" class="article-date">
+                                <time datetime="2018-03-12T07:53:18.704Z" itemprop="datePublished">2018-03-12</time>
+                            </a>
+
+                        </div>
+                        <div class="article-inner">
+
+
+                            <div class="article-entry" itemprop="articleBody">
+
+                                <h1 id="jquery插件">
+                                    <a href="#jquery插件" class="headerlink" title="jquery插件"></a>jquery插件</h1>
+                                <h3 id="说明">
+                                    <a href="#说明" class="headerlink" title="说明"></a>说明</h3>
+                                <p>jquery插件皆可用于react,使用方法:
+                                    <a href="https://github.com/liubin915249126/react-study/blob/master/jquery-in-react.md" target="_blank" rel="noopener">react中使用jquery插件</a>
+                                </p>
+                                <h3 id="效果图">
+                                    <a href="#效果图" class="headerlink" title="效果图"></a>效果图</h3>
+                                <p>
+                                    <img src="https://github.com/liubin915249126/javascript/raw/master/lencharts/image/lenchart.gif" alt="效果图">
+                                </p>
+                                <h4 id="使用方法">
+                                    <a href="#使用方法" class="headerlink" title="使用方法:"></a>使用方法:</h4>
+                                <figure class="highlight js">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><span class="line">$(<span class="string">'.orgWrap'</span>).lenChart(&#123;</span><br><span class="line">         data:obj,   <span class="comment">//数据源</span></span><br><span class="line">         drag:<span class="literal">true</span>,  <span class="comment">//是否可拖拽</span></span><br><span class="line">         depth:<span class="number">3</span>,  <span class="comment">//初始化展示的层级</span></span><br><span class="line">         renderdata:<span class="function"><span class="keyword">function</span>(<span class="params">data,$dom</span>)</span>&#123;&#125;, <span class="comment">//根据数据定制每个名片里面的DOM结构</span></span><br><span class="line">         callback:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125; <span class="comment">//渲染完图表后的回调函数    </span></span><br><span class="line">         &#125;)</span><br></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h4 id="数据源格式">
+                                    <a href="#数据源格式" class="headerlink" title="数据源格式"></a>数据源格式</h4>
+                                <figure class="highlight js">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><span class="line">  <span class="keyword">var</span> obj = &#123;</span><br><span class="line">    id:<span class="number">001</span>,</span><br><span class="line">    data:&#123;&#125;</span><br><span class="line">    children:[</span><br><span class="line">        &#123;</span><br><span class="line">          id:<span class="number">001</span>,</span><br><span class="line">          data:&#123;&#125;</span><br><span class="line">          children:[]</span><br><span class="line">      &#125;,</span><br><span class="line">      &#123;</span><br><span class="line">          id:<span class="number">001</span>,</span><br><span class="line">          data:&#123;&#125;</span><br><span class="line">          children:[]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h4 id="插件说明">
+                                    <a href="#插件说明" class="headerlink" title="插件说明"></a>插件说明</h4>
+                                <pre><code>使用递归的方式深层遍历数据,架构图第二层为横向结构,
+                    从第三层开始为竖向结构,解决了横向太长的问题。
+                    点击加减号按钮可以显示与隐藏当前节点的子节点。
+                    </code></pre>
+                                <h4 id="源码解析-jquery插件的写法">
+                                    <a href="#源码解析-jquery插件的写法" class="headerlink" title="源码解析(jquery插件的写法)"></a>源码解析(jquery插件的写法)</h4>
+                                <figure class="highlight js">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$,window,document</span>)</span>&#123;</span><br><span class="line">   $.fn.lenChart = <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;<span class="comment">//这里的options可以取到调用时传的参数</span></span><br><span class="line">       <span class="keyword">var</span> defaults = &#123;&#125;;</span><br><span class="line">       <span class="keyword">var</span> opts = $.extend(&#123;&#125;, defaults, options);</span><br><span class="line">       ...</span><br><span class="line">   &#125;</span><br><span class="line">&#125;)(jQuery,<span class="built_in">window</span>,<span class="built_in">document</span>)</span><br></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p> 代码托关于
+                                    <a href="https://github.com/liubin915249126/javascript/tree/master/lencharts#jquery%E6%8F%92%E4%BB%B6" target="_blank" rel="noopener">github</a>欢迎star </p>
+
+
+                            </div>
+                            <footer class="article-footer">
+                                <a data-url="http://yoursite.com/2018/03/12/lencharts/" data-id="cjenxwdl60001kzx8i1ss81cx" class="article-share-link">Teilen</a>
+
+
+                            </footer>
+                        </div>
+
+
+                        <nav id="article-nav">
+
+
+                            <a href="/2018/03/10/svg2/" id="article-nav-older" class="article-nav-link-wrap">
+                                <strong class="article-nav-caption">Älter</strong>
+                                <div class="article-nav-title"></div>
+                            </a>
+
+                        </nav>
+
+
+                    </article>
+                </section>
+            </div>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115451143-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-115451143-1');
+            </script>
+</body>
+
+</html>

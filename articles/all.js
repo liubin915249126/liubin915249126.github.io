@@ -50,7 +50,7 @@ var allArticles = [
     {
         title:'spacetree定制化展示',
         tags:['javascript','jquery','spacetree','svg','canvas'],
-        target:'../articles/jquery-in-react.html',
+        target:'../articles/spacetree.html',
         img:{src:'https://github.com/liubin915249126/javascript/raw/master/spacetree/image/spacetree1.gif',alt:'效果图'},
         description:'很好的canvas的组织架构图，从上到下按层级展示汇报关系,支持定制化内容，和异步加载子节点',
         creattime:'2018-03-12'

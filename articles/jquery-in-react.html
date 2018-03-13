@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>liubin website</title>
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="在react里面使用jquery插件背景:虽然现在react,vue等框架开启了前端开发的新篇章， 但对于一些比较复杂的页面，比如想在项目里面生成 组织架构图，人员汇报关系等还是需要用到之前的 jquery插件。比如： jsplumbspacetreelenchart   首先要在react里面引用jquery1234567891011121314151617     cnpm i --save-">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="liubin website">
+    <meta property="og:url" content="http://yoursite.com/2018/03/13/jquery-in-react/index.html">
+    <meta property="og:site_name" content="liubin website">
+    <meta property="og:description" content="在react里面使用jquery插件背景:虽然现在react,vue等框架开启了前端开发的新篇章， 但对于一些比较复杂的页面，比如想在项目里面生成 组织架构图，人员汇报关系等还是需要用到之前的 jquery插件。比如： jsplumbspacetreelenchart   首先要在react里面引用jquery1234567891011121314151617     cnpm i --save-">
+    <meta property="og:updated_time" content="2018-03-13T02:10:17.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="liubin website">
+    <meta name="twitter:description" content="在react里面使用jquery插件背景:虽然现在react,vue等框架开启了前端开发的新篇章， 但对于一些比较复杂的页面，比如想在项目里面生成 组织架构图，人员汇报关系等还是需要用到之前的 jquery插件。比如： jsplumbspacetreelenchart   首先要在react里面引用jquery1234567891011121314151617     cnpm i --save-">
+
+    <link rel="alternate" href="/atom.xml" title="liubin website" type="application/atom+xml">
+
+</head>
+
+<body>
+    <div id="container">
+        <div id="wrap">
+            <header class="header">
+                <a href="../index.html" target="_blank">
+                    <img src="../img/liubin.jpg" class="lb_logo">
+                    <span>刘宾</span>
+                </a>
+
+                <span>
+                    <a class="logo_a" href="../index.html" target="_blank">返回首页</a>
+                </span>
+            </header>
+            <div class="outer">
+                <section id="main">
+                    <article id="post-jquery-in-react" class="article article-type-post" itemscope itemprop="blogPost">
+                        <div class="article-meta">
+                            <a href="/2018/03/13/jquery-in-react/" class="article-date">
+                                <time datetime="2018-03-13T02:10:09.190Z" itemprop="datePublished">2018-03-13</time>
+                            </a>
+
+                        </div>
+                        <div class="article-inner">
+
+
+                            <div class="article-entry" itemprop="articleBody">
+
+                                <h2 id="在react里面使用jquery插件">
+                                    <a href="#在react里面使用jquery插件" class="headerlink" title="在react里面使用jquery插件"></a>在react里面使用jquery插件</h2>
+                                <h4 id="背景">
+                                    <a href="#背景" class="headerlink" title="背景:"></a>背景:</h4>
+                                <pre><code>虽然现在react,vue等框架开启了前端开发的新篇章，
+                    但对于一些比较复杂的页面，比如想在项目里面生成
+                    组织架构图，人员汇报关系等还是需要用到之前的
+                    jquery插件。比如：
+                    </code></pre>
+                                <p>
+                                    <a href="https://segmentfault.com/a/1190000011099455" target="_blank" rel="noopener">jsplumb</a>
+                                    <br>
+                                    <a href="https://segmentfault.com/a/1190000011132218" target="_blank" rel="noopener">spacetree</a>
+                                    <br>
+                                    <a href="https://segmentfault.com/a/1190000010978444" target="_blank" rel="noopener">lenchart</a>
+                                </p>
+                                <h4 id="首先要在react里面引用jquery">
+                                    <a href="#首先要在react里面引用jquery" class="headerlink" title="首先要在react里面引用jquery"></a>首先要在react里面引用jquery</h4>
+                                <figure class="highlight js">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><span class="line">cnpm i --save-dev jquery</span><br><span class="line">修改webpack配置文件:</span><br><span class="line">plugins:[</span><br><span class="line">   <span class="keyword">new</span> webpack.ProvidePlugin(&#123;</span><br><span class="line">   $:<span class="string">"jquery"</span>,</span><br><span class="line">   jQuery:<span class="string">"jquery"</span>,</span><br><span class="line">   <span class="string">"window.jQuery"</span>:<span class="string">"jquery"</span></span><br><span class="line">   &#125;)</span><br><span class="line"> ]</span><br></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <p>将$变量挂载到window下面，可以在项目中直接使用$,不用再引用</p>
+                                <h4 id="使用jquery插件的姿势">
+                                    <a href="#使用jquery插件的姿势" class="headerlink" title="使用jquery插件的姿势"></a>使用jquery插件的姿势</h4>
+                                <pre><code>首先用require(/your/path/jquery.plugin)引用jquery插件
+                    webpack支持ES6的import,requirejs.commonjs语法，可以用CMD,
+                    AMD的方式引用。
+                    </code></pre>
+                                <h5 id="AMD写法：">
+                                    <a href="#AMD写法：" class="headerlink" title="AMD写法："></a>AMD写法：</h5>
+                                <figure class="highlight js">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><span class="line">define([<span class="string">"jquery"</span>],<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">var</span> initialChart = <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">        <span class="comment">//插件逻辑</span></span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">    $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//页面逻辑</span></span><br><span class="line">    &#125;)</span><br><span class="line">    ...</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">       initialChart:initialChart <span class="comment">//导出函数</span></span><br><span class="line">    &#125; </span><br><span class="line">&#125;)</span><br></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h5 id="CMD写法">
+                                    <a href="#CMD写法" class="headerlink" title="CMD写法"></a>CMD写法</h5>
+                                <figure class="highlight js">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">orgOrgChart</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">      <span class="comment">//插件逻辑</span></span><br><span class="line">  &#125;</span><br><span class="line">  $(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">         <span class="comment">//页面逻辑</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="built_in">module</span>.exports.orgOrgChart = orgOrgChart <span class="comment">//导出函数</span></span><br></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h4 id="最后在react里面引用导出的函数并在生命周期函数里面调用">
+                                    <a href="#最后在react里面引用导出的函数并在生命周期函数里面调用" class="headerlink" title="最后在react里面引用导出的函数并在生命周期函数里面调用"></a>最后在react里面引用导出的函数并在生命周期函数里面调用</h4>
+                                <figure class="highlight js">
+                                    <table>
+                                        <tr>
+                                            <td class="gutter">
+                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                                <pre><span class="line"><span class="keyword">import</span> &#123;initialChart&#125; <span class="keyword">from</span> <span class="string">'../../es5Components/emp-orgChart.js'</span> </span><br><span class="line"><span class="keyword">import</span> &#123;orgOrgChart&#125; <span class="keyword">from</span> <span class="string">'../../es5Components/emp-orgChart.js'</span> </span><br><span class="line">...</span><br><span class="line">componentDidMount()&#123;</span><br><span class="line">    initialChart(<span class="keyword">this</span>.state.data);</span><br><span class="line">    orgOrgChart(<span class="keyword">this</span>.state.data)</span><br><span class="line">&#125;</span><br><span class="line">....</span><br></pre>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </figure>
+                                <h4 id="github">
+                                    <a href="#github" class="headerlink" title="github"></a>
+                                    <a href="https://github.com/liubin915249126/react-study/tree/master/jquery%20in%20react" target="_blank" rel="noopener">github</a>
+                                </h4>
+
+                            </div>
+                            <footer class="article-footer">
+                                <a data-url="http://yoursite.com/2018/03/13/jquery-in-react/" data-id="cjep15qqd0001l5x8ur3m1zbc" class="article-share-link">Teilen</a>
+
+
+                            </footer>
+                        </div>
+
+
+                        <nav id="article-nav">
+
+
+                            <a href="/2018/03/12/lencharts/" id="article-nav-older" class="article-nav-link-wrap">
+                                <strong class="article-nav-caption">Älter</strong>
+                                <div class="article-nav-title"></div>
+                            </a>
+
+                        </nav>
+
+
+                    </article>
+                </section>
+            </div>
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-115451143-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+
+                function gtag() {
+                    dataLayer.push(arguments);
+                }
+                gtag('js', new Date());
+
+                gtag('config', 'UA-115451143-1');
+            </script>
+</body>
+
+</html>

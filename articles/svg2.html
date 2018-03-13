@@ -46,273 +46,317 @@
             </header>
             <div class="outer">
                 <section id="main">
-                    <article id="post-svg1" class="article article-type-post" itemscope itemprop="blogPost">
-                        <div class="article-meta">
-                            <a href="/2018/03/10/svg1/" class="article-date">
-                                <time datetime="2018-03-10T09:30:18.809Z" itemprop="datePublished">2018-03-10</time>
-                            </a>
-
-                        </div>
-                        <div class="article-inner">
-
-
-                            <div class="article-entry" itemprop="articleBody">
-
-                                <h2 id="SVG-相关学习">
-                                    <a href="#SVG-相关学习" class="headerlink" title="SVG 相关学习"></a>SVG 相关学习</h2>
-                                    <h4>代码托管于<a href="https://github.com/liubin915249126/HTML-CSS-SVG/tree/master/SVG" target="blank">github</a>欢迎star</h4>
-                                <h4 id="SVG">
-                                    <a href="#SVG" class="headerlink" title="SVG"></a>SVG</h4>
-                                <blockquote>
-                                </blockquote>
-                                <p> SVG 指可伸缩矢量图形 (Scalable Vector Graphics)</p>
-                                <blockquote>
-                                </blockquote>
-                                <h4 id="SVG-viewBox">
-                                    <a href="#SVG-viewBox" class="headerlink" title="SVG viewBox"></a>SVG viewBox</h4>
-                                <blockquote>
-                                </blockquote>
-                                <figure class="highlight plain">
-                                    <table>
-                                        <tr>
-                                            <td class="gutter">
-                                                <pre><span class="line">1</span><br></pre>
-                                            </td>
-                                            <td class="code">
-                                                <pre><span class="line">&lt;svg width=&quot;500&quot; height=&quot;300&quot;&gt;&lt;/svg&gt;</span><br></pre>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </figure>
-                                <p>viewport svg 实际大小
-                                    <br>
-                                    <br>
-                                    <br>viewBox=”x, y, width, height” // x:左上角横坐标，y:左上角纵坐标，width:宽度，height:高度
-                                    <br>
-                                    <br>
-                                    <br>视区盒子：以视区盒子大小选中元素然后缩放至viewport的大小</p>
-                                <p>
-                                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/viewbox.gif" alt="viewBox">;
-                                    <br>
-                                    <br>
-                                    <br>preserveAspectRatio()
-                                    <br>第1个值表示，viewBox如何与SVG viewport对齐；第2个值表示，如何维持高宽比（如果有)
-                                    <br>
-                                    <figure class="highlight plain">
-                                        <table>
-                                            <tr>
-                                                <td class="gutter">
-                                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
-                                                </td>
-                                                <td class="code">
-                                                    <pre><span class="line">meet	保持纵横比同时比例大的方向缩放适应viewport</span><br><span class="line">slice	保持纵横比同时比例小的方向缩放适应viewport</span><br><span class="line">none	扭曲纵横比以充分适应viewport</span><br></pre>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </figure>
-                                </p>
-                                <p>参考文章
-                                    <a href="http://www.zhangxinxu.com/wordpress/2014/08/svg-viewport-viewbox-preserveaspectratio/" target="_blank" rel="noopener">张鑫旭</a>
-                                </p>
-                                <p>实例请戳
-                                        <a href="../example/preserveAspectRatio.html" target="_blank" rel="noopener">preserveAspectRatio</a>
-                                    </p>
-                                <blockquote>
-                                </blockquote>
-                                <h4 id="渐变">
-                                    <a href="#渐变" class="headerlink" title="渐变"></a>渐变</h4>
-                                <h5 id="线性渐变">
-                                    <a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h5>
-                                <blockquote>
-                                </blockquote>
-                                <p>先定义再引用
-                                    <br>
-                                    <figure class="highlight plain">
-                                        <table>
-                                            <tr>
-                                                <td class="gutter">
-                                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre>
-                                                </td>
-                                                <td class="code">
-                                                    <pre><span class="line">&lt;svg width=&quot;660&quot; height=&quot;220&quot;&gt;</span><br><span class="line">     &lt;defs&gt;</span><br><span class="line">         &lt;linearGradient id=&quot;linear&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;100%&quot; y2=&quot;0%&quot;&gt;</span><br><span class="line">             &lt;stop offset=&quot;0%&quot; stop-color=&quot;#05a&quot; /&gt;</span><br><span class="line">             &lt;stop offset=&quot;50%&quot; stop-color=&quot;#a55&quot; /&gt;</span><br><span class="line">             &lt;stop offset=&quot;100%&quot; stop-color=&quot;#0a5&quot; /&gt;</span><br><span class="line">         &lt;/linearGradient&gt;</span><br><span class="line">     &lt;/defs&gt;</span><br><span class="line"> &lt;/svg&gt;</span><br><span class="line"> &lt;svg width=&quot;660&quot; height=&quot;220&quot;&gt;</span><br><span class="line">     &lt;rect x=&quot;10&quot; y=&quot;10&quot; width=&quot;600&quot; height=&quot;200&quot; fill=&quot;url(#linear)&quot; /&gt;</span><br><span class="line"> &lt;/svg&gt;</span><br><span class="line"> &lt;svg width=&quot;660&quot; height=&quot;220&quot;&gt; </span><br><span class="line">     &lt;rect x=&quot;10&quot; y=&quot;10&quot; width=&quot;600&quot; height=&quot;200&quot; stroke=&quot;url(#linear)&quot; stroke-width=&quot;20&quot; fill=&quot;#fff&quot;/&gt;</span><br><span class="line"> &lt;/svg&gt;</span><br></pre>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </figure>
-                                </p>
-                                <p>gradientUnit属性
-                                    <br>
-                                    <figure class="highlight plain">
-                                        <table>
-                                            <tr>
-                                                <td class="gutter">
-                                                    <pre><span class="line">1</span><br><span class="line">2</span><br></pre>
-                                                </td>
-                                                <td class="code">
-                                                    <pre><span class="line">userSpaceOnUse:(默认值) x1、y1、x2、y2表示当前用户坐标系统的坐标。也就是说渐变中的值都是绝对值。</span><br><span class="line">objectBoundingBox: x1, y1, x2, y2表示应用渐变的元素创建的边界坐标系统。也就是说渐变随着应用的元素进行了缩放。</span><br></pre>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </figure>
-                                </p>
-                                <p>spreadMethod属性
-                                    <br>
-                                    <figure class="highlight plain">
-                                        <table>
-                                            <tr>
-                                                <td class="gutter">
-                                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
-                                                </td>
-                                                <td class="code">
-                                                    <pre><span class="line">pad: （默认值）使用渐变的颜色结点来填充剩余的空间。例如，如果第一个结点是20%，那么0%到20%这部分就是相同的颜色。</span><br><span class="line">reflect: 映射渐变图案，从&apos;start-to-end&apos;，再从&apos;end-to-start&apos;，然后&apos;start-to-end&apos;，直到空间都填满了。</span><br><span class="line">repeat: 重复渐变图案，从起点-&gt;终点，直到空间填满。</span><br></pre>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </figure>
-                                </p>
-                                <blockquote>
-                                </blockquote>
-                                <h5 id="径向渐变">
-                                    <a href="#径向渐变" class="headerlink" title="径向渐变"></a>径向渐变</h5>
-                                <blockquote>
-                                </blockquote>
-                                <p>先定义再引用
-                                    <br>
-                                    <figure class="highlight plain">
-                                        <table>
-                                            <tr>
-                                                <td class="gutter">
-                                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre>
-                                                </td>
-                                                <td class="code">
-                                                    <pre><span class="line">&lt;svg width=&quot;660&quot; height=&quot;330&quot;&gt;</span><br><span class="line">     &lt;defs&gt;</span><br><span class="line">         &lt;radialGradient id=&quot;radial&quot; fx=&quot;50%&quot; fy=&quot;50%&quot; cx=&quot;50%&quot; cy=&quot;50%&quot; r=&quot;50%&quot;&gt;</span><br><span class="line">             &lt;stop offset=&quot;0%&quot; stop-color=&quot;#05a&quot; stop-opacity=&quot;1&quot; /&gt;</span><br><span class="line">             &lt;stop offset=&quot;100%&quot; stop-color=&quot;#0a5&quot; stop-opacity=&quot;1&quot; /&gt; </span><br><span class="line">         &lt;/radialGradient&gt;</span><br><span class="line">     &lt;/defs&gt;</span><br><span class="line">     &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;600&quot; height=&quot;300&quot; fill=&quot;url(#radial)&quot; /&gt; </span><br><span class="line"> &lt;/svg&gt;</span><br></pre>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </figure>
-                                </p>
-                                <p>stop的属性
-                                    <br>
-                                    <figure class="highlight plain">
-                                        <table>
-                                            <tr>
-                                                <td class="gutter">
-                                                    <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
-                                                </td>
-                                                <td class="code">
-                                                    <pre><span class="line">offset: 在径向渐变中，它表示从点(fx,fy)到外边缘的圆的百分比值距离。它定义了渐变结点的位置。值从0到1之间，或者0%到100%。</span><br><span class="line">stop-color: 定义offset结点位置的颜色</span><br><span class="line">stop-opacity: 定义颜色结点的透明度，值从0到1，或0%到100%。</span><br></pre>
-                                                </td>
-                                            </tr>
-                                        </table>
-                                    </figure>
-                                </p>
-                                <p>gradientUnit属性和spreadMethod属性类似于线性渐变</p>
-                                <p>焦点：
-                                    <br>
-                                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/SVG_Radial_Grandient_Focus.png" alt="focus">
-                                </p>
-                                <h4 id="基本形状">
-                                    <a href="#基本形状" class="headerlink" title="基本形状"></a>基本形状</h4>
-                                <figure class="highlight plain">
-                                    <table>
-                                        <tr>
-                                            <td class="gutter">
-                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre>
-                                            </td>
-                                            <td class="code">
-                                                <pre><span class="line">矩形 rect:   x:矩形左上角的x坐标  </span><br><span class="line">            y:矩形左上角的y坐标  </span><br><span class="line">            width:矩形的宽度 </span><br><span class="line">            height:矩形的高度  </span><br><span class="line">            rx:对于圆角矩形,圆角对应的椭圆在x方向上的半径  </span><br><span class="line">            ry:对于圆角矩形,圆角对应的椭圆在y方向上的半径  </span><br><span class="line">圆 circle cx:圆心的x坐标  </span><br><span class="line">            cy:圆心的y坐标  </span><br><span class="line">            r:圆的半径  </span><br><span class="line">椭圆 ellipse cx:椭圆心的x坐标  </span><br><span class="line">              cy:椭圆心的y坐标  </span><br><span class="line">              rx:椭圆的x轴半径   </span><br><span class="line">              ry:椭圆的Y轴半径  </span><br><span class="line">线段 line  x1:起点的x坐标  </span><br><span class="line">            y1:起点的y坐标  </span><br><span class="line">            x2:终点的x坐标  </span><br><span class="line">            y2:重点的y坐标  </span><br><span class="line">多边形 polygon points各个点的坐标</span><br><span class="line">```                                                      </span><br><span class="line">&gt;</span><br><span class="line"></span><br><span class="line">#### path基本相关属性</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">```html</span><br><span class="line">   fill //填充(线条包裹的区间)颜色 </span><br><span class="line">   stroke //定义一条线，文本或元素轮廓颜色 </span><br><span class="line">   stroke-width //定义一条线，文本或元素轮廓厚度</span><br><span class="line">   stroke-linecap //butt | round | square | inherit</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">#### stroke-dasharray,stroke-dashoffset</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">```html</span><br><span class="line">stroke-dasharray:绘制虚线:一个参数时： 表示一段虚线长度和每段虚线之间的间距 </span><br><span class="line">                          两个参数或者多个参数时：一个表示长度，一个表示间距 </span><br><span class="line">stroke-dashoffset: 表示虚线的起始偏移</span><br></pre>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </figure>
-                                <h4 id="path-d-路径相关">
-                                    <a href="#path-d-路径相关" class="headerlink" title="path d 路径相关"></a>path d 路径相关</h4>
-                                <h5 id="直线命令：">
-                                    <a href="#直线命令：" class="headerlink" title="直线命令："></a>直线命令：</h5>
-                                <figure class="highlight js">
-                                    <table>
-                                        <tr>
-                                            <td class="gutter">
-                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre>
-                                            </td>
-                                            <td class="code">
-                                                <pre><span class="line">   M:将画笔移动 M10,<span class="number">10</span>(两个参数)</span><br><span class="line">   H:画水平线 H100(一个参数)</span><br><span class="line">   V:画竖直线 V100(一个参数)</span><br><span class="line">   Z:闭合(无参数)</span><br><span class="line">   以上命令大写表示绝对位置(明确的坐标)，小写表示相对坐标(相对于前一个点的坐标)</span><br><span class="line"><span class="string">``</span><span class="string">` </span></span><br><span class="line"><span class="string">##### 曲线命令：</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>js</span><br><span class="line">  C 三次贝塞尔曲线 x1 y1, x2 y2, x y (or c dx1 dy1, dx2 dy2, dx dy)</span><br><span class="line">    x1 y1, x2 y2 两个不同的控制点</span><br><span class="line">    x y 终点</span><br><span class="line"></span><br><span class="line">  S x2 y2, x y (or s dx2 dy2, dx dy)</span><br><span class="line">    （S命令可以用来创建与之前那些曲线一样的贝塞尔曲线，但是，如果S命令跟在一个C命令或者另一个S命令的后面，</span><br><span class="line">    它的第一个控制点，就会被假设成前一个控制点的对称点。如果S命令单独使用，前面没有C命令或者另一个S命令，</span><br><span class="line">    那么它的两个控制点就会被假设为同一个点。）</span><br><span class="line"></span><br><span class="line">  Q x1 y1, x y (or q dx1 dy1, dx dy)</span><br><span class="line">    x1 y1 控制点确定起点终点的斜率</span><br><span class="line">    x y 终点坐标</span><br><span class="line"></span><br><span class="line">  T 二次贝塞尔曲线 x y (or t dx dy)</span><br><span class="line">    和之前一样，快捷命令T会通过前一个控制点，推断出一个新的控制点。这意味着，在你的第一个控制点后面，</span><br><span class="line">    可以只定义终点，就创建出一个相当复杂的曲线。需要注意的是，T命令前面必须是一个Q命令，或者是另一个T命令，</span><br><span class="line">    才能达到这种效果。如果T单独使用，那么控制点就会被认为和终点是同一个点，所以画出来的将是一条直线。 </span><br><span class="line"></span><br><span class="line">  A:画弧形 A rx ry x-axis-rotation large-arc-flag sweep-flag x y：</span><br><span class="line">     rx,<span class="attr">ry</span>:表示弧形X,Y轴半径,</span><br><span class="line">     x-axis-rotation: 弧形的旋转情况(顺时针为正)(<span class="number">0</span>不旋转)</span><br><span class="line">     large-arc-flag:角度大小(<span class="number">0</span>表示小角度弧，<span class="number">1</span>表示大角度弧)  </span><br><span class="line">     sweep-flag:弧线方向(<span class="number">0</span>表示从起点到终点沿逆时针画弧，<span class="number">1</span>表示从起点到终点沿顺时针画弧)</span><br><span class="line">     x,<span class="attr">y</span>:弧的终点坐标</span><br></pre>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </figure>
-                                <p>三次贝塞尔曲线C:
-                                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/Cubic_Bezier_Curves.png" alt="三次贝塞尔曲线">
-                                    <br>三次贝塞尔曲线S:
-                                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/ShortCut_Cubic_Bezier.png" alt="三次贝塞尔曲线">
-                                </p>
-                                <p>二次贝塞尔曲线Q:
-                                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/Quadratic_Bezier.png" alt="二次贝塞尔曲线">
-                                    <br>二次贝塞尔曲线T:
-                                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/Shortcut_Quadratic_Bezier.png" alt="二次贝塞尔曲线">
-                                </p>
-                                <h5 id="弧线命令A：">
-                                    <a href="#弧线命令A：" class="headerlink" title="弧线命令A："></a>弧线命令A：</h5>
-                                <figure class="highlight html">
-                                    <table>
-                                        <tr>
-                                            <td class="gutter">
-                                                <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre>
-                                            </td>
-                                            <td class="code">
-                                                <pre><span class="line"><span class="tag">&lt;<span class="name">svg</span> <span class="attr">width</span>=<span class="string">"325px"</span> <span class="attr">height</span>=<span class="string">"325px"</span> <span class="attr">version</span>=<span class="string">"1.1"</span> <span class="attr">xmlns</span>=<span class="string">"http://www.w3.org/2000/svg"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M80 80</span></span></span><br><span class="line"><span class="tag"><span class="string">           A 45 45, 0, 0, 0, 125 125</span></span></span><br><span class="line"><span class="tag"><span class="string">           L 125 80 Z"</span> <span class="attr">fill</span>=<span class="string">"green"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M230 80</span></span></span><br><span class="line"><span class="tag"><span class="string">           A 45 45, 0, 1, 0, 275 125</span></span></span><br><span class="line"><span class="tag"><span class="string">           L 275 80 Z"</span> <span class="attr">fill</span>=<span class="string">"red"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M80 230</span></span></span><br><span class="line"><span class="tag"><span class="string">           A 45 45, 0, 0, 1, 125 275</span></span></span><br><span class="line"><span class="tag"><span class="string">           L 125 230 Z"</span> <span class="attr">fill</span>=<span class="string">"purple"</span>/&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">path</span> <span class="attr">d</span>=<span class="string">"M230 230</span></span></span><br><span class="line"><span class="tag"><span class="string">           A 45 45, 0, 1, 1, 275 275</span></span></span><br><span class="line"><span class="tag"><span class="string">           L 275 230 Z"</span> <span class="attr">fill</span>=<span class="string">"blue"</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">svg</span>&gt;</span></span><br></pre>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                </figure>
-                                <p>
-                                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/SVGArcs_Flags.png" alt="A">
-                                </p>
-                                <p>参考文档
-                                    <a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Paths" target="_blank" rel="noopener">MDN</a>;</p>
-                                    
-                                <h4 id="应用">
-                                    <a href="#应用" class="headerlink" title="应用"></a>应用</h4>
-                                <p>
-                                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/half.gif" alt="半圆">
-                                    <br>
-                                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/half.gif" alt="loading">
-                                    <br>
-                                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/loading.gif" alt="hover">
-                                </p>
-
-
-                            </div>
-                            <footer class="article-footer">
-                                <a data-url="http://yoursite.com/2018/03/10/svg1/" data-id="cjenwiori0003hvx8j0qek28c" class="article-share-link">Teilen</a>
-
-
-                            </footer>
-                        </div>
-
-
-                        <nav id="article-nav">
-
-                            <a href="/2018/03/10/svg2/" id="article-nav-newer" class="article-nav-link-wrap">
-                                <strong class="article-nav-caption">Neuer</strong>
-                                <div class="article-nav-title">
-
-                                    (no title)
-
+                        <article id="post-svg1" class="article article-type-post" itemscope itemprop="blogPost">
+                                <div class="article-meta">
+                                  <a href="/2018/03/10/svg1/" class="article-date">
+                                    <time datetime="2018-03-10T09:30:18.809Z" itemprop="datePublished">2018-03-10</time>
+                                  </a>
+                    
                                 </div>
-                            </a>
-
-
-                            <a href="/2018/03/08/parallax/" id="article-nav-older" class="article-nav-link-wrap">
-                                <strong class="article-nav-caption">Älter</strong>
-                                <div class="article-nav-title">我的博客</div>
-                            </a>
-
-                        </nav>
-
-
-                    </article>
-
+                                <div class="article-inner">
+                    
+                    
+                                  <div class="article-entry" itemprop="articleBody">
+                    
+                                    <h2 id="SVG-相关学习">
+                                      <a href="#SVG-相关学习" class="headerlink" title="SVG 相关学习"></a>SVG 相关学习</h2>
+                                    <h4 id="SVG">
+                                      <a href="#SVG" class="headerlink" title="SVG"></a>SVG</h4>
+                                    <blockquote>
+                                    </blockquote>
+                                    <p> SVG 指可伸缩矢量图形 (Scalable Vector Graphics)</p>
+                                    <blockquote>
+                                    </blockquote>
+                                    <h4 id="SVG-viewBox">
+                                      <a href="#SVG-viewBox" class="headerlink" title="SVG viewBox"></a>SVG viewBox</h4>
+                                    <blockquote>
+                                    </blockquote>
+                                    <figure class="highlight js">
+                                      <table>
+                                        <tr>
+                                          <td class="gutter">
+                                            <pre><span class="line">1</span><br></pre>
+                                          </td>
+                                          <td class="code">
+                                            <pre><span class="line">&lt;svg width=<span class="string">"500"</span> height=<span class="string">"300"</span>&gt;&lt;/svg&gt;</span><br></pre>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </figure>
+                                    <p>viewport svg 实际大小
+                                      <br>
+                                      <br>
+                                      <br>viewBox=”x, y, width, height” // x:左上角横坐标，y:左上角纵坐标，width:宽度，height:高度
+                                      <br>
+                                      <br>
+                                      <br>视区盒子：以视区盒子大小选中元素然后缩放至viewport的大小</p>
+                                    <p>
+                                      <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/viewbox.gif" alt="viewBox">;
+                                      <br>
+                                      <br>
+                                      <br>preserveAspectRatio()
+                                      <br>第1个值表示，viewBox如何与SVG viewport对齐；第2个值表示，如何维持高宽比（如果有)
+                                      <br>
+                                      <figure class="highlight js">
+                                        <table>
+                                          <tr>
+                                            <td class="gutter">
+                                              <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                              <pre><span class="line">meet	保持纵横比同时比例大的方向缩放适应viewport</span><br><span class="line">slice	保持纵横比同时比例小的方向缩放适应viewport</span><br><span class="line">none	扭曲纵横比以充分适应viewport</span><br></pre>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </figure>
+                                    </p>
+                                    <p>参考文章
+                                      <a href="http://www.zhangxinxu.com/wordpress/2014/08/svg-viewport-viewbox-preserveaspectratio/" target="_blank"
+                                        rel="noopener">张鑫旭</a>
+                                    </p>
+                                    <blockquote>
+                                    </blockquote>
+                                    <h4 id="渐变">
+                                      <a href="#渐变" class="headerlink" title="渐变"></a>渐变</h4>
+                                    <h5 id="线性渐变">
+                                      <a href="#线性渐变" class="headerlink" title="线性渐变"></a>线性渐变</h5>
+                                    <blockquote>
+                                    </blockquote>
+                                    <p>先定义再引用
+                                      <br>
+                                      <figure class="highlight js">
+                                        <table>
+                                          <tr>
+                                            <td class="gutter">
+                                              <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                              <pre><span class="line">&lt;svg width=<span class="string">"660"</span> height=<span class="string">"220"</span>&gt;</span><br><span class="line">     &lt;defs&gt;</span><br><span class="line">         &lt;linearGradient id=<span class="string">"linear"</span> x1=<span class="string">"0%"</span> y1=<span class="string">"0%"</span> x2=<span class="string">"100%"</span> y2=<span class="string">"0%"</span>&gt;</span><br><span class="line">             &lt;stop offset=<span class="string">"0%"</span> stop-color=<span class="string">"#05a"</span> /&gt;</span><br><span class="line">             &lt;stop offset=<span class="string">"50%"</span> stop-color=<span class="string">"#a55"</span> /&gt;</span><br><span class="line">             &lt;stop offset=<span class="string">"100%"</span> stop-color=<span class="string">"#0a5"</span> /&gt;</span><br><span class="line">         &lt;<span class="regexp">/linearGradient&gt;</span></span><br><span class="line"><span class="regexp">     &lt;/</span>defs&gt;</span><br><span class="line"> &lt;<span class="regexp">/svg&gt;</span></span><br><span class="line"><span class="regexp"> &lt;svg width="660" height="220"&gt;</span></span><br><span class="line"><span class="regexp">     &lt;rect x="10" y="10" width="600" height="200" fill="url(#linear)" /</span>&gt;</span><br><span class="line"> &lt;<span class="regexp">/svg&gt;</span></span><br><span class="line"><span class="regexp"> &lt;svg width="660" height="220"&gt; </span></span><br><span class="line"><span class="regexp">     &lt;rect x="10" y="10" width="600" height="200" stroke="url(#linear)" stroke-width="20" fill="#fff"/</span>&gt;</span><br><span class="line"> &lt;<span class="regexp">/svg&gt;</span></span><br></pre>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </figure>
+                                    </p>
+                                    <p>gradientUnit属性
+                                      <br>
+                                      <figure class="highlight js">
+                                        <table>
+                                          <tr>
+                                            <td class="gutter">
+                                              <pre><span class="line">1</span><br><span class="line">2</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                              <pre><span class="line">userSpaceOnUse:(默认值) x1、y1、x2、y2表示当前用户坐标系统的坐标。也就是说渐变中的值都是绝对值。</span><br><span class="line">objectBoundingBox: x1, y1, x2, y2表示应用渐变的元素创建的边界坐标系统。也就是说渐变随着应用的元素进行了缩放。</span><br></pre>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </figure>
+                                    </p>
+                                    <p>spreadMethod属性
+                                      <br>
+                                      <figure class="highlight js">
+                                        <table>
+                                          <tr>
+                                            <td class="gutter">
+                                              <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                              <pre><span class="line">pad: （默认值）使用渐变的颜色结点来填充剩余的空间。例如，如果第一个结点是<span class="number">20</span>%，那么<span class="number">0</span>%到<span class="number">20</span>%这部分就是相同的颜色。</span><br><span class="line">reflect: 映射渐变图案，从<span class="string">'start-to-end'</span>，再从<span class="string">'end-to-start'</span>，然后<span class="string">'start-to-end'</span>，直到空间都填满了。</span><br><span class="line">repeat: 重复渐变图案，从起点-&gt;终点，直到空间填满。</span><br></pre>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </figure>
+                                    </p>
+                                    <blockquote>
+                                    </blockquote>
+                                    <h5 id="径向渐变">
+                                      <a href="#径向渐变" class="headerlink" title="径向渐变"></a>径向渐变</h5>
+                                    <blockquote>
+                                    </blockquote>
+                                    <p>先定义再引用
+                                      <br>
+                                      <figure class="highlight js">
+                                        <table>
+                                          <tr>
+                                            <td class="gutter">
+                                              <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                              <pre><span class="line">&lt;svg width=<span class="string">"660"</span> height=<span class="string">"330"</span>&gt;</span><br><span class="line">     &lt;defs&gt;</span><br><span class="line">         &lt;radialGradient id=<span class="string">"radial"</span> fx=<span class="string">"50%"</span> fy=<span class="string">"50%"</span> cx=<span class="string">"50%"</span> cy=<span class="string">"50%"</span> r=<span class="string">"50%"</span>&gt;</span><br><span class="line">             &lt;stop offset=<span class="string">"0%"</span> stop-color=<span class="string">"#05a"</span> stop-opacity=<span class="string">"1"</span> /&gt;</span><br><span class="line">             &lt;stop offset=<span class="string">"100%"</span> stop-color=<span class="string">"#0a5"</span> stop-opacity=<span class="string">"1"</span> /&gt; </span><br><span class="line">         &lt;<span class="regexp">/radialGradient&gt;</span></span><br><span class="line"><span class="regexp">     &lt;/</span>defs&gt;</span><br><span class="line">     &lt;rect x=<span class="string">"0"</span> y=<span class="string">"0"</span> width=<span class="string">"600"</span> height=<span class="string">"300"</span> fill=<span class="string">"url(#radial)"</span> /&gt; </span><br><span class="line"> &lt;<span class="regexp">/svg&gt;</span></span><br></pre>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </figure>
+                                    </p>
+                                    <p>stop的属性
+                                      <br>
+                                      <figure class="highlight js">
+                                        <table>
+                                          <tr>
+                                            <td class="gutter">
+                                              <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
+                                            </td>
+                                            <td class="code">
+                                              <pre><span class="line">offset: 在径向渐变中，它表示从点(fx,fy)到外边缘的圆的百分比值距离。它定义了渐变结点的位置。值从<span class="number">0</span>到<span class="number">1</span>之间，或者<span class="number">0</span>%到<span class="number">100</span>%。</span><br><span class="line">stop-color: 定义offset结点位置的颜色</span><br><span class="line">stop-opacity: 定义颜色结点的透明度，值从<span class="number">0</span>到<span class="number">1</span>，或<span class="number">0</span>%到<span class="number">100</span>%。</span><br></pre>
+                                            </td>
+                                          </tr>
+                                        </table>
+                                      </figure>
+                                    </p>
+                                    <p>gradientUnit属性和spreadMethod属性类似于线性渐变</p>
+                                    <p>焦点：
+                                      <br>
+                                      <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/SVG_Radial_Grandient_Focus.png"
+                                        alt="focus">
+                                    </p>
+                                    <h4 id="基本形状">
+                                      <a href="#基本形状" class="headerlink" title="基本形状"></a>基本形状</h4>
+                                    <figure class="highlight js">
+                                      <table>
+                                        <tr>
+                                          <td class="gutter">
+                                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre>
+                                          </td>
+                                          <td class="code">
+                                            <pre><span class="line">矩形 rect:   x:矩形左上角的x坐标  </span><br><span class="line">            y:矩形左上角的y坐标  </span><br><span class="line">            width:矩形的宽度 </span><br><span class="line">            height:矩形的高度  </span><br><span class="line">            rx:对于圆角矩形,圆角对应的椭圆在x方向上的半径  </span><br><span class="line">            ry:对于圆角矩形,圆角对应的椭圆在y方向上的半径  </span><br><span class="line">圆 circle cx:圆心的x坐标  </span><br><span class="line">            cy:圆心的y坐标  </span><br><span class="line">            r:圆的半径  </span><br><span class="line">椭圆 ellipse cx:椭圆心的x坐标  </span><br><span class="line">              cy:椭圆心的y坐标  </span><br><span class="line">              rx:椭圆的x轴半径   </span><br><span class="line">              ry:椭圆的Y轴半径  </span><br><span class="line">线段 line  x1:起点的x坐标  </span><br><span class="line">            y1:起点的y坐标  </span><br><span class="line">            x2:终点的x坐标  </span><br><span class="line">            y2:重点的y坐标  </span><br><span class="line">多边形 polygon points各个点的坐标</span><br></pre>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </figure>
+                                    <blockquote>
+                                    </blockquote>
+                                    <h4 id="path基本相关属性">
+                                      <a href="#path基本相关属性" class="headerlink" title="path基本相关属性"></a>path基本相关属性</h4>
+                                    <figure class="highlight js">
+                                      <table>
+                                        <tr>
+                                          <td class="gutter">
+                                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre>
+                                          </td>
+                                          <td class="code">
+                                            <pre><span class="line">fill <span class="comment">//填充(线条包裹的区间)颜色 </span></span><br><span class="line">stroke <span class="comment">//定义一条线，文本或元素轮廓颜色 </span></span><br><span class="line">stroke-width <span class="comment">//定义一条线，文本或元素轮廓厚度</span></span><br><span class="line">stroke-linecap <span class="comment">//butt | round | square | inherit</span></span><br></pre>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </figure>
+                                    <h4 id="stroke-dasharray-stroke-dashoffset">
+                                      <a href="#stroke-dasharray-stroke-dashoffset" class="headerlink" title="stroke-dasharray,stroke-dashoffset"></a>stroke-dasharray,stroke-dashoffset</h4>
+                                    <figure class="highlight js">
+                                      <table>
+                                        <tr>
+                                          <td class="gutter">
+                                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre>
+                                          </td>
+                                          <td class="code">
+                                            <pre><span class="line">stroke-dasharray:绘制虚线:一个参数时： 表示一段虚线长度和每段虚线之间的间距 </span><br><span class="line">                          两个参数或者多个参数时：一个表示长度，一个表示间距 </span><br><span class="line">stroke-dashoffset: 表示虚线的起始偏移</span><br></pre>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </figure>
+                                    <h4 id="path-d-路径相关">
+                                      <a href="#path-d-路径相关" class="headerlink" title="path d 路径相关"></a>path d 路径相关</h4>
+                                    <h5 id="直线命令：">
+                                      <a href="#直线命令：" class="headerlink" title="直线命令："></a>直线命令：</h5>
+                                    <figure class="highlight js">
+                                      <table>
+                                        <tr>
+                                          <td class="gutter">
+                                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre>
+                                          </td>
+                                          <td class="code">
+                                            <pre><span class="line">M:将画笔移动 M10,<span class="number">10</span>(两个参数)</span><br><span class="line">H:画水平线 H100(一个参数)</span><br><span class="line">V:画竖直线 V100(一个参数)</span><br><span class="line">Z:闭合(无参数)</span><br><span class="line">以上命令大写表示绝对位置(明确的坐标)，小写表示相对坐标(相对于前一个点的坐标)</span><br></pre>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </figure>
+                                    <h5 id="曲线命令：">
+                                      <a href="#曲线命令：" class="headerlink" title="曲线命令："></a>曲线命令：</h5>
+                                    <figure class="highlight js">
+                                      <table>
+                                        <tr>
+                                          <td class="gutter">
+                                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre>
+                                          </td>
+                                          <td class="code">
+                                            <pre><span class="line">C 三次贝塞尔曲线 x1 y1, x2 y2, x y (or c dx1 dy1, dx2 dy2, dx dy)</span><br><span class="line">  x1 y1, x2 y2 两个不同的控制点</span><br><span class="line">  x y 终点</span><br><span class="line"></span><br><span class="line">S x2 y2, x y (or s dx2 dy2, dx dy)</span><br><span class="line">  （S命令可以用来创建与之前那些曲线一样的贝塞尔曲线，但是，如果S命令跟在一个C命令或者另一个S命令的后面，</span><br><span class="line">  它的第一个控制点，就会被假设成前一个控制点的对称点。如果S命令单独使用，前面没有C命令或者另一个S命令，</span><br><span class="line">  那么它的两个控制点就会被假设为同一个点。）</span><br><span class="line"></span><br><span class="line">Q x1 y1, x y (or q dx1 dy1, dx dy)</span><br><span class="line">  x1 y1 控制点确定起点终点的斜率</span><br><span class="line">  x y 终点坐标</span><br><span class="line"></span><br><span class="line">T 二次贝塞尔曲线 x y (or t dx dy)</span><br><span class="line">  和之前一样，快捷命令T会通过前一个控制点，推断出一个新的控制点。这意味着，在你的第一个控制点后面，</span><br><span class="line">  可以只定义终点，就创建出一个相当复杂的曲线。需要注意的是，T命令前面必须是一个Q命令，或者是另一个T命令，</span><br><span class="line">  才能达到这种效果。如果T单独使用，那么控制点就会被认为和终点是同一个点，所以画出来的将是一条直线。 </span><br><span class="line"></span><br><span class="line">A:画弧形 A rx ry x-axis-rotation large-arc-flag sweep-flag x y：</span><br><span class="line">   rx,<span class="attr">ry</span>:表示弧形X,Y轴半径,</span><br><span class="line">   x-axis-rotation: 弧形的旋转情况(顺时针为正)(<span class="number">0</span>不旋转)</span><br><span class="line">   large-arc-flag:角度大小(<span class="number">0</span>表示小角度弧，<span class="number">1</span>表示大角度弧)  </span><br><span class="line">   sweep-flag:弧线方向(<span class="number">0</span>表示从起点到终点沿逆时针画弧，<span class="number">1</span>表示从起点到终点沿顺时针画弧)</span><br><span class="line">   x,<span class="attr">y</span>:弧的终点坐标</span><br></pre>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </figure>
+                                    <p>三次贝塞尔曲线C:
+                                      <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/Cubic_Bezier_Curves.png"
+                                        alt="三次贝塞尔曲线">
+                                      <br>三次贝塞尔曲线S:
+                                      <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/ShortCut_Cubic_Bezier.png"
+                                        alt="三次贝塞尔曲线">
+                                    </p>
+                                    <p>二次贝塞尔曲线Q:
+                                      <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/Quadratic_Bezier.png"
+                                        alt="二次贝塞尔曲线">
+                                      <br>二次贝塞尔曲线T:
+                                      <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/Shortcut_Quadratic_Bezier.png"
+                                        alt="二次贝塞尔曲线">
+                                    </p>
+                                    <h5 id="弧线命令A：">
+                                      <a href="#弧线命令A：" class="headerlink" title="弧线命令A："></a>弧线命令A：</h5>
+                                    <figure class="highlight js">
+                                      <table>
+                                        <tr>
+                                          <td class="gutter">
+                                            <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre>
+                                          </td>
+                                          <td class="code">
+                                            <pre><span class="line">&lt;svg width=<span class="string">"325px"</span> height=<span class="string">"325px"</span> version=<span class="string">"1.1"</span> xmlns=<span class="string">"http://www.w3.org/2000/svg"</span>&gt;</span><br><span class="line">   &lt;path d=<span class="string">"M80 80</span></span><br><span class="line"><span class="string">           A 45 45, 0, 0, 0, 125 125</span></span><br><span class="line"><span class="string">           L 125 80 Z"</span> fill=<span class="string">"green"</span>/&gt;</span><br><span class="line">   &lt;path d=<span class="string">"M230 80</span></span><br><span class="line"><span class="string">           A 45 45, 0, 1, 0, 275 125</span></span><br><span class="line"><span class="string">           L 275 80 Z"</span> fill=<span class="string">"red"</span>/&gt;</span><br><span class="line">   &lt;path d=<span class="string">"M80 230</span></span><br><span class="line"><span class="string">           A 45 45, 0, 0, 1, 125 275</span></span><br><span class="line"><span class="string">           L 125 230 Z"</span> fill=<span class="string">"purple"</span>/&gt;</span><br><span class="line">   &lt;path d=<span class="string">"M230 230</span></span><br><span class="line"><span class="string">           A 45 45, 0, 1, 1, 275 275</span></span><br><span class="line"><span class="string">           L 275 230 Z"</span> fill=<span class="string">"blue"</span>/&gt;</span><br><span class="line">&lt;<span class="regexp">/svg&gt;</span></span><br></pre>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </figure>
+                                    <p>
+                                      <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/SVGArcs_Flags.png" alt="A">
+                                    </p>
+                                    <p>参考文档
+                                      <a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial/Paths" target="_blank" rel="noopener">MDN</a>;</p>
+                                    <h4 id="应用">
+                                      <a href="#应用" class="headerlink" title="应用"></a>应用</h4>
+                                    <p>
+                                      <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/half.gif" alt="半圆">
+                                      <br>
+                                      <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/half.gif" alt="loading">
+                                      <br>
+                                      <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/loading.gif" alt="hover">
+                                    </p>
+                    
+                    
+                                  </div>
+                                  <footer class="article-footer">
+                                    <a data-url="http://yoursite.com/2018/03/10/svg1/" data-id="cjep1icbb0004upx8jshlvi8q" class="article-share-link">Teilen</a>
+                    
+                    
+                                  </footer>
+                                </div>
+                    
+                    
+                                <nav id="article-nav">
+                    
+                                  <a href="/2018/03/10/svg2/" id="article-nav-newer" class="article-nav-link-wrap">
+                                    <strong class="article-nav-caption">Neuer</strong>
+                                    <div class="article-nav-title">
+                    
+                                      (no title)
+                    
+                                    </div>
+                                  </a>
+                    
+                    
+                                  <a href="/2018/03/08/parallax/" id="article-nav-older" class="article-nav-link-wrap">
+                                    <strong class="article-nav-caption">Älter</strong>
+                                    <div class="article-nav-title">我的博客</div>
+                                  </a>
+                    
+                                </nav>
+                    
+                    
+                              </article><p></p>
                 </section>
             </div>
             <!-- Global site tag (gtag.js) - Google Analytics -->

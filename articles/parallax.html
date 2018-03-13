@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="./style.css">
-    
+
 </head>
 
 <body>
@@ -21,9 +21,9 @@
             </header>
             <div class="outer">
                 <section id="main">
-                    <article id="post-example" class="article article-type-post" itemscope itemprop="blogPost">
+                    <article id="post-parallax" class="article article-type-post" itemscope itemprop="blogPost">
                         <div class="article-meta">
-                            <a href="/2018/03/08/example/" class="article-date">
+                            <a href="/2018/03/08/parallax/" class="article-date">
                                 <time datetime="2018-03-08T07:29:53.491Z" itemprop="datePublished">2018-03-08</time>
                             </a>
 
@@ -46,7 +46,7 @@
                                 <h1 id="js视差效果">
                                     <a href="#js视差效果" class="headerlink" title="js视差效果"></a>js视差效果</h1>
                                 <p>
-                                    <img src="https://raw.githubusercontent.com/liubin915249126/javascript/master/Parallax/img/parallax.gif" alt="效果图">
+                                    <img src="https://github.com/liubin915249126/javascript/raw/master/Parallax/img/parallax.gif" alt="效果图">
                                 </p>
                                 <h4 id="1-思路：">
                                     <a href="#1-思路：" class="headerlink" title="1.思路："></a>1.思路：</h4>
@@ -89,28 +89,28 @@
                                     <a href="#2-求一个元素左上角相对于屏幕的位置" class="headerlink" title="2.求一个元素左上角相对于屏幕的位置"></a>2.求一个元素左上角相对于屏幕的位置</h4>
                                 <blockquote>
                                 </blockquote>
-                                <figure class="highlight plain">
+                                <figure class="highlight js">
                                     <table>
                                         <tr>
                                             <td class="gutter">
                                                 <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre>
                                             </td>
                                             <td class="code">
-                                                <pre><span class="line">   //获取元素相对于屏幕绝对位置</span><br><span class="line">function getAbsPosition(element)&#123;</span><br><span class="line">   var abs=&#123;x:0,y:0&#125;</span><br><span class="line">   //如果浏览器兼容此方法</span><br><span class="line">   if (document.documentElement.getBoundingClientRect)&#123;</span><br><span class="line">       //注意，getBoundingClientRect()是jQuery对象的方法</span><br><span class="line">       //如果不用jQuery对象，可以使用else分支。</span><br><span class="line">       abs.x = element.getBoundingClientRect().left;</span><br><span class="line">       abs.y = element.getBoundingClientRect().top;</span><br><span class="line"></span><br><span class="line">       abs.x += window.screenLeft +</span><br><span class="line">                   document.documentElement.scrollLeft -</span><br><span class="line">                   document.documentElement.clientLeft;</span><br><span class="line">       abs.y += window.screenTop +</span><br><span class="line">                   document.documentElement.scrollTop -</span><br><span class="line">                   document.documentElement.clientTop;</span><br><span class="line">     &#125;</span><br><span class="line">   //如果浏览器不兼容此方法</span><br><span class="line">   else&#123;</span><br><span class="line">       while(element!=document.body)&#123;</span><br><span class="line">           abs.x+=element.offsetLeft;</span><br><span class="line">           abs.y+=element.offsetTop;</span><br><span class="line">           element=element.offsetParent;</span><br><span class="line">       &#125;</span><br><span class="line">    //计算想对位置</span><br><span class="line">        abs.x += window.screenLeft +</span><br><span class="line">               document.body.clientLeft - document.body.scrollLeft;</span><br><span class="line">        abs.y += window.screenTop +</span><br><span class="line">               document.body.clientTop - document.body.scrollTop;</span><br><span class="line">      &#125;</span><br><span class="line">      return abs;</span><br><span class="line">  &#125;</span><br></pre>
+                                                <pre><span class="line">   <span class="comment">//获取元素相对于屏幕绝对位置</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getAbsPosition</span>(<span class="params">element</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">var</span> abs=&#123;<span class="attr">x</span>:<span class="number">0</span>,<span class="attr">y</span>:<span class="number">0</span>&#125;</span><br><span class="line">   <span class="comment">//如果浏览器兼容此方法</span></span><br><span class="line">   <span class="keyword">if</span> (<span class="built_in">document</span>.documentElement.getBoundingClientRect)&#123;</span><br><span class="line">       <span class="comment">//注意，getBoundingClientRect()是jQuery对象的方法</span></span><br><span class="line">       <span class="comment">//如果不用jQuery对象，可以使用else分支。</span></span><br><span class="line">       abs.x = element.getBoundingClientRect().left;</span><br><span class="line">       abs.y = element.getBoundingClientRect().top;</span><br><span class="line"></span><br><span class="line">       abs.x += <span class="built_in">window</span>.screenLeft +</span><br><span class="line">                   <span class="built_in">document</span>.documentElement.scrollLeft -</span><br><span class="line">                   <span class="built_in">document</span>.documentElement.clientLeft;</span><br><span class="line">       abs.y += <span class="built_in">window</span>.screenTop +</span><br><span class="line">                   <span class="built_in">document</span>.documentElement.scrollTop -</span><br><span class="line">                   <span class="built_in">document</span>.documentElement.clientTop;</span><br><span class="line">     &#125;</span><br><span class="line">   <span class="comment">//如果浏览器不兼容此方法</span></span><br><span class="line">   <span class="keyword">else</span>&#123;</span><br><span class="line">       <span class="keyword">while</span>(element!=<span class="built_in">document</span>.body)&#123;</span><br><span class="line">           abs.x+=element.offsetLeft;</span><br><span class="line">           abs.y+=element.offsetTop;</span><br><span class="line">           element=element.offsetParent;</span><br><span class="line">       &#125;</span><br><span class="line">    <span class="comment">//计算想对位置</span></span><br><span class="line">        abs.x += <span class="built_in">window</span>.screenLeft +</span><br><span class="line">               <span class="built_in">document</span>.body.clientLeft - <span class="built_in">document</span>.body.scrollLeft;</span><br><span class="line">        abs.y += <span class="built_in">window</span>.screenTop +</span><br><span class="line">               <span class="built_in">document</span>.body.clientTop - <span class="built_in">document</span>.body.scrollTop;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> abs;</span><br><span class="line">  &#125;</span><br></pre>
                                             </td>
                                         </tr>
                                     </table>
                                 </figure>
                                 <p>此方法循环累加位置坐标，直到父元素为根元素。
                                     <br>
-                                    <figure class="highlight plain">
+                                    <figure class="highlight js">
                                         <table>
                                             <tr>
                                                 <td class="gutter">
                                                     <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre>
                                                 </td>
                                                 <td class="code">
-                                                    <pre><span class="line">function getCenterPosition(element)&#123;</span><br><span class="line">       center=&#123;x:0,y:0&#125;</span><br><span class="line">       var leftTop=getAbsPosition(element[0])</span><br><span class="line">       // console.log(leftTop)</span><br><span class="line">       // console.log(element.css(&apos;width&apos;),element.css(&apos;height&apos;))</span><br><span class="line">       center.x =  leftTop.x + parseInt(element.css(&apos;width&apos;))/2</span><br><span class="line">       center.y =  leftTop.y + parseInt(element.css(&apos;height&apos;))/2</span><br><span class="line">       return center</span><br><span class="line">     &#125;</span><br></pre>
+                                                    <pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCenterPosition</span>(<span class="params">element</span>)</span>&#123;</span><br><span class="line">       center=&#123;<span class="attr">x</span>:<span class="number">0</span>,<span class="attr">y</span>:<span class="number">0</span>&#125;</span><br><span class="line">       <span class="keyword">var</span> leftTop=getAbsPosition(element[<span class="number">0</span>])</span><br><span class="line">       <span class="comment">// console.log(leftTop)</span></span><br><span class="line">       <span class="comment">// console.log(element.css('width'),element.css('height'))</span></span><br><span class="line">       center.x =  leftTop.x + <span class="built_in">parseInt</span>(element.css(<span class="string">'width'</span>))/<span class="number">2</span></span><br><span class="line">       center.y =  leftTop.y + <span class="built_in">parseInt</span>(element.css(<span class="string">'height'</span>))/<span class="number">2</span></span><br><span class="line">       <span class="keyword">return</span> center</span><br><span class="line">     &#125;</span><br></pre>
                                                 </td>
                                             </tr>
                                         </table>
@@ -125,14 +125,14 @@
                                 </blockquote>
                                 <p>当鼠标在图片上移动时,实时计算鼠标与元素中心点的距离差，经过比例换算，修改元素的transform
                                     <br>
-                                    <figure class="highlight plain">
+                                    <figure class="highlight js">
                                         <table>
                                             <tr>
                                                 <td class="gutter">
                                                     <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre>
                                                 </td>
                                                 <td class="code">
-                                                    <pre><span class="line">$(document).on(&apos;mousemove&apos;,&apos;.layerWrap&apos;,function(e)&#123;</span><br><span class="line">         //console.log(e.clientX,e.clientY)</span><br><span class="line">         CenterPosition = getCenterPosition($(&apos;.layer img&apos;))</span><br><span class="line">         moveY = (CenterPosition.x - e.clientX)/30</span><br><span class="line">         moveX = 0-(CenterPosition.y - e.clientY)/27</span><br><span class="line">         //console.log(moveX,moveY)</span><br><span class="line">         $(&apos;.layerWrap&apos;).css(&apos;transform&apos;,&apos;rotateX(&apos;+moveX+&apos;deg)&apos;+&apos;&apos;+&apos;rotateY(&apos;+moveY+&apos;deg)&apos;)</span><br><span class="line">         $(&apos;.layerWrap&apos;).css(&apos;webKitTransform&apos;,&apos;rotateX(&apos;+moveX+&apos;deg)&apos;+&apos;&apos;+&apos;rotateY(&apos;+moveY+&apos;deg)&apos;)</span><br><span class="line">     &#125;)</span><br></pre>
+                                                    <pre><span class="line">$(<span class="built_in">document</span>).on(<span class="string">'mousemove'</span>,<span class="string">'.layerWrap'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">         <span class="comment">//console.log(e.clientX,e.clientY)</span></span><br><span class="line">         CenterPosition = getCenterPosition($(<span class="string">'.layer img'</span>))</span><br><span class="line">         moveY = (CenterPosition.x - e.clientX)/<span class="number">30</span></span><br><span class="line">         moveX = <span class="number">0</span>-(CenterPosition.y - e.clientY)/<span class="number">27</span></span><br><span class="line">         <span class="comment">//console.log(moveX,moveY)</span></span><br><span class="line">         $(<span class="string">'.layerWrap'</span>).css(<span class="string">'transform'</span>,<span class="string">'rotateX('</span>+moveX+<span class="string">'deg)'</span>+<span class="string">''</span>+<span class="string">'rotateY('</span>+moveY+<span class="string">'deg)'</span>)</span><br><span class="line">         $(<span class="string">'.layerWrap'</span>).css(<span class="string">'webKitTransform'</span>,<span class="string">'rotateX('</span>+moveX+<span class="string">'deg)'</span>+<span class="string">''</span>+<span class="string">'rotateY('</span>+moveY+<span class="string">'deg)'</span>)</span><br><span class="line">     &#125;)</span><br></pre>
                                                 </td>
                                             </tr>
                                         </table>
@@ -141,17 +141,11 @@
                                 <p>即可看到效果。</p>
                                 <blockquote>
                                 </blockquote>
-                                <p>
-                                    <h3>
-                                        代码托关于
-                                        <a href="https://github.com/liubin915249126/javascript/tree/master/Parallax#js%E8%A7%86%E5%B7%AE%E6%95%88%E6%9E%9C" >github</a>
-                                        欢迎star
-                                    </h3>
-                                </p> 
+
 
                             </div>
                             <footer class="article-footer">
-                                <a data-url="http://yoursite.com/2018/03/08/example/" data-id="cjel4krg80000jfx83rq6miwc" class="article-share-link">Teilen</a>
+                                <a data-url="http://yoursite.com/2018/03/08/parallax/" data-id="cjep1busf0003psx8b1zog6xu" class="article-share-link">Teilen</a>
 
 
                             </footer>
@@ -159,6 +153,15 @@
 
 
                         <nav id="article-nav">
+
+                            <a href="/2018/03/10/svg1/" id="article-nav-newer" class="article-nav-link-wrap">
+                                <strong class="article-nav-caption">Neuer</strong>
+                                <div class="article-nav-title">
+
+                                    (no title)
+
+                                </div>
+                            </a>
 
 
                             <a href="/2018/03/08/hello-world/" id="article-nav-older" class="article-nav-link-wrap">

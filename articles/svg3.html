@@ -18,7 +18,7 @@
     <meta name="twitter:description" content="用SVG连接两个div的直线，拖动实时改变位置用d3.js动态添加 path,line 节点，并动态修改节点属性 1.产品经理提出的需求    用带箭头的虚线将两个位置不固定的div连接起来,初听到这个需求一头雾水，传统的div可以做直线，但斜起来不太好做，幸亏之前接触过svg,里面有一个line标签，知道起始中止两个点的位置，就可以将两个点连接起来了。  至于箭头,可以这么做先定义箭头：  12">
     <meta name="twitter:image" content="https://github.com/liubin915249126/javascript/blob/master/SVG/image/svgDrag.gif">
     <link rel="stylesheet" href="./style.css">
-    
+
 </head>
 
 <body>
@@ -51,7 +51,7 @@
                                 <h2 id="用SVG连接两个div的直线，拖动实时改变位置">
                                     <a href="#用SVG连接两个div的直线，拖动实时改变位置" class="headerlink" title="用SVG连接两个div的直线，拖动实时改变位置"></a>用SVG连接两个div的直线，拖动实时改变位置</h2>
                                 <p>
-                                    <img src="https://raw.githubusercontent.com/liubin915249126/javascript/master/SVG/image/svgDrag.gif" alt="效果图">
+                                    <img src="https://github.com/liubin915249126/javascript/blob/master/SVG/image/svgDrag.gif" alt="效果图">
                                     <br>用d3.js动态添加 path,line 节点，并动态修改节点属性</p>
                                 <h4 id="1-产品经理提出的需求">
                                     <a href="#1-产品经理提出的需求" class="headerlink" title="1.产品经理提出的需求"></a>1.产品经理提出的需求</h4>
@@ -60,14 +60,14 @@
                                 <p> 用带箭头的虚线将两个位置不固定的div连接起来,初听到这个需求一头雾水，传统的div可以做直线，但斜起来不太好做，幸亏之前接触过svg,里面有一个line标签，知道起始中止两个点的位置，就可以将两个点连接起来了。
                                     <br> 至于箭头,可以这么做先定义箭头：
                                     <br>
-                                    <figure class="highlight plain">
+                                    <figure class="highlight js">
                                         <table>
                                             <tr>
                                                 <td class="gutter">
                                                     <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre>
                                                 </td>
                                                 <td class="code">
-                                                    <pre><span class="line">&lt;svg&gt;</span><br><span class="line">    &lt;defs&gt;</span><br><span class="line">        &lt;marker id=&quot;arrow&quot; markerUnits=&quot;strokeWidth&quot; markerWidth=&quot;12&quot; markerHeight=&quot;12&quot; viewBox=&quot;0 0 12 12&quot; refX=&quot;6&quot; refY=&quot;6&quot; orient=&quot;auto&quot;&gt;</span><br><span class="line">            &lt;path xmlns=&quot;http://www.w3.org/2000/svg&quot; d=&quot;M2,2 L10,6 L2,10 L6,6 L2,2&quot; style=&quot;fill: #000000;&quot; /&gt;</span><br><span class="line">        &lt;/marker&gt;</span><br><span class="line">    &lt;/defs&gt;</span><br><span class="line">&lt;/svg&gt;</span><br></pre>
+                                                    <pre><span class="line">&lt;svg&gt;</span><br><span class="line">    &lt;defs&gt;</span><br><span class="line">        &lt;marker id=<span class="string">"arrow"</span> markerUnits=<span class="string">"strokeWidth"</span> markerWidth=<span class="string">"12"</span> markerHeight=<span class="string">"12"</span> viewBox=<span class="string">"0 0 12 12"</span> refX=<span class="string">"6"</span> refY=<span class="string">"6"</span> orient=<span class="string">"auto"</span>&gt;</span><br><span class="line">            &lt;path xmlns=<span class="string">"http://www.w3.org/2000/svg"</span> d=<span class="string">"M2,2 L10,6 L2,10 L6,6 L2,2"</span> style=<span class="string">"fill: #000000;"</span> /&gt;</span><br><span class="line">        &lt;<span class="regexp">/marker&gt;</span></span><br><span class="line"><span class="regexp">    &lt;/</span>defs&gt;</span><br><span class="line">&lt;<span class="regexp">/svg&gt;</span></span><br></pre>
                                                 </td>
                                             </tr>
                                         </table>
@@ -75,14 +75,14 @@
                                 </p>
                                 <p> 将箭头放在直线上：marker-end=”url(#arrow)”
                                     <br>
-                                    <figure class="highlight plain">
+                                    <figure class="highlight js">
                                         <table>
                                             <tr>
                                                 <td class="gutter">
                                                     <pre><span class="line">1</span><br></pre>
                                                 </td>
                                                 <td class="code">
-                                                    <pre><span class="line">&lt;line  x1=&quot;0&quot; y1=&quot;0&quot; x2=&quot;200&quot; y2=&quot;50&quot; stroke=&quot;#000&quot; stroke-width=&quot;2&quot; marker-end=&quot;url(#arrow)&quot;stroke-dasharray=&quot;10,10&quot;&gt;&lt;/line&gt;</span><br></pre>
+                                                    <pre><span class="line">&lt;line  x1=<span class="string">"0"</span> y1=<span class="string">"0"</span> x2=<span class="string">"200"</span> y2=<span class="string">"50"</span> stroke=<span class="string">"#000"</span> stroke-width=<span class="string">"2"</span> marker-end=<span class="string">"url(#arrow)"</span>stroke-dasharray=<span class="string">"10,10"</span>&gt;&lt;/line&gt;</span><br></pre>
                                                 </td>
                                             </tr>
                                         </table>
@@ -96,14 +96,14 @@
                                 </blockquote>
                                 <p> 需要连接的两个div及SVG都相对于某一个div.wrap绝对定位，可以先求得两个div左上角相对与div.wrap坐标：
                                     <br>
-                                    <figure class="highlight plain">
+                                    <figure class="highlight js">
                                         <table>
                                             <tr>
                                                 <td class="gutter">
                                                     <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre>
                                                 </td>
                                                 <td class="code">
-                                                    <pre><span class="line"> //获取元素左上角相对于某一元素的的位置</span><br><span class="line"> function getElCoordinate(dom) &#123;</span><br><span class="line">             var t = dom.offsetTop;</span><br><span class="line">             var l = dom.offsetLeft;</span><br><span class="line">             var w = dom.offsetWidth;</span><br><span class="line">             var h = dom.offsetHeight;</span><br><span class="line">             dom = dom.offsetParent;</span><br><span class="line">             while (!$(dom).hasClass(&apos;wrap&apos;)) &#123;</span><br><span class="line">                 t += dom.offsetTop;</span><br><span class="line">                 l += dom.offsetLeft;</span><br><span class="line">                 dom = dom.offsetParent;</span><br><span class="line">             &#125;; return &#123;</span><br><span class="line">                 top: t,//Y轴坐标</span><br><span class="line">                 left: l,//X轴坐标</span><br><span class="line">                 width:w,//元素宽度</span><br><span class="line">                 height:h//元素高度 </span><br><span class="line">             &#125;;</span><br><span class="line">         &#125;</span><br><span class="line">&#125;)</span><br></pre>
+                                                    <pre><span class="line"> <span class="comment">//获取元素左上角相对于某一元素的的位置</span></span><br><span class="line"> <span class="function"><span class="keyword">function</span> <span class="title">getElCoordinate</span>(<span class="params">dom</span>) </span>&#123;</span><br><span class="line">             <span class="keyword">var</span> t = dom.offsetTop;</span><br><span class="line">             <span class="keyword">var</span> l = dom.offsetLeft;</span><br><span class="line">             <span class="keyword">var</span> w = dom.offsetWidth;</span><br><span class="line">             <span class="keyword">var</span> h = dom.offsetHeight;</span><br><span class="line">             dom = dom.offsetParent;</span><br><span class="line">             <span class="keyword">while</span> (!$(dom).hasClass(<span class="string">'wrap'</span>)) &#123;</span><br><span class="line">                 t += dom.offsetTop;</span><br><span class="line">                 l += dom.offsetLeft;</span><br><span class="line">                 dom = dom.offsetParent;</span><br><span class="line">             &#125;; <span class="keyword">return</span> &#123;</span><br><span class="line">                 top: t,<span class="comment">//Y轴坐标</span></span><br><span class="line">                 left: l,<span class="comment">//X轴坐标</span></span><br><span class="line">                 width:w,<span class="comment">//元素宽度</span></span><br><span class="line">                 height:h<span class="comment">//元素高度 </span></span><br><span class="line">             &#125;;</span><br><span class="line">         &#125;</span><br><span class="line">&#125;)</span><br></pre>
                                                 </td>
                                             </tr>
                                         </table>
@@ -117,14 +117,14 @@
                                 </blockquote>
                                 <p> 分为两种情况：终点div位于起点div上方,终点div位于起点div下方。
                                     <br>
-                                    <figure class="highlight plain">
+                                    <figure class="highlight js">
                                         <table>
                                             <tr>
                                                 <td class="gutter">
                                                     <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre>
                                                 </td>
                                                 <td class="code">
-                                                    <pre><span class="line">var pos1 = getElCoordinate($(&apos;.item1&apos;)[0])//起点div的位置</span><br><span class="line">var pos2 = getElCoordinate($(&apos;.item2&apos;)[0])//终点div的位置</span><br><span class="line">function getPos(pos1, pos2)&#123;</span><br><span class="line">           //分两种情况</span><br><span class="line">           var x1,y1,x2,y2;</span><br><span class="line">           if(pos2.top&lt;pos1.top)&#123;</span><br><span class="line">               x1 = pos1.left + pos1.width/2;</span><br><span class="line">               y1 = pos1.top;</span><br><span class="line">               y2 = pos2.top + pos2.height</span><br><span class="line">              if(pos2.left&lt;pos1.left)&#123;</span><br><span class="line">                 x2 = pos2.left + pos2.width/2</span><br><span class="line">           &#125;else&#123;</span><br><span class="line">               x1 = pos1.left + pos1.width / 2;</span><br><span class="line">               y1 = pos1.top + pos1.height;</span><br><span class="line">               x2 = pos2.left + pos2.width/2</span><br><span class="line">               y2 = pos2.top </span><br><span class="line">           &#125;</span><br><span class="line">           return &#123;</span><br><span class="line">               start :&#123;x:x1,y:y1&#125;,</span><br><span class="line">               end : &#123;x:x2,y:y2&#125;</span><br><span class="line">           &#125;</span><br><span class="line">        &#125;</span><br></pre>
+                                                    <pre><span class="line"><span class="keyword">var</span> pos1 = getElCoordinate($(<span class="string">'.item1'</span>)[<span class="number">0</span>])<span class="comment">//起点div的位置</span></span><br><span class="line"><span class="keyword">var</span> pos2 = getElCoordinate($(<span class="string">'.item2'</span>)[<span class="number">0</span>])<span class="comment">//终点div的位置</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getPos</span>(<span class="params">pos1, pos2</span>)</span>&#123;</span><br><span class="line">           <span class="comment">//分两种情况</span></span><br><span class="line">           <span class="keyword">var</span> x1,y1,x2,y2;</span><br><span class="line">           <span class="keyword">if</span>(pos2.top&lt;pos1.top)&#123;</span><br><span class="line">               x1 = pos1.left + pos1.width/<span class="number">2</span>;</span><br><span class="line">               y1 = pos1.top;</span><br><span class="line">               y2 = pos2.top + pos2.height</span><br><span class="line">              <span class="keyword">if</span>(pos2.left&lt;pos1.left)&#123;</span><br><span class="line">                 x2 = pos2.left + pos2.width/<span class="number">2</span></span><br><span class="line">           &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">               x1 = pos1.left + pos1.width / <span class="number">2</span>;</span><br><span class="line">               y1 = pos1.top + pos1.height;</span><br><span class="line">               x2 = pos2.left + pos2.width/<span class="number">2</span></span><br><span class="line">               y2 = pos2.top </span><br><span class="line">           &#125;</span><br><span class="line">           <span class="keyword">return</span> &#123;</span><br><span class="line">               start :&#123;<span class="attr">x</span>:x1,<span class="attr">y</span>:y1&#125;,</span><br><span class="line">               end : &#123;<span class="attr">x</span>:x2,<span class="attr">y</span>:y2&#125;</span><br><span class="line">           &#125;</span><br><span class="line">        &#125;</span><br></pre>
                                                 </td>
                                             </tr>
                                         </table>
@@ -136,14 +136,14 @@
                                     <a href="#4-确定起止点位置后连线。" class="headerlink" title="4.确定起止点位置后连线。"></a>4.确定起止点位置后连线。</h4>
                                 <blockquote>
                                 </blockquote>
-                                <figure class="highlight plain">
+                                <figure class="highlight js">
                                     <table>
                                         <tr>
                                             <td class="gutter">
                                                 <pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre>
                                             </td>
                                             <td class="code">
-                                                <pre><span class="line">function move()&#123;</span><br><span class="line">            var pos1 = getElCoordinate($(&apos;.item1&apos;)[0])</span><br><span class="line">            var pos2 = getElCoordinate($(&apos;.item2&apos;)[0])</span><br><span class="line">            var start = getPos(pos1, pos2).start</span><br><span class="line">            var end = getPos(pos1, pos2).end</span><br><span class="line"></span><br><span class="line">            $(&apos;#line&apos;).attr(&#123; x1: start.x, y1: start.y, x2: end.x, y2: end.y &#125;)</span><br><span class="line">            $(&apos;#path&apos;).attr(&#123; d: &apos;M20,20 L100,100&apos; &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        move()</span><br></pre>
+                                                <pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">move</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="keyword">var</span> pos1 = getElCoordinate($(<span class="string">'.item1'</span>)[<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">var</span> pos2 = getElCoordinate($(<span class="string">'.item2'</span>)[<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">var</span> start = getPos(pos1, pos2).start</span><br><span class="line">            <span class="keyword">var</span> end = getPos(pos1, pos2).end</span><br><span class="line"></span><br><span class="line">            $(<span class="string">'#line'</span>).attr(&#123; <span class="attr">x1</span>: start.x, <span class="attr">y1</span>: start.y, <span class="attr">x2</span>: end.x, <span class="attr">y2</span>: end.y &#125;)</span><br><span class="line">            $(<span class="string">'#path'</span>).attr(&#123; <span class="attr">d</span>: <span class="string">'M20,20 L100,100'</span> &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">        move()</span><br></pre>
                                             </td>
                                         </tr>
                                     </table>
@@ -154,31 +154,31 @@
                                     <a href="#5-两个div分别拖动并保持线始终连接" class="headerlink" title="5.两个div分别拖动并保持线始终连接"></a>5.两个div分别拖动并保持线始终连接</h4>
                                 <blockquote>
                                 </blockquote>
-                                <pre><code>  drag($(&apos;.item&apos;), move)
-                      function drag(obj,callback) {
-                         var dragEles = obj;
-                         dragEles.each(function(index, dragEleDom){
-                             var _move = false;//移动标记
-                             var _x, _y;//鼠标离控件左上角的相对位置
-                             var dragEle = $(dragEleDom)
-                             dragEle.click(function () {
-                                 //alert(&quot;click&quot;);//点击（松开后触发）
-                             }).mousedown(function (e) {
-                                 _move = true;
-                                 _x = e.pageX - parseInt(dragEle.css(&quot;left&quot;));
-                                 _y = e.pageY - parseInt(dragEle.css(&quot;top&quot;));
-                                 // dragEle.fadeTo(20, 0.9);//点击后开始拖动并透明显示
+                                <pre><code class="js">  drag($(<span class="string">'.item'</span>), move)
+                      <span class="function"><span class="keyword">function</span> <span class="title">drag</span>(<span class="params">obj,callback</span>) </span>{
+                         <span class="keyword">var</span> dragEles = obj;
+                         dragEles.each(<span class="function"><span class="keyword">function</span>(<span class="params">index, dragEleDom</span>)</span>{
+                             <span class="keyword">var</span> _move = <span class="literal">false</span>;<span class="comment">//移动标记</span>
+                             <span class="keyword">var</span> _x, _y;<span class="comment">//鼠标离控件左上角的相对位置</span>
+                             <span class="keyword">var</span> dragEle = $(dragEleDom)
+                             dragEle.click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
+                                 <span class="comment">//alert("click");//点击（松开后触发）</span>
+                             }).mousedown(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>{
+                                 _move = <span class="literal">true</span>;
+                                 _x = e.pageX - <span class="built_in">parseInt</span>(dragEle.css(<span class="string">"left"</span>));
+                                 _y = e.pageY - <span class="built_in">parseInt</span>(dragEle.css(<span class="string">"top"</span>));
+                                 <span class="comment">// dragEle.fadeTo(20, 0.9);//点击后开始拖动并透明显示</span>
                              });
-                             $(document).mousemove(function (e) {
-                                 if (_move) {
-                                     var x = e.pageX - _x;//移动时根据鼠标位置计算控件左上角的绝对位置
-                                     var y = e.pageY - _y;
-                                     dragEle.css({ top: y, left: x });//控件新位置
-                                     if(callback){callback()}
+                             $(<span class="built_in">document</span>).mousemove(<span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>{
+                                 <span class="keyword">if</span> (_move) {
+                                     <span class="keyword">var</span> x = e.pageX - _x;<span class="comment">//移动时根据鼠标位置计算控件左上角的绝对位置</span>
+                                     <span class="keyword">var</span> y = e.pageY - _y;
+                                     dragEle.css({ <span class="attr">top</span>: y, <span class="attr">left</span>: x });<span class="comment">//控件新位置</span>
+                                     <span class="keyword">if</span>(callback){callback()}
                                  }
-                             }).mouseup(function () {
-                                 _move = false;
-                                 dragEle.fadeTo(&quot;fast&quot;, 1);//松开鼠标后停止移动并恢复成不透明
+                             }).mouseup(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{
+                                 _move = <span class="literal">false</span>;
+                                 dragEle.fadeTo(<span class="string">"fast"</span>, <span class="number">1</span>);<span class="comment">//松开鼠标后停止移动并恢复成不透明</span>
                              });
                          })
                     
@@ -191,11 +191,11 @@
                                 <h4 id="源码托管于github欢迎star">
                                     <a href="#源码托管于github欢迎star" class="headerlink" title="源码托管于github欢迎star"></a>源码托管于
                                     <a href="https://github.com/liubin915249126/javascript/tree/master/SVG" target="_blank" rel="noopener">github</a>欢迎star</h4>
-                                <h4><a href="../example/svg1.html" target="_blank" >实例应用</a></h4>    
+                                    <h4><a href="../example/svg1.html" target="_blank" rel="noopener"></a></h4>
 
                             </div>
                             <footer class="article-footer">
-                                <a data-url="http://yoursite.com/2018/03/10/svg2/" data-id="cjel6xkv30003mpx8dfnht1nt" class="article-share-link">Teilen</a>
+                                <a data-url="http://yoursite.com/2018/03/10/svg2/" data-id="cjep1icbc0005upx89rqz9rtz" class="article-share-link">Teilen</a>
 
 
                             </footer>
@@ -203,6 +203,15 @@
 
 
                         <nav id="article-nav">
+
+                            <a href="/2018/03/12/lencharts/" id="article-nav-newer" class="article-nav-link-wrap">
+                                <strong class="article-nav-caption">Neuer</strong>
+                                <div class="article-nav-title">
+
+                                    (no title)
+
+                                </div>
+                            </a>
 
 
                             <a href="/2018/03/10/svg1/" id="article-nav-older" class="article-nav-link-wrap">
@@ -212,7 +221,7 @@
 
                         </nav>
 
-                    
+
                     </article>
                 </section>
             </div>

@@ -42,7 +42,7 @@ var allArticles = [
     {
         title:'react里面使用jquery插件',
         tags:['javascript','jquery','react','jquery插件'],
-        target:'../example/jquery-in-react.html',
+        target:'../articles/jquery-in-react.html',
         // img:{src:'https://github.com/liubin915249126/javascript/raw/master/image/dirction.gif',alt:'效果图'},
         description:'webpack支持CMD，AMD语法，CMD，AMD的语法写文件，然后引入，在组件componentDidMount里面调用方法',
         creattime:'2018-03-12'

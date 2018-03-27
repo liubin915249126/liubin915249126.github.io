@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>所有文章</title>
+    <link href="./all.css" type="text/css" rel="stylesheet" />
+    <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" target="_blank">
+            <img src="../img/liubin.jpg" class="lb_logo">
+            <span>刘宾</span>
+        </a>
+        
+        <span>
+            <a class="logo_a" href="../index.html" target="_blank">返回首页</a>
+        </span>
+    </header>
+    <!-- 文章主体 -->
+    <div class="article-lists container-fluid">
+        <div class="row">
+
+        </div>
+        <div class="col-md-6 col-xs-12" id="template" style="display:none;">
+            <article class="article">
+                <a class="title" href="https://github.com/liubin915249126/HTML-CSS-SVG/tree/master/SVG#svg-%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0"
+                    target="blank">
+                    <h4>SVG相关学习(一)SVG基础</h4>
+                </a>
+                <div class="tags">
+
+                </div>
+                <a class="content" href="https://github.com/liubin915249126/HTML-CSS-SVG/tree/master/SVG#svg-%E7%9B%B8%E5%85%B3%E5%AD%A6%E4%B9%A0"
+                    target="blank">
+                    <img src="https://github.com/liubin915249126/HTML-CSS-SVG/raw/master/SVG/image/SVGArcs_Flags.png" alt="SVGArcs_Flags.png"
+                    />
+                    <div class="description">
+                        主要包括SVG基础知识，基本图形，渐变，还有path路径相关
+                    </div>
+                </a>
+            </article>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="./all.js"></script>
+<script type="text/javascript">
+    // 切换页面
+    $(function () {
+        // 渲染文章
+        allArticles.forEach(function (article,index) {
+            var $template = $('#template').clone();
+            $template.css('display', 'block')
+                .find('.title')
+                .attr('href', article.target)
+                .find('h4').text("第"+ (index+1) + "篇: "+article.title);
+            $template.find('.tags').html('')
+            article.tags.forEach(function (tag) {
+                var $tag = $('<span class="label label-primary"></span>');
+                $tag.text(tag);
+                $template.find('.tags').append($tag)
+            })
+            $template.find('.content').attr('href', article.target)
+                .find('.description').text(article.description);
+            if(article.img){
+                $template.find('img').attr({
+                    'src': article.img.src,
+                    'alt': article.img.alt
+                });
+            }    
+                
+                
+            $('.article-lists .row').append($template);
+        });
+        // 文章点击事件 
+        $('.article').find('a').on('click', function () {
+            var target = $(this).attr('data-target');
+            var title = $(this).closest('.article').find('h4').text();
+            var iframe = window.parent.document.getElementById('showcontent');
+            $(iframe).attr('src', target)
+            $(window.parent.document).find('.main .title h3').text(title);
+        })
+        
+        // 有父级时隐藏头部 
+        if(window.parent.document.getElementById('showcontent')){
+           $('.header').css('display',"none")
+        }
+    })
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115451143-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115451143-1');
+</script>
+
+</html>

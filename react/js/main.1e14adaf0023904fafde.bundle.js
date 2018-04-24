@@ -17228,7 +17228,8 @@ if (typeof __MOBX_DEVTOOLS_GLOBAL_HOOK__ === "object") {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(102)))
 
 /***/ }),
-/* 234 */
+/* 234 */,
+/* 235 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18270,7 +18271,6 @@ if ((typeof __MOBX_DEVTOOLS_GLOBAL_HOOK__ === "undefined" ? "undefined" : _typeo
 
 
 /***/ }),
-/* 235 */,
 /* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -36676,7 +36676,7 @@ var _reactLoadable = __webpack_require__(565);
 
 var _reactLoadable2 = _interopRequireDefault(_reactLoadable);
 
-var _mobxReact = __webpack_require__(234);
+var _mobxReact = __webpack_require__(235);
 
 var _index = __webpack_require__(566);
 
@@ -36700,7 +36700,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var MainComponent = (0, _reactLoadable2.default)({
     loader: function loader() {
-        return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 575));
+        return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 575));
     },
     loading: LoadingPage
 });
@@ -36727,7 +36727,7 @@ var TimeLineComponent = (0, _reactLoadable2.default)({
 });
 var HomeComponent = (0, _reactLoadable2.default)({
     loader: function loader() {
-        return __webpack_require__.e/* import() */(1).then(__webpack_require__.bind(null, 579));
+        return __webpack_require__.e/* import() */(0).then(__webpack_require__.bind(null, 579));
     },
     loading: LoadingPage
 });

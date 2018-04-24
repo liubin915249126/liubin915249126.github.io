@@ -1380,7 +1380,7 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
-/***/ 235:
+/***/ 234:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3771,7 +3771,7 @@ var _require2 = __webpack_require__(59),
     isValidElement = _require2.isValidElement;
 
 var ReactNoopUpdateQueue = __webpack_require__(194);
-var factory = __webpack_require__(235);
+var factory = __webpack_require__(234);
 
 module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 

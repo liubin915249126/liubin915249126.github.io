@@ -126,7 +126,7 @@ function (_React$Component) {
             } else {
               console.log('failed' + this.getStatus());
               var myCity = new BMap.LocalCity();
-              myCity.get(function () {
+              myCity.get(function (result) {
                 var cityName = result.name;
                 map.setCenter(cityName);
                 console.log("当前定位城市:" + cityName);
@@ -214,4 +214,4 @@ function (_React$Component) {
 /***/ })
 
 }]);
-//# sourceMappingURL=7299e482f59afc5eb779e.js.map
+//# sourceMappingURL=794fd2509d0276e2596b3.js.map

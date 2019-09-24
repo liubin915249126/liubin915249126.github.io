@@ -250,6 +250,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "1ea33c0fe0b37882290b":
+/*!**************************************!*\
+  !*** ./src/pub-sub/store/actions.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  addBook: function addBook(context, payload) {
+    context.commit('addBook', payload);
+  }
+});
+
+/***/ }),
+
 /***/ "28d8211412be3b64eff8":
 /*!*********************************************!*\
   !*** ./src/components/Table/TableSprate.js ***!
@@ -1148,6 +1165,165 @@ function isObjectValueEqual(a, b) {
 
 /***/ }),
 
+/***/ "3f9813bd58a9599260a2":
+/*!********************************!*\
+  !*** ./src/pub-sub/pub-sub.js ***!
+  \********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PubSub; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var PubSub =
+/*#__PURE__*/
+function () {
+  function PubSub() {
+    _classCallCheck(this, PubSub);
+
+    // events里存放的是所有的具名事件
+    this.events = {};
+  } //  提供订阅功能
+
+
+  _createClass(PubSub, [{
+    key: "subscribe",
+    value: function subscribe(event, callback) {
+      var self = this;
+
+      if (!self.events.hasOwnProperty(event)) {
+        self.events[event] = [];
+      } // 没有做去重
+
+
+      return self.events[event].push(callback);
+    } // 提供发布功能
+
+  }, {
+    key: "publish",
+    value: function publish(event, data) {
+      var self = this;
+
+      if (!self.events.hasOwnProperty(event)) {
+        return [];
+      }
+
+      return self.events[event].map(function (callback) {
+        return callback(data);
+      });
+    }
+  }]);
+
+  return PubSub;
+}();
+
+
+
+/***/ }),
+
+/***/ "4573fd42727860f4a96d":
+/*!****************************************!*\
+  !*** ./src/pub-sub/store/mutations.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  addBook: function addBook(state, payload) {
+    state.bookList.push(payload);
+    return state;
+  }
+});
+
+/***/ }),
+
+/***/ "4c9edeafc1df1d07f301":
+/*!*********************************!*\
+  !*** ./src/views/punsub/Pub.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Pub; });
+/* harmony import */ var antd_lib_button_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/button/style */ "b28d1f103e4a5b2e8ef8");
+/* harmony import */ var antd_lib_button_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/button */ "55f6171b5a254025824d");
+/* harmony import */ var antd_lib_button__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_button__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "8af190b70a6bc55c6f1b");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _pub_sub_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/pub-sub/store */ "ef605bb5a4a1e7ad1e17");
+
+
+
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var Pub =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Pub, _React$Component);
+
+  function Pub(props) {
+    _classCallCheck(this, Pub);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Pub).call(this, props));
+  }
+
+  _createClass(Pub, [{
+    key: "pub",
+    value: function pub() {
+      _pub_sub_store__WEBPACK_IMPORTED_MODULE_3__["default"].dispatch('addBook', {
+        bookid: 203
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        onClick: function onClick() {
+          _this.pub();
+        }
+      }, "\u53D1\u5E03"));
+    }
+  }]);
+
+  return Pub;
+}(react__WEBPACK_IMPORTED_MODULE_2___default.a.Component);
+
+
+
+/***/ }),
+
 /***/ "52f5f6bcbcb3449bee20":
 /*!***************************!*\
   !*** ./src/common/nav.js ***!
@@ -1162,6 +1338,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_about_AboutView__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @views/about/AboutView */ "a6f4efeb00136d939b9e");
 /* harmony import */ var _views_timeLine_TimeLineView__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @views/timeLine/TimeLineView */ "ed13d0969987be818423");
 /* harmony import */ var _views_Thanos_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @views/Thanos/index.js */ "00202a98bb09eaf405bb");
+/* harmony import */ var _views_punsub_index_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @views/punsub/index.js */ "61f74ceec3c37af70a26");
+
 
 
 
@@ -1170,7 +1348,8 @@ var componentLink = {
   main: _views_home_HomeView__WEBPACK_IMPORTED_MODULE_0__["default"],
   about: _views_about_AboutView__WEBPACK_IMPORTED_MODULE_1__["default"],
   timeline: _views_timeLine_TimeLineView__WEBPACK_IMPORTED_MODULE_2__["default"],
-  thanos: _views_Thanos_index_js__WEBPACK_IMPORTED_MODULE_3__["default"]
+  thanos: _views_Thanos_index_js__WEBPACK_IMPORTED_MODULE_3__["default"],
+  punsub: _views_punsub_index_js__WEBPACK_IMPORTED_MODULE_4__["default"]
 };
 var routerConfig = [{
   icon: 'user',
@@ -1188,9 +1367,115 @@ var routerConfig = [{
   icon: 'upload',
   name: '灭霸特效',
   url: 'thanos'
+}, {
+  icon: 'upload',
+  name: '事件订阅',
+  url: 'punsub'
 }];
 
 /* harmony default export */ __webpack_exports__["default"] = (routerConfig);
+
+/***/ }),
+
+/***/ "56b7fdc1b11e55d3bb3d":
+/*!************************************!*\
+  !*** ./src/pub-sub/store/store.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Store; });
+/* harmony import */ var _pub_sub_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../pub-sub.js */ "3f9813bd58a9599260a2");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+var Store =
+/*#__PURE__*/
+function () {
+  function Store(params) {
+    _classCallCheck(this, Store);
+
+    var self = this;
+    self.actions = {}; // 存储异步方法
+
+    self.mutations = {}; // 存储同步方法
+
+    self.state = {}; // 共享数据
+
+    self.status = 'resting'; // 防止手动更新
+
+    self.events = new _pub_sub_js__WEBPACK_IMPORTED_MODULE_0__["default"](); // 参数可以传入初始的actions和mutations
+
+    if (params.hasOwnProperty('actions')) {
+      self.actions = params.actions;
+    }
+
+    if (params.hasOwnProperty('mutations')) {
+      self.mutations = params.mutations;
+    } // Proxy：es6的方法，起到拦截的作用
+
+
+    self.state = new Proxy(params.state || {}, {
+      set: function set(state, key, value) {
+        state[key] = value;
+        console.log("stateChange: ".concat(key, ": ").concat(value));
+        self.events.publish('stateChange', self.state); // 防止手动更新
+
+        if (self.status !== 'mutation') {
+          console.warn("You should use a mutation to set ".concat(key));
+        }
+
+        self.status = 'resting';
+        return true;
+      }
+    });
+  }
+
+  _createClass(Store, [{
+    key: "dispatch",
+    value: function dispatch(actionKey, payload) {
+      var self = this;
+
+      if (typeof self.actions[actionKey] !== 'function') {
+        console.error("Action \"".concat(actionKey, " doesn't exist."));
+        return false;
+      }
+
+      console.groupCollapsed("ACTION: ".concat(actionKey));
+      self.status = 'action';
+      self.actions[actionKey](self, payload);
+      console.groupEnd();
+      return true;
+    }
+  }, {
+    key: "commit",
+    value: function commit(mutationKey, payload) {
+      var self = this;
+
+      if (typeof self.mutations[mutationKey] !== 'function') {
+        console.log("Mutation \"".concat(mutationKey, "\" doesn't exist"));
+        return false;
+      }
+
+      self.status = 'mutation';
+      console.groupCollapsed("MUTATION: ".concat(mutationKey));
+      var newState = self.mutations[mutationKey](self.state, payload);
+      self.state = Object.assign(self.state, newState);
+      return true;
+    }
+  }]);
+
+  return Store;
+}();
+
+
 
 /***/ }),
 
@@ -1415,6 +1700,146 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "58d3b4b343662f3a0da9":
+/*!*********************************!*\
+  !*** ./src/views/punsub/Sub.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Sub; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "8af190b70a6bc55c6f1b");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _pub_sub_store__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/pub-sub/store */ "ef605bb5a4a1e7ad1e17");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var Sub =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Sub, _React$Component);
+
+  function Sub(props) {
+    var _this;
+
+    _classCallCheck(this, Sub);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Sub).call(this, props));
+    _this.state = {
+      bookList: []
+    };
+    return _this;
+  }
+
+  _createClass(Sub, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      _pub_sub_store__WEBPACK_IMPORTED_MODULE_1__["default"].events.subscribe('stateChange', function (params) {
+        _this2.setState({
+          bookList: params.bookList
+        });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var bookList = this.state.bookList;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "\u8BA2\u9605", bookList.map(function (book) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, book.bookid);
+      }));
+    }
+  }]);
+
+  return Sub;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
+/***/ "61f74ceec3c37af70a26":
+/*!***********************************!*\
+  !*** ./src/views/punsub/index.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return PubSub; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "8af190b70a6bc55c6f1b");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Pub__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Pub */ "4c9edeafc1df1d07f301");
+/* harmony import */ var _Sub__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Sub */ "58d3b4b343662f3a0da9");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+
+var PubSub =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(PubSub, _React$Component);
+
+  function PubSub(props) {
+    _classCallCheck(this, PubSub);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(PubSub).call(this, props));
+  }
+
+  _createClass(PubSub, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Pub__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Sub__WEBPACK_IMPORTED_MODULE_2__["default"], null));
+    }
+  }]);
+
+  return PubSub;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
 /***/ "6bd219a6004852596e72":
 /*!*********************************************!*\
   !*** ./src/components/Table/TableHeader.js ***!
@@ -1538,6 +1963,21 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_4___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (TableHeader);
+
+/***/ }),
+
+/***/ "8bf9f5ceb63a6daa4739":
+/*!************************************!*\
+  !*** ./src/pub-sub/store/state.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  bookList: []
+});
 
 /***/ }),
 
@@ -4338,6 +4778,31 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "ef605bb5a4a1e7ad1e17":
+/*!************************************!*\
+  !*** ./src/pub-sub/store/index.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions.js */ "1ea33c0fe0b37882290b");
+/* harmony import */ var _mutations_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mutations.js */ "4573fd42727860f4a96d");
+/* harmony import */ var _state_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./state.js */ "8bf9f5ceb63a6daa4739");
+/* harmony import */ var _store_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store.js */ "56b7fdc1b11e55d3bb3d");
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = (new _store_js__WEBPACK_IMPORTED_MODULE_3__["default"]({
+  actions: _actions_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+  mutations: _mutations_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+  state: _state_js__WEBPACK_IMPORTED_MODULE_2__["default"]
+}));
+
+/***/ }),
+
 /***/ "ef9fc4aa5c1823ea9201":
 /*!****************************************!*\
   !*** ./src/views/Flow/FlowTemplate.js ***!
@@ -4912,4 +5377,4 @@ app.start('#main');
 /***/ })
 
 },[[0,"manifest","styles","vendor"]]]);
-//# sourceMappingURL=mainb3051eef1f7f2a5c4122.js.map
+//# sourceMappingURL=mainb8845c04e3e62d9e59f9.js.map

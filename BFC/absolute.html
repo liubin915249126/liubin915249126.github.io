@@ -83,15 +83,15 @@
                     dom.style[display] = select.value
                 }, false)
             })
-            BFC.addEventListener('change', function (e){
-                var display = this.getAttribute('id');
-                var dom = document.getElementById(display + '1')
-               if(e.target.checked){
-                    dom.style.display = 'inline-block'
-               }else{
-                    dom.style.display = 'block'
-               }
-            })
+            // BFC.addEventListener('change', function (e){
+            //     var display = this.getAttribute('id');
+            //     var dom = document.getElementById(display + '1')
+            //    if(e.target.checked){
+            //         dom.style.display = 'inline-block'
+            //    }else{
+            //         dom.style.display = 'block'
+            //    }
+            // })
             center.addEventListener('change', function (e){
                 document.body.classList.toggle('center')
             })

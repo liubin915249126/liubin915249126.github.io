@@ -12,7 +12,7 @@ exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/li
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "html,\nbody {\n  background: #fff;\n}\n#main {\n  background: #fff;\n}\n", ""]);
 
 // exports
 
@@ -54,6 +54,31 @@ exports.push([module.i, "/* stylelint-disable at-rule-empty-line-before,at-rule-
 
 // exports
 
+
+/***/ }),
+
+/***/ "087405ba330b7215979f":
+/*!*************************************!*\
+  !*** ./src/views/resume/index.less ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(/*! !../../../node_modules/css-loader!../../../node_modules/less-loader/dist/cjs.js!./index.less */ "cbce4745811000a09e74");
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "1e4534d1d62a11482e97")(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {}
 
 /***/ }),
 
@@ -1228,6 +1253,25 @@ if(false) {}
 
 /***/ }),
 
+/***/ "cbce4745811000a09e74":
+/*!******************************************************************************************************!*\
+  !*** ./node_modules/css-loader!./node_modules/less-loader/dist/cjs.js!./src/views/resume/index.less ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "c138e55a31f3f8960e99")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".myResume {\n  box-sizing: border-box;\n  width: 210mm;\n  margin: 0 auto;\n  padding: 12px 24px 48px 24px;\n  font-size: 16px;\n  font-family: BV-Harmony;\n  color: #000;\n  background: #fff;\n}\n.myResume > section:not(:first-child) {\n  margin-top: 12px;\n}\n.myResume .sectionTitle {\n  padding: 4px 0;\n  border-left: 4px solid #3498db;\n  background: rgba(52, 152, 219, 0.5);\n  color: #333;\n  padding-left: 8px;\n}\n.myResume .subTitle {\n  color: #333;\n  font-size: 16px;\n  margin: 0;\n}\n.myResume .basicInfo h3 {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n}\n.myResume .basicInfo h3 span {\n  font-size: 24px;\n  font-weight: bold;\n  color: #3498db;\n}\n.myResume .basicInfo .socialInfo {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  gap: 16px;\n}\n.myResume .basicInfo .socialInfo span {\n  display: inline-flex;\n  align-items: center;\n}\n.myResume .excellent > div {\n  margin-bottom: 8px;\n  margin-left: 12px;\n}\n.myResume .work .workItem .bold {\n  font-size: 20px;\n  font-weight: bold;\n}\n.myResume .work .workItem .workTitle {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n.myResume .work .workItem + .workItem {\n  margin-top: 8px;\n}\n.myResume .work .jobItem {\n  margin-left: 12px;\n  color: #333;\n}\n.myResume .project .projectItem .mainJobs {\n  margin-left: 12px;\n}\n.myResume .project .projectItem .projectTitle {\n  color: #3498db;\n  font-size: 18px;\n}\n.myResume .project .projectItem + .projectItem {\n  margin-top: 8px;\n}\n.myResume .tagWrap .tag {\n  border: 1px solid #3498db;\n  border-radius: 4px;\n  color: #3498db;\n  display: inline-block;\n  padding: 2px 6px;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "cd216efd7a38097c6a17":
 /*!***********************************************************!*\
   !*** ./node_modules/antd/lib/pagination/style/index.less ***!
@@ -1681,4 +1725,4 @@ if(false) {}
 /***/ })
 
 }]);
-//# sourceMappingURL=styles254f50c2906b0957308d.js.map
+//# sourceMappingURL=stylesece6fc24f05269a8617c.js.map

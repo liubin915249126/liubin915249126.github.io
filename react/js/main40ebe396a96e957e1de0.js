@@ -1837,6 +1837,122 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "4771c7d07a290bcf0da8":
+/*!************************************!*\
+  !*** ./src/views/resume/index.jsx ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_icon_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/icon/style */ "c099c4fc48cd9bb84110");
+/* harmony import */ var antd_lib_icon_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_icon_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_icon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/icon */ "21700e306353b2e19c0b");
+/* harmony import */ var antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "8af190b70a6bc55c6f1b");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _data_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./data.js */ "55e53a5ea3c84781d6b2");
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.less */ "087405ba330b7215979f");
+/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_index_less__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+// data
+
+
+
+var MyResume = function MyResume() {
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "myResume"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", {
+    className: "basicInfo"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, "\u5218\u5BBE"), "\xA0 \u524D\u7AEF\u5DE5\u7A0B\u5E08"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "socialInfo"
+  }, _data_js__WEBPACK_IMPORTED_MODULE_3__["basicData"].map(function (item, index) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      key: index
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      type: item.icon
+    }), "\xA0", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+      href: "javascript:;"
+    }, item.title));
+  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", {
+    className: "excellent"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+    className: "sectionTitle"
+  }, "\u4E2A\u4EBA\u4F18\u52BF"), _data_js__WEBPACK_IMPORTED_MODULE_3__["excellentData"].map(function (item, index) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, index + 1, ":", item.title);
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", {
+    className: "work"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+    className: "sectionTitle"
+  }, "\u5DE5\u4F5C\u7ECF\u5386"), _data_js__WEBPACK_IMPORTED_MODULE_3__["workData"].map(function (item, index) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      className: "workItem",
+      key: index
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      className: "workTitle"
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "bold"
+    }, item.name, " - ", item.title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "time"
+    }, item.time)), item.jobs.map(function (item, index) {
+      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "jobItem",
+        key: index
+      }, index + 1, ": ", item.title);
+    }));
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", {
+    className: "project"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+    className: "sectionTitle"
+  }, "\u4E3B\u8981\u9879\u76EE\u7ECF\u5386"), _data_js__WEBPACK_IMPORTED_MODULE_3__["projectData"].map(function (item, index) {
+    var mainJobs = item.mainJobs,
+        mainAchivements = item.mainAchivements,
+        _item$techStack = item.techStack,
+        techStack = _item$techStack === void 0 ? [] : _item$techStack;
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      className: "projectItem",
+      key: index
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      className: "projectTitle"
+    }, item.title), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "subTitle"
+    }, "\u6280\u672F\u6808: "), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, techStack.join(' | '))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, "-- \u9879\u76EE\u80CC\u666F\u548C\u4E3B\u8981\u5DE5\u4F5C:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      className: "mainJobs"
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      className: "projectInfo"
+    }, item.projectInfo), Array.isArray(mainJobs) && mainJobs.map(function (item, index) {
+      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "",
+        key: index
+      }, item);
+    })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, "-- \u4E3B\u8981\u6210\u5C31:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      className: "mainJobs"
+    }, Array.isArray(mainAchivements) && mainAchivements.map(function (item, index) {
+      return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+        className: "",
+        key: index
+      }, item);
+    })));
+  })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", {
+    className: "tagWrap"
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+    className: "sectionTitle"
+  }, "\u6BD5\u4E1A\u9662\u6821/\u8BED\u8A00\u6C34\u5E73"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "tag"
+  }, "\u592A\u539F\u7406\u5DE5\u5927\u5B66: 211"), " \xA0", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "tag"
+  }, "\u70ED\u80FD\u4E0E\u52A8\u529B\u5DE5\u7A0B"), " \xA0", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+    className: "tag"
+  }, "\u82F1\u8BED CET-4 "))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (MyResume);
+
+/***/ }),
+
 /***/ "4c9edeafc1df1d07f301":
 /*!*********************************!*\
   !*** ./src/views/punsub/Pub.js ***!
@@ -1938,6 +2054,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _views_test__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @views/test */ "07f3901f30ac134729df");
 /* harmony import */ var _views_test_immer__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @views/test/immer */ "36b697c0f0059d9db547");
 /* harmony import */ var _views_test_state__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @views/test/state */ "cf9157284cc3de2ef765");
+/* harmony import */ var _views_resume_index_jsx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @views/resume/index.jsx */ "4771c7d07a290bcf0da8");
 
 
 
@@ -1948,6 +2065,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+ // 简历
 
 
 var componentLink = {
@@ -1962,7 +2081,8 @@ var componentLink = {
   hook: _views_hook__WEBPACK_IMPORTED_MODULE_7__["default"],
   immer: _views_test_immer__WEBPACK_IMPORTED_MODULE_10__["default"],
   state: _views_test_state__WEBPACK_IMPORTED_MODULE_11__["default"],
-  upload: _views_upload__WEBPACK_IMPORTED_MODULE_8__["default"]
+  upload: _views_upload__WEBPACK_IMPORTED_MODULE_8__["default"],
+  resume: _views_resume_index_jsx__WEBPACK_IMPORTED_MODULE_12__["default"]
 };
 var routerConfig = [{
   icon: 'user',
@@ -2001,6 +2121,10 @@ var routerConfig = [{
   name: 'upload',
   url: 'upload'
 }, {
+  icon: 'contacts',
+  name: 'resume',
+  url: 'resume'
+}, {
   icon: 'upload',
   name: '测试',
   url: 'test',
@@ -2017,6 +2141,121 @@ var routerConfig = [{
 }];
 
 /* harmony default export */ __webpack_exports__["default"] = (routerConfig);
+
+/***/ }),
+
+/***/ "55e53a5ea3c84781d6b2":
+/*!**********************************!*\
+  !*** ./src/views/resume/data.js ***!
+  \**********************************/
+/*! exports provided: basicData, excellentData, workData, projectData */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "basicData", function() { return basicData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "excellentData", function() { return excellentData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "workData", function() { return workData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "projectData", function() { return projectData; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "8af190b70a6bc55c6f1b");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+var basicData = [{
+  title: 'len.liu0614@gmail.com',
+  icon: 'mail'
+}, {
+  title: 'liubin-53',
+  icon: 'wechat'
+}, {
+  title: '18205556911',
+  icon: 'phone'
+}];
+var excellentData = [{
+  title: '平时工作中有注意补齐原生js相关概念与知识点,计算机基础,数据结构与算法,网络相关还在持续学习当中.',
+  content: ''
+}, {
+  title: '熟悉 React/Vue 全家桶, 维护过一整套的 UI 组件库, 承担了项⽬技术选型，项⽬架构，跨团队协同，推⾏前端⼯程化，会封装适⽤于团队项⽬的脚⼿架⼯具',
+  content: ''
+}, {
+  title: '带过团队, 做过项目和技术 owner, 平时工作中比较有项目 owner 意识。',
+  content: ''
+}, {
+  title: '具有较强的自学能力,技术栈基本属于自己看文档学习到的,有较强的问题解决能力,能够快速定位问题,通过搜索引擎找到解决方案.',
+  content: ''
+}, {
+  title: '有过 PC/H5/混合开发 项目经验, 搭建过项目脚手架, 项目开发中善于利用技术提高开发效率.',
+  content: ''
+}, {
+  title: '平时喜欢钻研技术,逐步在了解和掌握后端技术栈和运维相关技术.',
+  content: ''
+}];
+var workData = [{
+  name: '上海亿锦 (bybit)',
+  title: '前端开发',
+  time: '2020.03 - 2022.09',
+  jobs: [{
+    title: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u6838\u5FC3\u4EA4\u6613\u7AD9:\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "https://www.bybit.com/trade/inverse/BTCUSD"
+    }, "\u53CD\u5411\u4EA4\u6613\u7AD9"), "\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "https://www.bybit.com/trade/usdt/BTCUSDT"
+    }, "\u6B63\u5411\u4EA4\u6613\u7AD9"), "\xA0\u91CD\u6784,\u6027\u80FD\u4F18\u5316,\u4E1A\u52A1\u8FED\u4EE3.")
+  }, {
+    title: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u8FD0\u8425\u5E73\u53F0\u67B6\u6784\uFF0C\u4E1A\u52A1\u8FED\u4EE3.")
+  }, {
+    title: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "https://www.bybit.com"
+    }, "\u5B98\u7F51"), " \u7EF4\u62A4\uFF0C\u6D3B\u52A8\u9875\u5F00\u53D1")
+  }]
+}, {
+  name: '江苏五一互联电子商务有限公司',
+  title: '前端开发',
+  time: '2018.08 - 2020.03',
+  jobs: [{
+    title: '运营管理后台架构改造和业务迭代'
+  }, {
+    title: '官网项目架构和开发'
+  }]
+}, {
+  name: '上海星合金融科技',
+  title: '前端开发',
+  time: '2017.12 - 2018.08',
+  jobs: [{
+    title: 'APP管理后台架构和业务迭代'
+  }, {
+    title: 'APP 架构搭建与开发(React-Native)'
+  }]
+}, {
+  name: '上海磐哲科技公司',
+  title: '前端开发',
+  time: '2016.02 - 2017.12',
+  jobs: [{
+    title: '参与唯品会人才管理项目开发'
+  }]
+}]; // project 项目
+
+var projectData = [{
+  title: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u6838\u5FC3\u4EA4\u6613\u7AD9:\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.bybit.com/trade/inverse/BTCUSD"
+  }, "\u53CD\u5411\u4EA4\u6613\u7AD9"), "\xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.bybit.com/trade/usdt/BTCUSDT"
+  }, "\u6B63\u5411\u4EA4\u6613\u7AD9"), "\xA0 \u91CD\u6784\u548C\u4E1A\u52A1\u8FED\u4EE3\u3002"),
+  techStack: ['TypeScript', 'React/Hook/Redux', 'WebPack+Node', 'less+css-modules', '自研UI组件库'],
+  projectInfo: '作为公司主要业务,面向C端用户,很注重用户视觉交互体验,以及解决大行情下性能问题',
+  mainJobs: ['1. 反向业务的重构，参与了项目脚手架的搭建，数据流的管理，公共方法，网络请求的封装，组件库的维护.', '2. 参与了 下单区, 持仓区, orderBook, Kline, deepChart, 业务的迭代', '3. 负责持仓区聚合持仓的技术owner,参与C端快速上币的改造,担任运营管理端的项目owner,快速上币功能使得上一个币对的时间和bug大大减少', '4. 运用社区各种技术手段优化首页加载性能和运行时性能'],
+  mainAchivements: ['1. http/ws 数据统一通过数据处理按照NameSpace存储到全局状态,后续通过自定义Hook处理好逻辑,输出给组件使用,数据的统一处理和统一输出', '2. 自动上币的改造, 使得每次上一个新币对不需要修改代码,直接页面操作,可以快速抓住市场热点,做到 0 bug 上币', '3. 持仓区的改造,使得用户可以看到所有的持仓,操作仓位不需要切换币对,优化用户体验', '4. 打包的优化和浏览器的缓存减少白屏时间, 虚拟滚动/webWorker/懒加载/immutableData 优化运行时性能', '5. C端 mock 方案, 前端可以脱离后端环境开发,大大加快前端开发效率和体验']
+}, {
+  title: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u516C\u53F8\u7EC4\u4EF6\u5E93:"),
+  techStack: ['TypeScript', 'React/Hook/Redux', 'Rollup+Node', 'less+css-modules', 'father/storyBook/dumi'],
+  projectInfo: '和UI/产品确定了色彩交互体系, 写出了一套基础组件库，并基于基础组件封装业务组件',
+  mainJobs: ['1. 制定组件封装原则和规范，开发与私有包部署', '2. 常用组件的开发与维护，组件库文档书写，单元测试与发布的 PipLine', '3. 结合业务基于组件库封装业务组件，方便业务快速迭代与后续的维护'],
+  mainAchivements: ['1. 根据业务扩展从 Monorepo 项⽬结构 迁移到 私有化 Npm 部署(Verdaccio)', '2. 结合业务，接入数据和业务配置，扩展成业务组件.', '3. 引入组件单元测试覆盖与后续流水线发布, 维护组件库文档']
+}, {
+  title: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u524D\u7AEF CLI \u5DE5\u5177:"),
+  techStack: ['TypeScript', 'node', 'commander', 'ora', 'art-template', 'eslint', 'prettier'],
+  projectInfo: '维护了 React/Vue 的项目模版, 增加代码规范团队协作规范，并发展成CLI, 可以快速开始项目。',
+  mainJobs: ['1. 结合社区已有方案，输出服务于自己业务的模版，预设公共方法，layout，快速开始一个项目', '2. 模版可适用于 PC/H5, 预设后台管理Layout, utils 和 请求的封装等'],
+  mainAchivements: ['1. 增加命令行交互，从gitlab 直接 clone 模版，后续和运维扩展了 CI/CD 相关', '2. 配置eslint 规则和 prettier 规则，以及代码提交方案，组内代码风格统一']
+}];
 
 /***/ }),
 
@@ -3140,6 +3379,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var dva_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dva_router__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _views_login_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @views/login/index */ "cc40952a950107dc0492");
 /* harmony import */ var _views_index_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @views/index/index */ "f790f5f316a66d837da9");
+/* harmony import */ var _views_resume_index_jsx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @views/resume/index.jsx */ "4771c7d07a290bcf0da8");
 // import React from "react";
 // import { Router, Route, Switch, Redirect } from 'dva/router';
 // import { Spin } from "antd";
@@ -3252,6 +3492,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 function RouterConfig(_ref) {
   var history = _ref.history;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(dva_router__WEBPACK_IMPORTED_MODULE_1__["Router"], {
@@ -3259,6 +3500,9 @@ function RouterConfig(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(dva_router__WEBPACK_IMPORTED_MODULE_1__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(dva_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/login",
     component: _views_login_index__WEBPACK_IMPORTED_MODULE_2__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(dva_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    path: "/resume",
+    component: _views_resume_index_jsx__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(dva_router__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     path: "/",
     component: _views_index_index__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -5795,17 +6039,39 @@ function (_React$Component) {
       });
     }
   }, {
+    key: "handleClick1",
+    value: function handleClick1() {
+      var _this3 = this;
+
+      new Promise(function (resolve, reject) {
+        resolve();
+      }).then(function () {
+        _this3.setState({
+          done: true
+        });
+
+        console.log(111, _this3.state.done);
+      }).then(function () {
+        console.log(222, _this3.state.done);
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this4 = this;
 
       console.log("render");
       return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, this.state.val.info.name, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_1___default.a, {
         type: "primary",
         onClick: function onClick() {
-          return _this3.handleClick();
+          return _this4.handleClick();
         }
-      }, "state\u6D4B\u8BD5"));
+      }, "state\u6D4B\u8BD5"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_button__WEBPACK_IMPORTED_MODULE_1___default.a, {
+        type: "primary",
+        onClick: function onClick() {
+          return _this4.handleClick1();
+        }
+      }, "setSync"));
     }
   }]);
 
@@ -7285,4 +7551,4 @@ app.start('#main');
 /***/ })
 
 },[[0,"manifest","styles","vendor"]]]);
-//# sourceMappingURL=mainb128fa78c0d473fe092d.js.map
+//# sourceMappingURL=main40ebe396a96e957e1de0.js.map

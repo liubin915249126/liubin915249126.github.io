@@ -2251,7 +2251,7 @@ var projectData = [{
   mainAchivements: ['1. 根据业务扩展从 Monorepo 项⽬结构 迁移到 私有化 Npm 部署(Verdaccio)', '2. 结合业务，接入数据和业务配置，扩展成业务组件.', '3. 引入组件单元测试覆盖与后续流水线发布, 维护组件库文档']
 }, {
   title: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u524D\u7AEF CLI \u5DE5\u5177:"),
-  techStack: ['TypeScript', 'node', 'commander', 'ora', 'art-template', 'eslint', 'prettier'],
+  techStack: ['TypeScript', 'node', 'commander', 'Inquirer', 'dotenv', 'eslint', 'prettier'],
   projectInfo: '维护了 React/Vue 的项目模版, 增加代码规范团队协作规范，并发展成CLI, 可以快速开始项目。',
   mainJobs: ['1. 结合社区已有方案，输出服务于自己业务的模版，预设公共方法，layout，快速开始一个项目', '2. 模版可适用于 PC/H5, 预设后台管理Layout, utils 和 请求的封装等'],
   mainAchivements: ['1. 增加命令行交互，从gitlab 直接 clone 模版，后续和运维扩展了 CI/CD 相关', '2. 配置eslint 规则和 prettier 规则，以及代码提交方案，组内代码风格统一']
@@ -7551,4 +7551,4 @@ app.start('#main');
 /***/ })
 
 },[[0,"manifest","styles","vendor"]]]);
-//# sourceMappingURL=main40ebe396a96e957e1de0.js.map
+//# sourceMappingURL=main49238b8185ff02897ebf.js.map

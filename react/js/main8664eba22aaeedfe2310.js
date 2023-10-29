@@ -2159,6 +2159,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "projectData", function() { return projectData; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "8af190b70a6bc55c6f1b");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+ // 基本信息
 
 var basicData = [{
   title: 'len.liu0614@gmail.com',
@@ -2169,7 +2170,8 @@ var basicData = [{
 }, {
   title: '18205556911',
   icon: 'phone'
-}];
+}]; // 优势
+
 var excellentData = [{
   title: '平时工作中有注意补齐原生js相关概念与知识点,计算机基础,数据结构与算法,网络相关还在持续学习当中.',
   content: ''
@@ -2188,8 +2190,22 @@ var excellentData = [{
 }, {
   title: '平时喜欢钻研技术,逐步在了解和掌握后端技术栈和运维相关技术.',
   content: ''
-}];
+}]; // 工作经历
+
 var workData = [{
+  name: '参与 SocialFi 项目',
+  title: '项目制-前端开发',
+  time: '2022.09 - 2023.09',
+  jobs: [{
+    title: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "https://web3edu.xyz/profile"
+    }, "web3 \u7684 dapp"), " \xA0", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "https://alpha.talentre.com/home/referral"
+    }, "web3 \u7684 talentre"))
+  }, {
+    title: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u82E5\u5E72\u81EA\u7531\u804C\u4E1A\u63A5\u7684\u524D\u7AEF\u5F00\u53D1")
+  }]
+}, {
   name: '上海亿锦 (bybit)',
   title: '前端开发',
   time: '2020.03 - 2022.09',
@@ -2230,6 +2246,13 @@ var workData = [{
   time: '2016.02 - 2017.12',
   jobs: [{
     title: '参与唯品会人才管理项目开发'
+  }]
+}, {
+  name: '毕业签的国企',
+  title: '国企实习生',
+  time: '2014.07 - 2016.03',
+  jobs: [{
+    title: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "\u5B9E\u4E60\u671F\u95F4\u81EA\u5B66\u4E86\u524D\u7AEF")
   }]
 }]; // project 项目
 
@@ -7551,4 +7574,4 @@ app.start('#main');
 /***/ })
 
 },[[0,"manifest","styles","vendor"]]]);
-//# sourceMappingURL=main49238b8185ff02897ebf.js.map
+//# sourceMappingURL=main8664eba22aaeedfe2310.js.map

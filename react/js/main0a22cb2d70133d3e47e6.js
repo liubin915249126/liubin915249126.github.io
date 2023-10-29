@@ -1877,7 +1877,12 @@ var MyResume = function MyResume() {
     }), "\xA0", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
       href: "javascript:;"
     }, item.title));
-  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", {
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", null, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(antd_lib_icon__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    type: "github"
+  }), "\xA0", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+    href: "https://github.com/liubin915249126",
+    target: "_blank"
+  }, "github")))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("section", {
     className: "excellent"
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
     className: "sectionTitle"
@@ -7574,4 +7579,4 @@ app.start('#main');
 /***/ })
 
 },[[0,"manifest","styles","vendor"]]]);
-//# sourceMappingURL=main8664eba22aaeedfe2310.js.map
+//# sourceMappingURL=main0a22cb2d70133d3e47e6.js.map

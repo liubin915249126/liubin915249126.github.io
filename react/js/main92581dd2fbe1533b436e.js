@@ -2173,7 +2173,7 @@ var basicData = [{
   title: 'liubin-53',
   icon: 'wechat'
 }, {
-  title: '18205556911',
+  title: '13030602110',
   icon: 'phone'
 }]; // 优势
 
@@ -7579,4 +7579,4 @@ app.start('#main');
 /***/ })
 
 },[[0,"manifest","styles","vendor"]]]);
-//# sourceMappingURL=main0a22cb2d70133d3e47e6.js.map
+//# sourceMappingURL=main92581dd2fbe1533b436e.js.map
